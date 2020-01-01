@@ -1,0 +1,45 @@
+{
+  "name": "white",
+  "version": "0.0.0",
+  "author": "Prabagita Ivan <prabagita12@gmail.com>",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint": "prettier-standard '**/*' '!build/**/*' --lint"
+  },
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0"
+  },
+  "devDependencies": {
+    "prettier-standard": "^16.1.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "src/index.js",
+      "src/serviceWorker.js"
+    ]
+  }
+}
