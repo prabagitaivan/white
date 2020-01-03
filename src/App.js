@@ -1,26 +1,47 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { setConnection, setScreen } from './reducers/status'
+import Home from './layouts/Home'
 
-function App () {
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  )
+class App extends Component {
+  componentDidMount () {
+    window.addEventListener('online', this.online)
+    window.addEventListener('offline', this.offline)
+    window.addEventListener('resize', this.resize)
+
+    this.resize()
+  }
+
+  componentWillUnmount () {
+    window.removeEventListener('online', this.online)
+    window.removeEventListener('offline', this.offline)
+    window.removeEventListener('resize', this.resize)
+  }
+
+  online = () => {
+    this.props.setConnection(true)
+  }
+
+  offline = () => {
+    this.props.setConnection(false)
+  }
+
+  resize = () => {
+    this.props.setScreen(window.innerWidth)
+  }
+
+  render () {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
+      </BrowserRouter>
+    )
+  }
 }
 
-export default App
+const mapDispatchToProps = { setConnection, setScreen }
+
+export default connect(undefined, mapDispatchToProps)(App)
