@@ -1,1 +1,3 @@
-export default []
+const sagas = []
+
+export default sagas

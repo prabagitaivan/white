@@ -42,6 +42,6 @@ class App extends Component {
   }
 }
 
-const mapDispatchToProps = { setConnection, setScreen }
+export const mapDispatchToProps = { setConnection, setScreen }
 
 export default connect(undefined, mapDispatchToProps)(App)
