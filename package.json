@@ -9,7 +9,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "coverage": "npm run test -- --coverage --watchAll=false",
-    "lint": "prettier-standard '**/*' '!build/**/*' --lint"
+    "lint": "prettier-standard 'src/**/*.js' --lint"
   },
   "dependencies": {
     "@material-ui/core": "^4.8.2",
