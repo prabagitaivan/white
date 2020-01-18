@@ -2,8 +2,9 @@
   "name": "white",
   "version": "0.0.0",
   "author": "Prabagita Ivan <prabagita12@gmail.com>",
-  "private": true,
+  "homepage": "https://prabagitaivan.com",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
