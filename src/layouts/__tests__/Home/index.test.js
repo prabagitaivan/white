@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import Home from '..'
+import Home from '../../Home'
 
 describe('Home', () => {
   describe('snapshots', () => {
