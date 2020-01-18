@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigator snapshots contain random notes and its icon 1`] = `
+<button
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiIconButton-edgeEnd"
+  tabindex="0"
+  title="Random Notes"
+  type="button"
+>
+  <span
+    class="MuiIconButton-label"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
+      />
+    </svg>
+  </span>
+  <span
+    class="MuiTouchRipple-root"
+  />
+</button>
+`;
