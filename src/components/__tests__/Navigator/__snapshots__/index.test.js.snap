@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Navigator snapshots contain random notes and its icon 1`] = `
+exports[`components Navigator snapshots contain random notes and its icon 1`] = `
 <button
   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall MuiIconButton-edgeEnd"
   tabindex="0"

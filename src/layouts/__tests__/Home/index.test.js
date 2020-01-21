@@ -16,11 +16,18 @@ function renderHome (desktop = true) {
   )
 }
 
-describe('Home', () => {
+describe('layouts Home', () => {
   describe('snapshots', () => {
+    it('contain navigator', () => {
+      const { container } = renderHome()
+      const Navigator = container.querySelector('#navigator')
+      expect(Navigator).toBeInTheDocument()
+    })
     it('contain correct content', () => {
       const { container } = renderHome()
-      expect(container.querySelector('#content').firstChild).toMatchSnapshot()
+      const Content = container.querySelector('#content')
+      expect(Content).toBeInTheDocument()
+      expect(Content.firstChild).toMatchSnapshot()
     })
   })
 })

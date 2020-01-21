@@ -21,7 +21,7 @@ function renderNavigator (desktop = true) {
   )
 }
 
-describe('Navigator', () => {
+describe('components Navigator', () => {
   describe('snapshots', () => {
     it('contain random notes and its icon', () => {
       const { container } = renderNavigator()

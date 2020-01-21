@@ -17,7 +17,7 @@ class Navigator extends PureComponent {
     const styles = createStyles(desktop)
 
     return (
-      <AppBar position='fixed' style={styles.appBar}>
+      <AppBar id='navigator' position='fixed' style={styles.appBar}>
         <Fab color='secondary' style={styles.fab}>
           <Avatar>
             <span role='img' aria-label='grin' style={styles.emoji}>

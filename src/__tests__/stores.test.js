@@ -24,7 +24,7 @@ function getStoresStore (preloadedState = undefined) {
   return JSON.parse(getByTestId(container, 'data').firstChild.textContent)
 }
 
-describe('Stores', () => {
+describe('main Stores', () => {
   it('return default state', () => {
     const StoresStore = getStoresStore()
     const defaultStore = createStore(reducers).getState()

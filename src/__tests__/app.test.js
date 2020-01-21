@@ -24,7 +24,7 @@ function mobileScreenEvent () {
   window.dispatchEvent(new Event('resize'))
 }
 
-describe('App', () => {
+describe('main App', () => {
   describe('routers', () => {
     it('render Home for initial router', () => {
       const history = createBrowserHistory()

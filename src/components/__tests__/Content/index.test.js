@@ -16,7 +16,7 @@ function renderContent (desktop = true) {
   )
 }
 
-describe('Content', () => {
+describe('components Content', () => {
   describe('snapshots', () => {
     it('contain children inside', () => {
       const { container } = renderContent()
