@@ -20,7 +20,7 @@ describe('Home', () => {
   describe('snapshots', () => {
     it('contain correct content', () => {
       const { container } = renderHome()
-      expect(container.querySelector('#content')).toMatchSnapshot()
+      expect(container.querySelector('#content').firstChild).toMatchSnapshot()
     })
   })
 })
