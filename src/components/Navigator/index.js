@@ -13,8 +13,7 @@ import createStyles from './styles'
 
 class Navigator extends PureComponent {
   render () {
-    const { desktop } = this.props
-    const styles = createStyles(desktop)
+    const { styles } = this.props
 
     return (
       <AppBar id='navigator' position='fixed' style={styles.appBar}>
@@ -39,6 +38,8 @@ class Navigator extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ status: { desktop } }) => ({ desktop })
+const mapStateToProps = ({ status: { desktop } }) => ({
+  styles: createStyles(desktop)
+})
 
 export default connect(mapStateToProps)(Navigator)

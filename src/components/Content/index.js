@@ -5,8 +5,7 @@ import createStyles from './styles'
 
 class Content extends Component {
   render () {
-    const { desktop, children } = this.props
-    const styles = createStyles(desktop)
+    const { styles, children } = this.props
 
     return (
       <Container id='content' style={styles.container}>
@@ -16,6 +15,8 @@ class Content extends Component {
   }
 }
 
-const mapStateToProps = ({ status: { desktop } }) => ({ desktop })
+const mapStateToProps = ({ status: { desktop } }) => ({
+  styles: createStyles(desktop)
+})
 
 export default connect(mapStateToProps)(Content)
