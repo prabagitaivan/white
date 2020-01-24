@@ -4,6 +4,7 @@ import {
   AppBar,
   Fab,
   Avatar,
+  Container,
   Toolbar,
   Tooltip,
   IconButton
@@ -24,15 +25,17 @@ class Navigator extends PureComponent {
             </span>
           </Avatar>
         </Fab>
-        <Toolbar>
-          Random Notes
-          <div style={styles.grow} />
-          <Tooltip title='Random Notes' edge='end'>
-            <IconButton size='small'>
-              <PlayCircleFilledIcon />
-            </IconButton>
-          </Tooltip>
-        </Toolbar>
+        <Container>
+          <Toolbar disableGutters>
+            Random Notes
+            <div style={styles.grow} />
+            <Tooltip title='Random Notes' edge='end'>
+              <IconButton size='small'>
+                <PlayCircleFilledIcon />
+              </IconButton>
+            </Tooltip>
+          </Toolbar>
+        </Container>
       </AppBar>
     )
   }
