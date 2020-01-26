@@ -1,8 +1,8 @@
 import { render, getByText } from '@testing-library/react'
 import React from 'react'
-import Stores from '../../../stores'
-import Styles from '../../../styles'
-import Content from '../../Content'
+import Stores from '../../stores'
+import Styles from '../../styles'
+import Content from '../Content'
 
 function renderContent (desktop = true) {
   const preloadedState = { status: { desktop } }

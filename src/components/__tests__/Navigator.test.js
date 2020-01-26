@@ -5,9 +5,9 @@ import {
   getByRole
 } from '@testing-library/react'
 import React from 'react'
-import Stores from '../../../stores'
-import Styles from '../../../styles'
-import Navigator from '../../Navigator'
+import Stores from '../../stores'
+import Styles from '../../styles'
+import Navigator from '../Navigator'
 
 function renderNavigator (desktop = true) {
   const preloadedState = { status: { desktop } }
