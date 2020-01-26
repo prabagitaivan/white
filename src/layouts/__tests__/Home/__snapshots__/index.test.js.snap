@@ -1,3 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`layouts Home snapshots contain correct content 1`] = `Home`;
+exports[`layouts Home snapshots contain data content when requesting result is not empty 1`] = `Home`;
+
+exports[`layouts Home snapshots contain empty content when requesting result is empty 1`] = `Empty`;
+
+exports[`layouts Home snapshots contain loading content when requesting 1`] = `Loading`;
