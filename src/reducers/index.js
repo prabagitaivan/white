@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import status from './status'
+import randomNotes from './randomNotes'
 
 const reducers = combineReducers({
-  status
+  status,
+  randomNotes
 })
 
 export default reducers

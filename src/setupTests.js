@@ -10,7 +10,10 @@ process.env = {
 }
 
 jest.mock('firebase/app', () => ({
-  initializeApp: jest.fn()
+  initializeApp: jest.fn(),
+  database: jest.fn(() => ({
+    ref: jest.fn()
+  }))
 }))
 
 Object.defineProperty(window.navigator, 'onLine', {
