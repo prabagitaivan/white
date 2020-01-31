@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import Stores from '../../../stores'
 import Styles from '../../../styles'
@@ -42,10 +43,33 @@ describe('layouts Home', () => {
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
     })
-    it('contain data content when requesting result is not empty', () => {
+    it('contain data content when requesting result is not empty in desktop', () => {
       const { container } = renderHome(true, {
         requesting: false,
-        data: ['data']
+        data: [
+          {
+            image: 'image',
+            title: 'title',
+            url: 'url',
+            published_at: new Date('2020-01-01')
+          }
+        ]
+      })
+      const Content = container.querySelector('#content')
+      expect(Content).toBeInTheDocument()
+      expect(Content.firstChild).toMatchSnapshot()
+    })
+    it('contain data content when requesting result is not empty in mobile', () => {
+      const { container } = renderHome(false, {
+        requesting: false,
+        data: [
+          {
+            image: 'image',
+            title: 'title',
+            url: 'url',
+            published_at: new Date('2020-01-01')
+          }
+        ]
       })
       const Content = container.querySelector('#content')
       expect(Content).toBeInTheDocument()
@@ -64,6 +88,43 @@ describe('layouts Home', () => {
 
     it('request for random notes data after mount', () => {
       expect(HomeReducers.request).toHaveBeenCalledTimes(1)
+    })
+  })
+  describe('userEvent', () => {
+    beforeEach(() => {
+      jest.spyOn(HomeReducers, 'request').mockReturnValue({ type: '' })
+      jest.spyOn(window, 'open').mockReturnValue()
+    })
+    afterEach(() => {
+      jest.restoreAllMocks()
+    })
+
+    it("open url when click the note's images", () => {
+      const { getByAltText } = renderHome(true, {
+        requesting: false,
+        data: [
+          {
+            image: 'image1',
+            title: 'title1',
+            url: 'url1',
+            published_at: new Date('2020-01-01')
+          },
+          {
+            image: 'image2',
+            title: 'title2',
+            url: 'url2',
+            published_at: new Date('2020-01-01')
+          }
+        ]
+      })
+
+      const Image1 = getByAltText('title1')
+      userEvent.click(Image1)
+      expect(window.open).toHaveBeenCalledWith('url1')
+
+      const Image2 = getByAltText('title2')
+      userEvent.click(Image2)
+      expect(window.open).toHaveBeenCalledWith('url2')
     })
   })
 })

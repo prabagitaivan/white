@@ -1,7 +1,119 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`layouts Home snapshots contain data content when requesting result is not empty 1`] = `Home`;
+exports[`layouts Home snapshots contain data content when requesting result is not empty in desktop 1`] = `
+<ul
+  class="MuiGridList-root"
+  style="margin: -10px;"
+>
+  <li
+    class="MuiGridListTile-root"
+    style="width: 25%; height: 270px; padding: 10px;"
+  >
+    <div
+      class="MuiGridListTile-tile"
+    >
+      <img
+        alt="title"
+        src="image"
+        style="cursor: pointer;"
+      />
+      <div
+        class="MuiGridListTileBar-root MuiGridListTileBar-titlePositionBottom"
+        style="height: 48px;"
+      >
+        <div
+          class="MuiGridListTileBar-titleWrap"
+        >
+          <div
+            class="MuiGridListTileBar-title"
+          >
+            <div
+              style="font-size: 24px; line-height: normal; white-space: normal; color: rgba(255, 255, 255, 0.85);"
+            >
+              title
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+`;
 
-exports[`layouts Home snapshots contain empty content when requesting result is empty 1`] = `Empty`;
+exports[`layouts Home snapshots contain data content when requesting result is not empty in mobile 1`] = `
+<ul
+  class="MuiGridList-root"
+  style="margin: -10px;"
+>
+  <li
+    class="MuiGridListTile-root"
+    style="width: 100%; height: 270px; padding: 10px;"
+  >
+    <div
+      class="MuiGridListTile-tile"
+    >
+      <img
+        alt="title"
+        src="image"
+        style="cursor: pointer;"
+      />
+      <div
+        class="MuiGridListTileBar-root MuiGridListTileBar-titlePositionBottom"
+        style="height: 40px;"
+      >
+        <div
+          class="MuiGridListTileBar-titleWrap"
+        >
+          <div
+            class="MuiGridListTileBar-title"
+          >
+            <div
+              style="font-size: 15px; line-height: normal; white-space: normal; color: rgba(255, 255, 255, 0.85);"
+            >
+              title
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+</ul>
+`;
 
-exports[`layouts Home snapshots contain loading content when requesting 1`] = `Loading`;
+exports[`layouts Home snapshots contain empty content when requesting result is empty 1`] = `
+<div
+  style="text-align: center;"
+>
+  <div>
+    Still Empty
+  </div>
+  <span
+    aria-label="three-wise-monkeys"
+    role="img"
+  >
+    🙈🙉🙊
+  </span>
+</div>
+`;
+
+exports[`layouts Home snapshots contain loading content when requesting 1`] = `
+<div
+  style="display: flex; flex-direction: column; align-items: center;"
+>
+  <div>
+    Loading
+  </div>
+  <div
+    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary MuiLinearProgress-indeterminate"
+    role="progressbar"
+    style="height: 10px; width: 60%;"
+  >
+    <div
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Indeterminate"
+    />
+    <div
+      class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorSecondary"
+    />
+  </div>
+</div>
+`;
