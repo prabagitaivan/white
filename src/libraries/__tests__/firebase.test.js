@@ -56,13 +56,25 @@ describe('libraries firebase', () => {
           image: 'image1',
           title: 'title1',
           url: 'url1',
-          published_at: '2020-01-26'
+          active: true,
+          created_at: '2020-01-26',
+          updated_at: '2020-01-27'
         },
         {
           image: 'image2',
           title: 'title2',
           url: 'url2',
-          published_at: '2020-01-27'
+          active: false,
+          created_at: '2020-01-27 01:00:00',
+          updated_at: '2020-01-28 03:00:00'
+        },
+        {
+          image: 'image3',
+          title: 'title3',
+          url: 'url3',
+          active: true,
+          created_at: 1580916575000,
+          updated_at: 1580916626000
         }
       ]
 
@@ -72,13 +84,25 @@ describe('libraries firebase', () => {
           image: 'image1',
           title: 'title1',
           url: 'url1',
-          published_at: new Date('2020-01-26')
+          active: true,
+          created_at: new Date('2020-01-26'),
+          updated_at: new Date('2020-01-27')
         },
         {
           image: 'image2',
           title: 'title2',
           url: 'url2',
-          published_at: new Date('2020-01-27')
+          active: false,
+          created_at: new Date('2020-01-27 01:00:00'),
+          updated_at: new Date('2020-01-28 03:00:00')
+        },
+        {
+          image: 'image3',
+          title: 'title3',
+          url: 'url3',
+          active: true,
+          created_at: new Date(1580916575000),
+          updated_at: new Date(1580916626000)
         }
       ])
     })

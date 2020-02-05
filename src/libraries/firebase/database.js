@@ -14,7 +14,9 @@ export async function getRandomNotes () {
       image: value.image,
       title: value.title,
       url: value.url,
-      published_at: new Date(value.published_at)
+      active: value.active,
+      created_at: new Date(value.created_at),
+      updated_at: new Date(value.updated_at)
     })
   })
 

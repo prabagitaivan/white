@@ -51,11 +51,12 @@ describe('layouts Home', () => {
             image: 'image',
             title: 'title',
             url: 'url',
-            published_at: new Date('2020-01-01')
+            active: true
           }
         ]
       })
       const Content = container.querySelector('#content')
+
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
     })
@@ -67,13 +68,36 @@ describe('layouts Home', () => {
             image: 'image',
             title: 'title',
             url: 'url',
-            published_at: new Date('2020-01-01')
+            active: true
           }
         ]
       })
       const Content = container.querySelector('#content')
+
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
+    })
+    it('contain data content when that active only', () => {
+      const { queryByAltText } = renderHome(false, {
+        requesting: false,
+        data: [
+          {
+            image: 'image1',
+            title: 'title1',
+            url: 'url1',
+            active: false
+          },
+          {
+            image: 'image2',
+            title: 'title2',
+            url: 'url2',
+            active: true
+          }
+        ]
+      })
+
+      expect(queryByAltText('title1')).not.toBeInTheDocument()
+      expect(queryByAltText('title2')).toBeInTheDocument()
     })
   })
   describe('mounting', () => {
@@ -107,13 +131,13 @@ describe('layouts Home', () => {
             image: 'image1',
             title: 'title1',
             url: 'url1',
-            published_at: new Date('2020-01-01')
+            active: true
           },
           {
             image: 'image2',
             title: 'title2',
             url: 'url2',
-            published_at: new Date('2020-01-01')
+            active: true
           }
         ]
       })

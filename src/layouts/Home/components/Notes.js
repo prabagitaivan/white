@@ -13,8 +13,9 @@ class Notes extends PureComponent {
 
     return (
       <GridList cols={desktop ? 4 : 1} cellHeight={250} spacing={20}>
-        {notes.map((note, index) => {
-          return (
+        {notes
+          .filter(note => note.active)
+          .map((note, index) => (
             <GridListTile key={index}>
               <img
                 src={note.image}
@@ -27,8 +28,7 @@ class Notes extends PureComponent {
                 style={styles.gridListTileBar}
               />
             </GridListTile>
-          )
-        })}
+          ))}
       </GridList>
     )
   }
