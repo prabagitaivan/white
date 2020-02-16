@@ -1,47 +1,35 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setConnection, setScreen } from './reducers/status'
 import Home from './layouts/Home'
 
-class App extends Component {
-  componentDidMount () {
-    window.addEventListener('online', this.online)
-    window.addEventListener('offline', this.offline)
-    window.addEventListener('resize', this.resize)
+export default () => {
+  const dispatch = useDispatch()
 
-    this.resize()
-  }
+  useEffect(() => {
+    const online = () => dispatch(setConnection(true))
+    const offline = () => dispatch(setConnection(false))
+    const resize = () => dispatch(setScreen(window.innerWidth))
 
-  componentWillUnmount () {
-    window.removeEventListener('online', this.online)
-    window.removeEventListener('offline', this.offline)
-    window.removeEventListener('resize', this.resize)
-  }
+    window.addEventListener('online', online)
+    window.addEventListener('offline', offline)
+    window.addEventListener('resize', resize)
 
-  online = () => {
-    this.props.setConnection(true)
-  }
+    resize()
 
-  offline = () => {
-    this.props.setConnection(false)
-  }
+    return () => {
+      window.removeEventListener('online', online)
+      window.removeEventListener('offline', offline)
+      window.removeEventListener('resize', resize)
+    }
+  }, [dispatch])
 
-  resize = () => {
-    this.props.setScreen(window.innerWidth)
-  }
-
-  render () {
-    return (
-      <BrowserRouter>
-        <Switch>
-          <Route exact path='/' component={Home} />
-        </Switch>
-      </BrowserRouter>
-    )
-  }
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
+    </BrowserRouter>
+  )
 }
-
-export const mapDispatchToProps = { setConnection, setScreen }
-
-export default connect(undefined, mapDispatchToProps)(App)
