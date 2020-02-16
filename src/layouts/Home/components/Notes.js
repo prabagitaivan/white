@@ -1,43 +1,33 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React, { memo } from 'react'
+import { useSelector } from 'react-redux'
 import { GridList, GridListTile, GridListTileBar } from '@material-ui/core'
-import { notes as createStyles } from '../styles'
+import { notes as useStyles } from '../styles'
 
-class Notes extends PureComponent {
-  openNote = url => {
-    window.open(url)
-  }
+export default memo(() => {
+  const { desktop } = useSelector(state => state.status)
+  const { data } = useSelector(state => state.randomNotes)
+  const classes = useStyles({ desktop })
 
-  render () {
-    const { styles, desktop, notes } = this.props
+  const openNote = url => window.open(url)
 
-    return (
-      <GridList cols={desktop ? 4 : 1} cellHeight={250} spacing={20}>
-        {notes
-          .filter(note => note.active)
-          .map((note, index) => (
-            <GridListTile key={index}>
-              <img
-                src={note.image}
-                alt={note.title}
-                style={styles.img}
-                onClick={() => this.openNote(note.url)}
-              />
-              <GridListTileBar
-                title={<div style={styles.title}>{note.title}</div>}
-                style={styles.gridListTileBar}
-              />
-            </GridListTile>
-          ))}
-      </GridList>
-    )
-  }
-}
-
-const mapStateToProps = ({ status: { desktop }, randomNotes: { data } }) => ({
-  styles: createStyles(desktop),
-  desktop,
-  notes: data
+  return (
+    <GridList cols={desktop ? 4 : 1} cellHeight={250} spacing={20}>
+      {data
+        .filter(note => note.active)
+        .map((note, index) => (
+          <GridListTile key={index}>
+            <img
+              src={note.image}
+              alt={note.title}
+              className={classes.img}
+              onClick={() => openNote(note.url)}
+            />
+            <GridListTileBar
+              title={<div className={classes.title}>{note.title}</div>}
+              className={classes.gridListTileBar}
+            />
+          </GridListTile>
+        ))}
+    </GridList>
+  )
 })
-
-export default connect(mapStateToProps)(Notes)

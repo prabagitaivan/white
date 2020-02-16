@@ -1,32 +1,45 @@
-export const loading = {
-  root: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  linearProgress: {
-    height: 10,
-    width: '60%'
-  }
-}
+import { makeStyles } from '@material-ui/styles'
 
-export const empty = {
-  root: {
-    textAlign: 'center'
-  }
-}
+const layout = 'Home'
 
-export const notes = desktop => ({
-  img: {
-    cursor: 'pointer'
+export const loading = makeStyles(
+  {
+    root: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    },
+    linearProgress: {
+      height: 10,
+      width: '60%'
+    }
   },
-  gridListTileBar: {
-    height: desktop ? 48 : 40
+  { name: `${layout}Loading` }
+)
+
+export const empty = makeStyles(
+  {
+    root: {
+      textAlign: 'center'
+    }
   },
-  title: {
-    fontSize: desktop ? 24 : 15,
-    lineHeight: 'normal',
-    whiteSpace: 'normal',
-    color: 'rgba(255, 255, 255, 0.85)'
-  }
-})
+  { name: `${layout}Empty` }
+)
+
+export const notes = makeStyles(
+  {
+    img: {
+      cursor: 'pointer'
+    },
+    gridListTileBar: ({ desktop }) => ({
+      height: desktop ? 48 : 40
+    }),
+    title: {
+      fontSize: ({ desktop }) => (desktop ? 24 : 15),
+      lineHeight: 'normal',
+      whiteSpace: 'normal',
+      color: 'rgba(255, 255, 255, 0.85)'
+    }
+  },
+  { name: `${layout}Notes` }
+)

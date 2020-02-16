@@ -1,14 +1,14 @@
-import React, { PureComponent } from 'react'
+import React, { memo } from 'react'
 import { LinearProgress } from '@material-ui/core'
-import { loading as styles } from '../styles'
+import { loading as useStyles } from '../styles'
 
-export default class Loading extends PureComponent {
-  render () {
-    return (
-      <div style={styles.root}>
-        <div>Loading</div>
-        <LinearProgress color='secondary' style={styles.linearProgress} />
-      </div>
-    )
-  }
-}
+export default memo(() => {
+  const classes = useStyles()
+
+  return (
+    <div className={classes.root}>
+      <div>Loading</div>
+      <LinearProgress color='secondary' className={classes.linearProgress} />
+    </div>
+  )
+})
