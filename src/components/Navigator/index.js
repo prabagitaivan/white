@@ -1,5 +1,5 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React, { memo } from 'react'
+import { useSelector } from 'react-redux'
 import {
   AppBar,
   Fab,
@@ -10,39 +10,32 @@ import {
   IconButton
 } from '@material-ui/core'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
-import createStyles from './styles'
+import useStyles from './styles'
 
-class Navigator extends PureComponent {
-  render () {
-    const { styles } = this.props
+export default memo(() => {
+  const { desktop } = useSelector(state => state.status)
+  const classes = useStyles({ desktop })
 
-    return (
-      <AppBar id='navigator' position='fixed' style={styles.appBar}>
-        <Fab color='secondary' style={styles.fab}>
-          <Avatar>
-            <span role='img' aria-label='grin' style={styles.emoji}>
-              😁
-            </span>
-          </Avatar>
-        </Fab>
-        <Container>
-          <Toolbar disableGutters>
-            Random Notes
-            <div style={styles.grow} />
-            <Tooltip title='Random Notes' edge='end'>
-              <IconButton size='small'>
-                <PlayCircleFilledIcon />
-              </IconButton>
-            </Tooltip>
-          </Toolbar>
-        </Container>
-      </AppBar>
-    )
-  }
-}
-
-const mapStateToProps = ({ status: { desktop } }) => ({
-  styles: createStyles(desktop)
+  return (
+    <AppBar id='navigator' position='fixed' className={classes.appBar}>
+      <Fab color='secondary' className={classes.fab}>
+        <Avatar>
+          <span role='img' aria-label='grin' className={classes.emoji}>
+            😁
+          </span>
+        </Avatar>
+      </Fab>
+      <Container>
+        <Toolbar disableGutters>
+          Random Notes
+          <div className={classes.grow} />
+          <Tooltip title='Random Notes' edge='end'>
+            <IconButton size='small'>
+              <PlayCircleFilledIcon />
+            </IconButton>
+          </Tooltip>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  )
 })
-
-export default connect(mapStateToProps)(Navigator)

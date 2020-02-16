@@ -1,22 +1,15 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import { Container } from '@material-ui/core'
-import createStyles from './styles'
+import useStyles from './styles'
 
-class Content extends Component {
-  render () {
-    const { styles, children } = this.props
+export default ({ children }) => {
+  const { desktop } = useSelector(state => state.status)
+  const classes = useStyles({ desktop })
 
-    return (
-      <Container id='content' style={styles.container}>
-        {children}
-      </Container>
-    )
-  }
+  return (
+    <Container id='content' className={classes.container}>
+      {children}
+    </Container>
+  )
 }
-
-const mapStateToProps = ({ status: { desktop } }) => ({
-  styles: createStyles(desktop)
-})
-
-export default connect(mapStateToProps)(Content)
