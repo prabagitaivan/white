@@ -1,24 +1,21 @@
 import { render, getByTestId } from '@testing-library/react'
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
-import { createStore } from 'redux'
-import Stores from '../stores'
+import React from 'react'
+import { createStore as ReduxCreateStore } from 'redux'
+import { Provider, useStore } from 'react-redux'
+import createStore from '../stores'
 import reducers from '../reducers'
 
-class AppComponent extends PureComponent {
-  render () {
-    const store = JSON.stringify(this.props.store)
-    return <div data-testid='data'>{store}</div>
-  }
+const App = () => {
+  const store = useStore()
+  return <div data-testid='data'>{JSON.stringify(store.getState())}</div>
 }
-const mapStateToProps = state => ({ store: state })
-const App = connect(mapStateToProps)(AppComponent)
 
-function getStoresStore (preloadedState = undefined) {
+function renderApp (preloadedState = undefined) {
+  const store = createStore(preloadedState)
   const { container } = render(
-    <Stores preloadedState={preloadedState}>
+    <Provider store={store}>
       <App />
-    </Stores>
+    </Provider>
   )
 
   return JSON.parse(getByTestId(container, 'data').firstChild.textContent)
@@ -26,18 +23,18 @@ function getStoresStore (preloadedState = undefined) {
 
 describe('main Stores', () => {
   it('return default state', () => {
-    const StoresStore = getStoresStore()
-    const defaultStore = createStore(reducers).getState()
+    const AppStore = renderApp()
+    const defaultStore = ReduxCreateStore(reducers).getState()
 
-    expect(StoresStore).toEqual(defaultStore)
+    expect(AppStore).toEqual(defaultStore)
   })
   it('return with overwrite preloaded state', () => {
     const preloadedState = { status: { online: false } }
-    const StoresStore = getStoresStore(preloadedState)
-    const defaultStore = createStore(reducers).getState()
+    const AppStore = renderApp(preloadedState)
+    const defaultStore = ReduxCreateStore(reducers).getState()
     const withPreloadedStore = { ...defaultStore, ...preloadedState }
 
-    expect(StoresStore).not.toEqual(defaultStore)
-    expect(StoresStore).toEqual(withPreloadedStore)
+    expect(AppStore).not.toEqual(defaultStore)
+    expect(AppStore).toEqual(withPreloadedStore)
   })
 })

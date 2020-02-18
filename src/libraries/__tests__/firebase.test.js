@@ -13,6 +13,10 @@ async function mockGetRandomNotes (data = []) {
   return getRandomNotes()
 }
 
+afterEach(() => {
+  database.ref.mockReset()
+})
+
 describe('libraries firebase', () => {
   describe('client', () => {
     it('use env when initialize firebase', () => {
@@ -35,10 +39,6 @@ describe('libraries firebase', () => {
     })
   })
   describe('database', () => {
-    afterEach(() => {
-      database.ref.mockRestore()
-    })
-
     it('send request data to firebase with correct references', async () => {
       await mockGetRandomNotes()
       expect(database.ref).toHaveBeenCalledTimes(1)
@@ -75,8 +75,8 @@ describe('libraries firebase', () => {
           updated_at: 1580916626000
         }
       ]
-
       const result = await mockGetRandomNotes(data)
+
       expect(result).toEqual([
         {
           image: 'image1',

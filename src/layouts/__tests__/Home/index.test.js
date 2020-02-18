@@ -1,31 +1,35 @@
 import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
-import Stores from '../../../stores'
+import { Provider } from 'react-redux'
+import createStore from '../../../stores'
 import Styles from '../../../styles'
-import Home, { mapDispatchToProps as HomeReducers } from '../../Home'
+import { request } from '../../../reducers/randomNotes'
+import Home from '../../Home'
+
+let store
 
 function renderHome (desktop = true, randomNotes) {
   const preloadedState = { status: { desktop }, randomNotes }
+  store = createStore(preloadedState)
+
+  jest.spyOn(store, 'dispatch').mockReturnValue()
 
   return render(
-    <Stores preloadedState={preloadedState}>
+    <Provider store={store}>
       <Styles>
         <Home />
       </Styles>
-    </Stores>
+    </Provider>
   )
 }
 
+afterEach(() => {
+  store.dispatch.mockRestore()
+})
+
 describe('layouts Home', () => {
   describe('snapshots', () => {
-    beforeEach(() => {
-      jest.spyOn(HomeReducers, 'request').mockReturnValue({ type: '' })
-    })
-    afterEach(() => {
-      jest.restoreAllMocks()
-    })
-
     it('contain navigator', () => {
       const { container } = renderHome()
       const Navigator = container.querySelector('#navigator')
@@ -102,25 +106,19 @@ describe('layouts Home', () => {
   })
   describe('mounting', () => {
     beforeEach(() => {
-      jest.spyOn(HomeReducers, 'request')
-
       renderHome()
-    })
-    afterEach(() => {
-      jest.restoreAllMocks()
     })
 
     it('request for random notes data after mount', () => {
-      expect(HomeReducers.request).toHaveBeenCalledTimes(1)
+      expect(store.dispatch).toHaveBeenCalledWith(request())
     })
   })
   describe('userEvent', () => {
     beforeEach(() => {
-      jest.spyOn(HomeReducers, 'request').mockReturnValue({ type: '' })
       jest.spyOn(window, 'open').mockReturnValue()
     })
     afterEach(() => {
-      jest.restoreAllMocks()
+      window.open.mockRestore()
     })
 
     it("open url when click the note's images", () => {

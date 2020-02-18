@@ -1,18 +1,20 @@
 import { render, getByText } from '@testing-library/react'
 import React from 'react'
-import Stores from '../../stores'
+import { Provider } from 'react-redux'
+import createStore from '../../stores'
 import Styles from '../../styles'
 import Content from '../Content'
 
 function renderContent (desktop = true) {
   const preloadedState = { status: { desktop } }
+  const store = createStore(preloadedState)
 
   return render(
-    <Stores preloadedState={preloadedState}>
+    <Provider store={store}>
       <Styles>
         <Content>test content</Content>
       </Styles>
-    </Stores>
+    </Provider>
   )
 }
 

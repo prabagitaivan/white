@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main Styles return global css 1`] = `
+exports[`main Styles configuration return global css 1`] = `
 "body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -17,7 +17,7 @@ body::-webkit-scrollbar {
 "
 `;
 
-exports[`main Styles return theme configuration 1`] = `
+exports[`main Styles configuration return theme configuration 1`] = `
 Object {
   "breakpoints": Object {
     "between": [Function],

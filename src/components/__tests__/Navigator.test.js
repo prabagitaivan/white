@@ -5,19 +5,21 @@ import {
   getByRole
 } from '@testing-library/react'
 import React from 'react'
-import Stores from '../../stores'
+import { Provider } from 'react-redux'
+import createStore from '../../stores'
 import Styles from '../../styles'
 import Navigator from '../Navigator'
 
 function renderNavigator (desktop = true) {
   const preloadedState = { status: { desktop } }
+  const store = createStore(preloadedState)
 
   return render(
-    <Stores preloadedState={preloadedState}>
+    <Provider store={store}>
       <Styles>
         <Navigator />
       </Styles>
-    </Stores>
+    </Provider>
   )
 }
 
