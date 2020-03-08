@@ -10,7 +10,11 @@ import {
   IconButton
 } from '@material-ui/core'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
+import GitHubIcon from '@material-ui/icons/GitHub'
 import useStyles from './styles'
+
+const openRepository = () =>
+  window.open('https://github.com/prabagitaivan/white')
 
 export default memo(() => {
   const { desktop } = useSelector(state => state.status)
@@ -29,9 +33,14 @@ export default memo(() => {
         <Toolbar disableGutters>
           Random Notes
           <div className={classes.grow} />
-          <Tooltip title='Random Notes' edge='end'>
+          <Tooltip title='Random Notes'>
             <IconButton size='small'>
               <PlayCircleFilledIcon />
+            </IconButton>
+          </Tooltip>
+          <Tooltip title='Repository' edge='end'>
+            <IconButton size='small' onClick={openRepository}>
+              <GitHubIcon className={classes.githubIcon} />
             </IconButton>
           </Tooltip>
         </Toolbar>

@@ -19,3 +19,14 @@ Object.defineProperty(window.navigator, 'onLine', {
   value: true,
   writable: true
 })
+
+// fix tooltip issues using jest
+// https://github.com/mui-org/material-ui/issues/15726#issuecomment-493124813
+global.document.createRange = () => ({
+  setStart: () => {},
+  setEnd: () => {},
+  commonAncestorContainer: {
+    nodeName: 'BODY',
+    ownerDocument: document
+  }
+})

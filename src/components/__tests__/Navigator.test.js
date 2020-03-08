@@ -4,6 +4,7 @@ import {
   getByTitle,
   getByRole
 } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 import { Provider } from 'react-redux'
 import createStore from '../../stores'
@@ -25,10 +26,11 @@ function renderNavigator (desktop = true) {
 
 describe('components Navigator', () => {
   describe('snapshots', () => {
-    it('contain random notes and its icon', () => {
+    it('contain navigations and its icon', () => {
       const { container } = renderNavigator()
       expect(getByText(container, 'Random Notes')).toBeInTheDocument()
       expect(getByTitle(container, 'Random Notes')).toMatchSnapshot()
+      expect(getByTitle(container, 'Repository')).toMatchSnapshot()
     })
     it('contain grin icon', () => {
       const { container } = renderNavigator()
@@ -41,6 +43,24 @@ describe('components Navigator', () => {
     it('show in bottom for mobile', () => {
       const { container } = renderNavigator(false)
       expect(container.firstChild).toHaveStyle('bottom: 0px')
+    })
+  })
+  describe('userEvent', () => {
+    beforeEach(() => {
+      jest.spyOn(window, 'open').mockReturnValue()
+    })
+    afterEach(() => {
+      window.open.mockRestore()
+    })
+
+    it('open this repository when click the Repository', () => {
+      const { container } = renderNavigator()
+      const repo = getByTitle(container, 'Repository')
+
+      userEvent.click(repo)
+      expect(window.open).toHaveBeenCalledWith(
+        'https://github.com/prabagitaivan/white'
+      )
     })
   })
 })

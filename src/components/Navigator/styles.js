@@ -27,6 +27,9 @@ export default makeStyles(
       left: 0,
       right: 0,
       fontSize: 30
+    },
+    githubIcon: {
+      padding: 2
     }
   },
   { name: 'Navigator' }
