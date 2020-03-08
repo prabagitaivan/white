@@ -1,4 +1,4 @@
-import { render, getByText } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
 import createStore from '../../stores'
@@ -21,8 +21,8 @@ function renderContent (desktop = true) {
 describe('components Content', () => {
   describe('snapshots', () => {
     it('contain children inside', () => {
-      const { container } = renderContent()
-      const children = getByText(container, 'test content')
+      const { container, getByText } = renderContent()
+      const children = getByText('test content')
       expect(container.firstChild).toContainElement(children)
     })
     it('return correct style for desktop', () => {

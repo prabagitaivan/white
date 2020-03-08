@@ -1,9 +1,4 @@
-import {
-  render,
-  getByText,
-  getByTitle,
-  getByRole
-} from '@testing-library/react'
+import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import React from 'react'
 import { Provider } from 'react-redux'
@@ -27,14 +22,14 @@ function renderNavigator (desktop = true) {
 describe('components Navigator', () => {
   describe('snapshots', () => {
     it('contain navigations and its icon', () => {
-      const { container } = renderNavigator()
-      expect(getByText(container, 'Random Notes')).toBeInTheDocument()
-      expect(getByTitle(container, 'Random Notes')).toMatchSnapshot()
-      expect(getByTitle(container, 'Repository')).toMatchSnapshot()
+      const { getByText, getByTitle } = renderNavigator()
+      expect(getByText('Random Notes')).toBeInTheDocument()
+      expect(getByTitle('Random Notes')).toMatchSnapshot()
+      expect(getByTitle('Repository')).toMatchSnapshot()
     })
     it('contain grin icon', () => {
-      const { container } = renderNavigator()
-      expect(getByRole(container, 'img')).toHaveTextContent('😁')
+      const { getByRole } = renderNavigator()
+      expect(getByRole('img')).toHaveTextContent('😁')
     })
     it('show in top for desktop', () => {
       const { container } = renderNavigator()
@@ -54,8 +49,8 @@ describe('components Navigator', () => {
     })
 
     it('open this repository when click the Repository', () => {
-      const { container } = renderNavigator()
-      const repo = getByTitle(container, 'Repository')
+      const { getByTitle } = renderNavigator()
+      const repo = getByTitle('Repository')
 
       userEvent.click(repo)
       expect(window.open).toHaveBeenCalledWith(

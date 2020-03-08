@@ -1,4 +1,4 @@
-import { render, getByTestId } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import React from 'react'
 import { createStore as ReduxCreateStore } from 'redux'
 import { Provider, useStore } from 'react-redux'
@@ -12,13 +12,13 @@ const App = () => {
 
 function renderApp (preloadedState = undefined) {
   const store = createStore(preloadedState)
-  const { container } = render(
+  const { getByTestId } = render(
     <Provider store={store}>
       <App />
     </Provider>
   )
 
-  return JSON.parse(getByTestId(container, 'data').firstChild.textContent)
+  return JSON.parse(getByTestId('data').firstChild.textContent)
 }
 
 describe('main Stores', () => {

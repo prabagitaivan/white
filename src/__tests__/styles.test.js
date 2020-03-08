@@ -1,4 +1,4 @@
-import { render, getByTestId } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import fs from 'fs'
 import path from 'path'
 import React from 'react'
@@ -20,13 +20,13 @@ describe('main Styles', () => {
   })
   describe('libraries', () => {
     it('return correct class name for material ui', () => {
-      const { container } = render(
+      const { getByTestId } = render(
         <Styles>
           <MuiContainer data-testid='data'>test</MuiContainer>
         </Styles>
       )
 
-      expect(getByTestId(container, 'data')).toHaveClass(
+      expect(getByTestId('data')).toHaveClass(
         'MuiContainer-root MuiContainer-maxWidthLg'
       )
     })
@@ -49,13 +49,13 @@ describe('main Styles', () => {
           </div>
         )
       }
-      const { container } = render(
+      const { getByTestId } = render(
         <Styles>
           <Container>test</Container>
         </Styles>
       )
 
-      expect(getByTestId(container, 'data')).toHaveClass(
+      expect(getByTestId('data')).toHaveClass(
         'WhiteContainer-root WhiteContainer-maxWidthLg'
       )
     })
