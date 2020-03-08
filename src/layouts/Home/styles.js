@@ -31,14 +31,27 @@ export const notes = makeStyles(
     img: {
       cursor: 'pointer'
     },
-    gridListTileBar: ({ desktop }) => ({
-      height: desktop ? 48 : 40
-    }),
-    title: {
-      fontSize: ({ desktop }) => (desktop ? 24 : 15),
-      lineHeight: 'normal',
-      whiteSpace: 'normal',
-      color: 'rgba(255, 255, 255, 0.85)'
+    gridListTileBar: {
+      height: 50,
+
+      '& .MuiGridListTileBar-titleWrap': {
+        marginLeft: 10,
+        marginRight: 10
+      },
+      '& .MuiGridListTileBar-rootSubtitle': {
+        marginLeft: 10,
+        marginRight: 10
+      },
+      '& .MuiGridListTileBar-title': {
+        fontSize: 15,
+        lineHeight: 'normal',
+        color: 'rgba(255, 255, 255, 0.85)'
+      },
+      '& .MuiGridListTileBar-subtitle': {
+        fontSize: 12,
+        lineHeight: 'normal',
+        color: 'rgba(255, 255, 255, 0.75)'
+      }
     }
   },
   { name: `${layout}Notes` }

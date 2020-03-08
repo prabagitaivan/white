@@ -70,6 +70,7 @@ describe('libraries firebase', () => {
           image: 'image3',
           title: 'title3',
           url: 'url3',
+          author: 'author3',
           active: true,
           created_at: 1580916575000,
           updated_at: 1580916626000
@@ -98,6 +99,7 @@ describe('libraries firebase', () => {
           image: 'image3',
           title: 'title3',
           url: 'url3',
+          author: 'author3',
           active: true,
           created_at: new Date(1580916575000),
           updated_at: new Date(1580916626000)

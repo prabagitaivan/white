@@ -23,7 +23,8 @@ export default memo(() => {
               onClick={() => openNote(note.url)}
             />
             <GridListTileBar
-              title={<div className={classes.title}>{note.title}</div>}
+              title={note.title}
+              subtitle={note.author}
               className={classes.gridListTileBar}
             />
           </GridListTile>

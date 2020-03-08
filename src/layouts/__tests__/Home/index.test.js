@@ -81,7 +81,7 @@ describe('layouts Home', () => {
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
     })
-    it('contain data content when that active only', () => {
+    it('show active only in data content', () => {
       const { queryByAltText } = renderHome(false, {
         requesting: false,
         data: [
@@ -102,6 +102,29 @@ describe('layouts Home', () => {
 
       expect(queryByAltText('title1')).not.toBeInTheDocument()
       expect(queryByAltText('title2')).toBeInTheDocument()
+    })
+    it('show subtitle when author provided in data content', () => {
+      const { queryByText } = renderHome(false, {
+        requesting: false,
+        data: [
+          {
+            image: 'image1',
+            title: 'title1',
+            url: 'url1',
+            active: true
+          },
+          {
+            image: 'image2',
+            title: 'title2',
+            url: 'url2',
+            author: 'author2',
+            active: true
+          }
+        ]
+      })
+
+      expect(queryByText('author1')).not.toBeInTheDocument()
+      expect(queryByText('author2')).toBeInTheDocument()
     })
   })
   describe('mounting', () => {

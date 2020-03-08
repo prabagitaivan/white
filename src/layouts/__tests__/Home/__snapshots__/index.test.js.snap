@@ -18,7 +18,7 @@ exports[`layouts Home snapshots contain data content when requesting result is n
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteHomeNotes-gridListTileBar WhiteHomeNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiGridListTileBar-root WhiteHomeNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
       >
         <div
           class="MuiGridListTileBar-titleWrap"
@@ -26,11 +26,7 @@ exports[`layouts Home snapshots contain data content when requesting result is n
           <div
             class="MuiGridListTileBar-title"
           >
-            <div
-              class="WhiteHomeNotes-title WhiteHomeNotes-title"
-            >
-              title
-            </div>
+            title
           </div>
         </div>
       </div>
@@ -57,7 +53,7 @@ exports[`layouts Home snapshots contain data content when requesting result is n
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteHomeNotes-gridListTileBar WhiteHomeNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiGridListTileBar-root WhiteHomeNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
       >
         <div
           class="MuiGridListTileBar-titleWrap"
@@ -65,11 +61,7 @@ exports[`layouts Home snapshots contain data content when requesting result is n
           <div
             class="MuiGridListTileBar-title"
           >
-            <div
-              class="WhiteHomeNotes-title WhiteHomeNotes-title"
-            >
-              title
-            </div>
+            title
           </div>
         </div>
       </div>
