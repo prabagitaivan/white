@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import createStore from '../../stores'
 import Styles from '../../styles'
 import Navigator from '../Navigator'
+import * as emoji from '../../libraries/emoji'
 
 function renderNavigator (desktop = true) {
   const preloadedState = { status: { desktop } }
@@ -27,10 +28,6 @@ describe('components Navigator', () => {
       expect(getByTitle('Random Notes')).toMatchSnapshot()
       expect(getByTitle('Repository')).toMatchSnapshot()
     })
-    it('contain grin icon', () => {
-      const { getByRole } = renderNavigator()
-      expect(getByRole('img')).toHaveTextContent('😁')
-    })
     it('show in top for desktop', () => {
       const { container } = renderNavigator()
       expect(container.firstChild).toHaveStyle('top: 0px')
@@ -43,9 +40,11 @@ describe('components Navigator', () => {
   describe('userEvent', () => {
     beforeEach(() => {
       jest.spyOn(window, 'open').mockReturnValue()
+      jest.spyOn(emoji, 'getRandomEmoji')
     })
     afterEach(() => {
       window.open.mockRestore()
+      emoji.getRandomEmoji.mockRestore()
     })
 
     it('open this repository when click the Repository', () => {
@@ -56,6 +55,16 @@ describe('components Navigator', () => {
       expect(window.open).toHaveBeenCalledWith(
         'https://github.com/prabagitaivan/white'
       )
+    })
+    it('random emoji when click the Emoji avatar', () => {
+      const { getByRole } = renderNavigator()
+      const avatar = getByRole('img')
+
+      userEvent.click(avatar)
+      expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(1)
+
+      userEvent.click(avatar)
+      expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(2)
     })
   })
 })

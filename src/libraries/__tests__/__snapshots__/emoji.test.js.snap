@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`libraries emoji data return all defined emoji 1`] = `
+Array [
+  Object {
+    "image": "😁",
+    "text": "grinning face with smiling eyes",
+  },
+  Object {
+    "image": "😂",
+    "text": "face with tears of joy",
+  },
+  Object {
+    "image": "🙂",
+    "text": "slightly smiling face",
+  },
+  Object {
+    "image": "🙃",
+    "text": "upside-down face",
+  },
+  Object {
+    "image": "🤔",
+    "text": "thinking face",
+  },
+  Object {
+    "image": "🤨",
+    "text": "face with raised eyebrow",
+  },
+  Object {
+    "image": "🤯",
+    "text": "exploding head",
+  },
+  Object {
+    "image": "😮",
+    "text": "face with open mouth",
+  },
+  Object {
+    "image": "👻",
+    "text": "ghost",
+  },
+  Object {
+    "image": "👽",
+    "text": "alien",
+  },
+  Object {
+    "image": "👾",
+    "text": "alien monster",
+  },
+  Object {
+    "image": "🤖",
+    "text": "robot",
+  },
+  Object {
+    "image": "🙈",
+    "text": "see-no-evil monkey",
+  },
+  Object {
+    "image": "🙉",
+    "text": "hear-no-evil monkey",
+  },
+  Object {
+    "image": "🙊",
+    "text": "speak-no-evil monkey",
+  },
+  Object {
+    "image": "👋",
+    "text": "waving hand",
+  },
+  Object {
+    "image": "🖖",
+    "text": "vulcan salute",
+  },
+  Object {
+    "image": "✌️",
+    "text": "victory hand",
+  },
+  Object {
+    "image": "🤟",
+    "text": "love-you gesture",
+  },
+  Object {
+    "image": "🤘",
+    "text": "sign of the horns",
+  },
+  Object {
+    "image": "👍",
+    "text": "thumbs up",
+  },
+  Object {
+    "image": "👊",
+    "text": "oncoming fist",
+  },
+  Object {
+    "image": "🚀",
+    "text": "rocket",
+  },
+  Object {
+    "image": "🔥",
+    "text": "fire",
+  },
+]
+`;
