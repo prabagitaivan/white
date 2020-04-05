@@ -9,8 +9,7 @@ import {
   Tooltip,
   IconButton
 } from '@material-ui/core'
-import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
-import GitHubIcon from '@material-ui/icons/GitHub'
+import { PlayCircleFilled, GitHub } from '@material-ui/icons'
 import useStyles from './styles'
 import { getRandomEmoji } from '../../libraries/emoji'
 
@@ -44,12 +43,12 @@ export default memo(() => {
           <div className={classes.grow} />
           <Tooltip title='Random Notes'>
             <IconButton size='small'>
-              <PlayCircleFilledIcon />
+              <PlayCircleFilled />
             </IconButton>
           </Tooltip>
           <Tooltip title='Repository' edge='end'>
             <IconButton size='small' onClick={openRepository}>
-              <GitHubIcon className={classes.githubIcon} />
+              <GitHub className={classes.githubIcon} />
             </IconButton>
           </Tooltip>
         </Toolbar>
