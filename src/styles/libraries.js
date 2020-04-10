@@ -5,3 +5,10 @@ export const generateClassName = (rule, styleSheet) => {
   if (prefix.match(/^Mui/)) return name
   else return `White${name}`
 }
+
+export const getLightStatus = () => {
+  const hour = new Date().getHours()
+
+  if (hour >= 6 && hour <= 17) return true
+  else return false
+}
