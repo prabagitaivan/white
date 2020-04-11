@@ -9,7 +9,7 @@ import Home from '../../Home'
 
 let store
 
-function renderHome (desktop = true, randomNotes) {
+function renderHome ({ desktop = true, randomNotes }) {
   const preloadedState = { status: { desktop }, randomNotes }
   store = createStore(preloadedState)
 
@@ -31,33 +31,37 @@ afterEach(() => {
 describe('layouts Home', () => {
   describe('snapshots', () => {
     it('contain navigator', () => {
-      const { container } = renderHome()
+      const { container } = renderHome({})
       const Navigator = container.querySelector('#navigator')
       expect(Navigator).toBeInTheDocument()
     })
     it('contain loading content when requesting', () => {
-      const { container } = renderHome()
+      const { container } = renderHome({})
       const Content = container.querySelector('#content')
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain empty content when requesting result is empty', () => {
-      const { container } = renderHome(true, { requesting: false, data: [] })
+      const { container } = renderHome({
+        randomNotes: { requesting: false, data: [] }
+      })
       const Content = container.querySelector('#content')
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain data content when requesting result is not empty in desktop', () => {
-      const { container } = renderHome(true, {
-        requesting: false,
-        data: [
-          {
-            image: 'image',
-            title: 'title',
-            url: 'url',
-            active: true
-          }
-        ]
+      const { container } = renderHome({
+        randomNotes: {
+          requesting: false,
+          data: [
+            {
+              image: 'image',
+              title: 'title',
+              url: 'url',
+              active: true
+            }
+          ]
+        }
       })
       const Content = container.querySelector('#content')
 
@@ -65,16 +69,19 @@ describe('layouts Home', () => {
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain data content when requesting result is not empty in mobile', () => {
-      const { container } = renderHome(false, {
-        requesting: false,
-        data: [
-          {
-            image: 'image',
-            title: 'title',
-            url: 'url',
-            active: true
-          }
-        ]
+      const { container } = renderHome({
+        desktop: false,
+        randomNotes: {
+          requesting: false,
+          data: [
+            {
+              image: 'image',
+              title: 'title',
+              url: 'url',
+              active: true
+            }
+          ]
+        }
       })
       const Content = container.querySelector('#content')
 
@@ -82,45 +89,49 @@ describe('layouts Home', () => {
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('show active only in data content', () => {
-      const { queryByAltText } = renderHome(false, {
-        requesting: false,
-        data: [
-          {
-            image: 'image1',
-            title: 'title1',
-            url: 'url1',
-            active: false
-          },
-          {
-            image: 'image2',
-            title: 'title2',
-            url: 'url2',
-            active: true
-          }
-        ]
+      const { queryByAltText } = renderHome({
+        randomNotes: {
+          requesting: false,
+          data: [
+            {
+              image: 'image1',
+              title: 'title1',
+              url: 'url1',
+              active: false
+            },
+            {
+              image: 'image2',
+              title: 'title2',
+              url: 'url2',
+              active: true
+            }
+          ]
+        }
       })
 
       expect(queryByAltText('title1')).not.toBeInTheDocument()
       expect(queryByAltText('title2')).toBeInTheDocument()
     })
     it('show subtitle when author provided in data content', () => {
-      const { queryByText } = renderHome(false, {
-        requesting: false,
-        data: [
-          {
-            image: 'image1',
-            title: 'title1',
-            url: 'url1',
-            active: true
-          },
-          {
-            image: 'image2',
-            title: 'title2',
-            url: 'url2',
-            author: 'author2',
-            active: true
-          }
-        ]
+      const { queryByText } = renderHome({
+        randomNotes: {
+          requesting: false,
+          data: [
+            {
+              image: 'image1',
+              title: 'title1',
+              url: 'url1',
+              active: true
+            },
+            {
+              image: 'image2',
+              title: 'title2',
+              url: 'url2',
+              author: 'author2',
+              active: true
+            }
+          ]
+        }
       })
 
       expect(queryByText('author1')).not.toBeInTheDocument()
@@ -129,7 +140,7 @@ describe('layouts Home', () => {
   })
   describe('mounting', () => {
     beforeEach(() => {
-      renderHome()
+      renderHome({})
     })
 
     it('request for random notes data after mount', () => {
@@ -145,22 +156,24 @@ describe('layouts Home', () => {
     })
 
     it("open url when click the note's images", () => {
-      const { getByAltText } = renderHome(true, {
-        requesting: false,
-        data: [
-          {
-            image: 'image1',
-            title: 'title1',
-            url: 'url1',
-            active: true
-          },
-          {
-            image: 'image2',
-            title: 'title2',
-            url: 'url2',
-            active: true
-          }
-        ]
+      const { getByAltText } = renderHome({
+        randomNotes: {
+          requesting: false,
+          data: [
+            {
+              image: 'image1',
+              title: 'title1',
+              url: 'url1',
+              active: true
+            },
+            {
+              image: 'image2',
+              title: 'title2',
+              url: 'url2',
+              active: true
+            }
+          ]
+        }
       })
 
       const Image1 = getByAltText('title1')

@@ -5,7 +5,7 @@ import createStore from '../../stores'
 import Styles from '../../styles'
 import Content from '../Content'
 
-function renderContent (desktop = true) {
+function renderContent ({ desktop = true }) {
   const preloadedState = { status: { desktop } }
   const store = createStore(preloadedState)
 
@@ -21,18 +21,18 @@ function renderContent (desktop = true) {
 describe('components Content', () => {
   describe('snapshots', () => {
     it('contain children inside', () => {
-      const { container, getByText } = renderContent()
+      const { container, getByText } = renderContent({})
       const children = getByText('test')
       expect(container.firstChild).toContainElement(children)
     })
     it('return correct style for desktop', () => {
-      const { container } = renderContent()
+      const { container } = renderContent({})
       expect(container.firstChild).toHaveStyle(
         'padding-top: 85px; padding-bottom: 20px;'
       )
     })
     it('return correct style for mobile', () => {
-      const { container } = renderContent(false)
+      const { container } = renderContent({ desktop: false })
       expect(container.firstChild).toHaveStyle(
         'padding-top: 15px; padding-bottom: 80px;'
       )

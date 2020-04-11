@@ -1,5 +1,5 @@
 import React, { memo, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import {
   AppBar,
   Fab,
@@ -9,8 +9,14 @@ import {
   Tooltip,
   IconButton
 } from '@material-ui/core'
-import { PlayCircleFilled, GitHub } from '@material-ui/icons'
+import {
+  PlayCircleFilled,
+  GitHub,
+  WbSunny,
+  Brightness2
+} from '@material-ui/icons'
 import useStyles from './styles'
+import { setTheme } from '../../reducers/status'
 import { getRandomEmoji } from '../../libraries/emoji'
 
 const initialEmoji = getRandomEmoji()
@@ -20,9 +26,13 @@ const openRepository = () =>
 
 export default memo(() => {
   const [emoji, setEmoji] = useState(initialEmoji)
-  const { desktop } = useSelector(state => state.status)
+  const { desktop, light } = useSelector(state => state.status)
+  const dispatch = useDispatch()
   const classes = useStyles({ desktop })
 
+  const changeTheme = () => {
+    dispatch(setTheme(!light))
+  }
   const changeEmoji = () => {
     const emoji = getRandomEmoji()
     setEmoji(emoji)
@@ -46,9 +56,22 @@ export default memo(() => {
               <PlayCircleFilled />
             </IconButton>
           </Tooltip>
-          <Tooltip title='Repository' edge='end'>
+          <Tooltip title='Repository'>
             <IconButton size='small' onClick={openRepository}>
-              <GitHub className={classes.githubIcon} />
+              <GitHub className={classes.compressIcon} />
+            </IconButton>
+          </Tooltip>
+          <Tooltip
+            title='Light / Dark Theme'
+            edge='end'
+            className={classes.themeContainer}
+          >
+            <IconButton size='small' onClick={changeTheme}>
+              {light ? (
+                <WbSunny className={classes.compressIcon} />
+              ) : (
+                <Brightness2 className={classes.compressIcon} />
+              )}
             </IconButton>
           </Tooltip>
         </Toolbar>

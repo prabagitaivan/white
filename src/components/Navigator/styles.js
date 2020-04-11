@@ -28,8 +28,11 @@ export default makeStyles(
       right: 0,
       fontSize: 30
     },
-    githubIcon: {
+    compressIcon: {
       padding: 2
+    },
+    themeContainer: {
+      marginLeft: 10
     }
   },
   { name: 'Navigator' }
