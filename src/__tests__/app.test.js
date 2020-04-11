@@ -9,6 +9,8 @@ import { setConnection, setScreen } from '../reducers/status'
 import App from '../app'
 import Home from '../layouts/Home'
 
+const store = createStore()
+
 function setConnectionEvent (online) {
   window.navigator.onLine = online
   window.dispatchEvent(new Event(online ? 'online' : 'offline'))
@@ -17,8 +19,6 @@ function setScreenEvent (size) {
   window.innerWidth = size
   window.dispatchEvent(new Event('resize'))
 }
-
-const store = createStore()
 
 beforeEach(() => {
   jest.spyOn(store, 'dispatch').mockReturnValue()

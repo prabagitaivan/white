@@ -4,7 +4,7 @@ import { StylesProvider, ThemeProvider } from '@material-ui/styles'
 import { CssBaseline } from '@material-ui/core'
 import './global.css'
 import * as themes from './themes'
-import { generateClassName } from './libraries'
+import { generateClassName } from '../libraries/styles'
 
 export default ({ children }) => {
   const { light } = useSelector(state => state.status)

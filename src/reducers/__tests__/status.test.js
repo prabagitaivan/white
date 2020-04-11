@@ -1,5 +1,5 @@
 import reducers, { setConnection, setScreen, setTheme } from '../status'
-import { getLightStatus } from '../../styles/libraries'
+import { getLightStatus } from '../../libraries/styles'
 
 function setConnectionAction (online) {
   const state = reducers(undefined, {})

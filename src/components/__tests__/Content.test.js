@@ -12,7 +12,7 @@ function renderContent (desktop = true) {
   return render(
     <Provider store={store}>
       <Styles>
-        <Content>test content</Content>
+        <Content>test</Content>
       </Styles>
     </Provider>
   )
@@ -22,7 +22,7 @@ describe('components Content', () => {
   describe('snapshots', () => {
     it('contain children inside', () => {
       const { container, getByText } = renderContent()
-      const children = getByText('test content')
+      const children = getByText('test')
       expect(container.firstChild).toContainElement(children)
     })
     it('return correct style for desktop', () => {

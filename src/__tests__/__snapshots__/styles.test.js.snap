@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`main Styles configuration return dark theme configuration 1`] = `
+exports[`main Styles return dark theme configuration 1`] = `
 Object {
   "breakpoints": Object {
     "between": [Function],
@@ -286,7 +286,7 @@ Object {
 }
 `;
 
-exports[`main Styles configuration return global css 1`] = `
+exports[`main Styles return global css 1`] = `
 "body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -303,7 +303,7 @@ body::-webkit-scrollbar {
 "
 `;
 
-exports[`main Styles configuration return light theme configuration 1`] = `
+exports[`main Styles return light theme configuration 1`] = `
 Object {
   "breakpoints": Object {
     "between": [Function],

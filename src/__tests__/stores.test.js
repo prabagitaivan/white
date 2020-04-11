@@ -7,18 +7,18 @@ import reducers from '../reducers'
 
 const App = () => {
   const store = useStore()
-  return <div data-testid='data'>{JSON.stringify(store.getState())}</div>
+  return <div>{JSON.stringify(store.getState())}</div>
 }
 
 function renderApp (preloadedState = undefined) {
   const store = createStore(preloadedState)
-  const { getByTestId } = render(
+  const { container } = render(
     <Provider store={store}>
       <App />
     </Provider>
   )
 
-  return JSON.parse(getByTestId('data').firstChild.textContent)
+  return JSON.parse(container.firstChild.textContent)
 }
 
 describe('main Stores', () => {

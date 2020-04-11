@@ -1,5 +1,5 @@
 import { createActions, handleActions } from 'redux-actions'
-import { getLightStatus } from '../styles/libraries'
+import { getLightStatus } from '../libraries/styles'
 
 const defaultState = {
   online: true,

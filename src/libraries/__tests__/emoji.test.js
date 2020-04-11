@@ -8,7 +8,7 @@ describe('libraries emoji', () => {
     })
   })
   describe('main', () => {
-    it('get random emoji data', async () => {
+    it('return random emoji data', async () => {
       const emoji = getRandomEmoji()
       const found = data.find(
         datum => datum.text === emoji.text && datum.image === emoji.image
