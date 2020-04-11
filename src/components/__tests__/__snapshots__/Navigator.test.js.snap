@@ -14,7 +14,6 @@ exports[`components Navigator snapshots contain navigations and its icon on dark
       aria-hidden="true"
       class="MuiSvgIcon-root WhiteNavigator-compressIcon"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -42,7 +41,6 @@ exports[`components Navigator snapshots contain navigations and its icon on ligh
       aria-hidden="true"
       class="MuiSvgIcon-root"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -70,7 +68,6 @@ exports[`components Navigator snapshots contain navigations and its icon on ligh
       aria-hidden="true"
       class="MuiSvgIcon-root WhiteNavigator-compressIcon"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
@@ -98,7 +95,6 @@ exports[`components Navigator snapshots contain navigations and its icon on ligh
       aria-hidden="true"
       class="MuiSvgIcon-root WhiteNavigator-compressIcon"
       focusable="false"
-      role="presentation"
       viewBox="0 0 24 24"
     >
       <path
