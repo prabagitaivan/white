@@ -7,11 +7,16 @@ export const loading = makeStyles(
     root: {
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center'
+      alignItems: 'center',
+      marginTop: '40vh'
     },
     linearProgress: {
       height: 10,
-      width: '60%'
+      width: '60%',
+
+      '& .MuiLinearProgress-barColorSecondary': {
+        backgroundColor: '#b1b1b1'
+      }
     }
   },
   { name: `${layout}Loading` }
@@ -20,7 +25,8 @@ export const loading = makeStyles(
 export const empty = makeStyles(
   {
     root: {
-      textAlign: 'center'
+      textAlign: 'center',
+      marginTop: '40vh'
     }
   },
   { name: `${layout}Empty` }
