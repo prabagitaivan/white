@@ -15,7 +15,7 @@ export const light = createMuiTheme({
       contrastText: '#ffffff'
     },
     action: {
-      active: '#969696'
+      active: '#686868'
     },
     background: {
       default: '#ffffff'
@@ -41,7 +41,7 @@ export const dark = createMuiTheme({
       contrastText: '#000000'
     },
     action: {
-      active: '#ffffff'
+      active: '#fafafa'
     },
     background: {
       default: '#3e3e3e'

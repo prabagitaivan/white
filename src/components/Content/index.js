@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
 import { Container } from '@material-ui/core'
 import useStyles from './styles'
 
-export default ({ children }) => {
+export default memo(({ children }) => {
   const { desktop } = useSelector(state => state.status)
   const classes = useStyles({ desktop })
 
@@ -12,4 +12,4 @@ export default ({ children }) => {
       {children}
     </Container>
   )
-}
+})

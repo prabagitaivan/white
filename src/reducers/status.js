@@ -4,7 +4,8 @@ import { getLightStatus } from '../libraries/styles'
 const defaultState = {
   online: true,
   desktop: true,
-  light: getLightStatus()
+  light: getLightStatus(),
+  page: 'Home'
 }
 
 export const {

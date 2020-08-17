@@ -10,7 +10,7 @@ import Home from '../../Home'
 let store
 
 function renderHome ({ desktop = true, randomNotes }) {
-  const preloadedState = { status: { desktop }, randomNotes }
+  const preloadedState = { status: { desktop, page: 'Home' }, randomNotes }
   store = createStore(preloadedState)
 
   jest.spyOn(store, 'dispatch').mockReturnValue()

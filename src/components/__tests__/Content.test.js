@@ -6,7 +6,7 @@ import Styles from '../../styles'
 import Content from '../Content'
 
 function renderContent ({ desktop = true }) {
-  const preloadedState = { status: { desktop } }
+  const preloadedState = { status: { desktop, page: 'Home' } }
   const store = createStore(preloadedState)
 
   return render(

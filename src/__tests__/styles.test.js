@@ -31,7 +31,7 @@ describe('main Styles', () => {
     expect(themes.dark).toMatchSnapshot()
   })
   it('return correct theme for light status', () => {
-    const preloadedState = { status: { light: true } }
+    const preloadedState = { status: { light: true, page: 'Home' } }
     const store = createStore(preloadedState)
 
     const { container } = render(
@@ -46,7 +46,7 @@ describe('main Styles', () => {
     )
   })
   it('return correct theme for dark status', () => {
-    const preloadedState = { status: { light: false } }
+    const preloadedState = { status: { light: false, page: 'Home' } }
     const store = createStore(preloadedState)
 
     const { container } = render(

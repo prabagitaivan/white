@@ -1,25 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components Navigator snapshots contain navigations and its icon on dark theme 1`] = `
+exports[`components Navigator snapshots contain main menu 1`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root WhiteNavigator-themeContainer MuiIconButton-sizeSmall MuiIconButton-edgeEnd"
+  class="MuiButtonBase-root MuiButton-root MuiButton-text WhiteNavigatorMenu-button WhiteNavigatorMenu-button MuiButton-textSecondary MuiButton-textSizeSmall MuiButton-sizeSmall"
   tabindex="0"
-  title="Light / Dark Theme"
+  title="Menu"
   type="button"
 >
   <span
-    class="MuiIconButton-label"
+    class="MuiButton-label"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigator-compressIcon"
-      focusable="false"
-      viewBox="0 0 24 24"
+    <span
+      class="MuiButton-startIcon MuiButton-iconSizeSmall"
     >
-      <path
-        d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"
-      />
-    </svg>
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          cx="7.2"
+          cy="14.4"
+          r="3.2"
+        />
+        <circle
+          cx="14.8"
+          cy="18"
+          r="2"
+        />
+        <circle
+          cx="15.2"
+          cy="8.8"
+          r="4.8"
+        />
+      </svg>
+    </span>
+    Random Notes
   </span>
   <span
     class="MuiTouchRipple-root"
@@ -27,34 +44,7 @@ exports[`components Navigator snapshots contain navigations and its icon on dark
 </button>
 `;
 
-exports[`components Navigator snapshots contain navigations and its icon on light theme 1`] = `
-<button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
-  tabindex="0"
-  title="Random Notes"
-  type="button"
->
-  <span
-    class="MuiIconButton-label"
-  >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"
-      />
-    </svg>
-  </span>
-  <span
-    class="MuiTouchRipple-root"
-  />
-</button>
-`;
-
-exports[`components Navigator snapshots contain navigations and its icon on light theme 2`] = `
+exports[`components Navigator snapshots contain side menu on dark theme 1`] = `
 <button
   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
   tabindex="0"
@@ -81,7 +71,61 @@ exports[`components Navigator snapshots contain navigations and its icon on ligh
 </button>
 `;
 
-exports[`components Navigator snapshots contain navigations and its icon on light theme 3`] = `
+exports[`components Navigator snapshots contain side menu on dark theme 2`] = `
+<button
+  class="MuiButtonBase-root MuiIconButton-root WhiteNavigator-themeContainer MuiIconButton-sizeSmall MuiIconButton-edgeEnd"
+  tabindex="0"
+  title="Light / Dark Theme"
+  type="button"
+>
+  <span
+    class="MuiIconButton-label"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root WhiteNavigator-compressIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"
+      />
+    </svg>
+  </span>
+  <span
+    class="MuiTouchRipple-root"
+  />
+</button>
+`;
+
+exports[`components Navigator snapshots contain side menu on light theme 1`] = `
+<button
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  tabindex="0"
+  title="Repository"
+  type="button"
+>
+  <span
+    class="MuiIconButton-label"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root WhiteNavigator-compressIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+      />
+    </svg>
+  </span>
+  <span
+    class="MuiTouchRipple-root"
+  />
+</button>
+`;
+
+exports[`components Navigator snapshots contain side menu on light theme 2`] = `
 <button
   class="MuiButtonBase-root MuiIconButton-root WhiteNavigator-themeContainer MuiIconButton-sizeSmall MuiIconButton-edgeEnd"
   tabindex="0"

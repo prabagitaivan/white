@@ -19,7 +19,8 @@ describe('reducers status', () => {
     expect(reducers(undefined, {})).toEqual({
       online: true,
       desktop: true,
-      light: getLightStatus()
+      light: getLightStatus(),
+      page: 'Home'
     })
   })
   it('return correct actions', () => {

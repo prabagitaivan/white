@@ -9,13 +9,9 @@ import {
   Tooltip,
   IconButton
 } from '@material-ui/core'
-import {
-  PlayCircleFilled,
-  GitHub,
-  WbSunny,
-  Brightness2
-} from '@material-ui/icons'
+import { GitHub, WbSunny, Brightness2 } from '@material-ui/icons'
 import useStyles from './styles'
+import Menu from './components/Menu'
 import { setTheme } from '../../reducers/status'
 import { getRandomEmoji } from '../../libraries/emoji'
 
@@ -49,13 +45,8 @@ export default memo(() => {
       </Fab>
       <Container>
         <Toolbar disableGutters>
-          Random Notes
+          <Menu />
           <div className={classes.grow} />
-          <Tooltip title='Random Notes'>
-            <IconButton size='small'>
-              <PlayCircleFilled />
-            </IconButton>
-          </Tooltip>
           <Tooltip title='Repository'>
             <IconButton size='small' onClick={openRepository}>
               <GitHub className={classes.compressIcon} />

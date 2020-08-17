@@ -11,7 +11,7 @@ import Navigator from '../Navigator'
 let store
 
 function renderNavigator ({ desktop = true, light = true }) {
-  const preloadedState = { status: { desktop, light } }
+  const preloadedState = { status: { desktop, light, page: 'Home' } }
   store = createStore(preloadedState)
 
   jest.spyOn(store, 'dispatch').mockReturnValue()
@@ -27,15 +27,19 @@ function renderNavigator ({ desktop = true, light = true }) {
 
 describe('components Navigator', () => {
   describe('snapshots', () => {
-    it('contain navigations and its icon on light theme', () => {
+    it('contain main menu', () => {
       const { getByText, getByTitle } = renderNavigator({})
       expect(getByText('Random Notes')).toBeInTheDocument()
-      expect(getByTitle('Random Notes')).toMatchSnapshot()
+      expect(getByTitle('Menu')).toMatchSnapshot()
+    })
+    it('contain side menu on light theme', () => {
+      const { getByTitle } = renderNavigator({})
       expect(getByTitle('Repository')).toMatchSnapshot()
       expect(getByTitle('Light / Dark Theme')).toMatchSnapshot()
     })
-    it('contain navigations and its icon on dark theme', () => {
+    it('contain side menu on dark theme', () => {
       const { getByTitle } = renderNavigator({ light: false })
+      expect(getByTitle('Repository')).toMatchSnapshot()
       expect(getByTitle('Light / Dark Theme')).toMatchSnapshot()
     })
     it('show in top for desktop', () => {

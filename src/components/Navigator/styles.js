@@ -1,5 +1,7 @@
 import { makeStyles } from '@material-ui/styles'
 
+const layout = 'Navigator'
+
 export default makeStyles(
   {
     appBar: {
@@ -35,5 +37,23 @@ export default makeStyles(
       marginLeft: 10
     }
   },
-  { name: 'Navigator' }
+  { name: layout }
+)
+
+export const menu = makeStyles(
+  {
+    button: {
+      fontSize: ({ desktop }) => (desktop ? 12 : 10),
+      textTransform: 'initial',
+
+      '& .MuiButton-startIcon': {
+        marginTop: -3,
+        marginRight: 2
+      },
+      '& .MuiButton-startIcon > svg': {
+        fontSize: 24
+      }
+    }
+  },
+  { name: `${layout}Menu` }
 )
