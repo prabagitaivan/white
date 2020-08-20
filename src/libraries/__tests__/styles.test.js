@@ -3,12 +3,11 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { Container as MuiContainer } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
-import createStore from '../../stores'
+import store from '../../stores'
 import Styles from '../../styles'
 import { getLightStatus } from '../../libraries/styles'
 
 const resetDate = Date
-const store = createStore()
 
 function mockGetLightStatus (hour) {
   global.Date = jest.fn(() => ({

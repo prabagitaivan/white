@@ -3,13 +3,11 @@ import React from 'react'
 import { Router } from 'react-router-dom'
 import { createBrowserHistory } from 'history'
 import { Provider } from 'react-redux'
-import createStore from '../stores'
+import store from '../stores'
 import Styles from '../styles'
 import { setConnection, setScreen } from '../reducers/status'
 import App from '../app'
 import Home from '../layouts/Home'
-
-const store = createStore()
 
 function setConnectionEvent (online) {
   window.navigator.onLine = online

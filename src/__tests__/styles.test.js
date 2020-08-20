@@ -4,7 +4,7 @@ import path from 'path'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { makeStyles } from '@material-ui/styles'
-import createStore from '../stores'
+import { createStore } from '../stores'
 import Styles from '../styles'
 import * as themes from '../styles/themes'
 
