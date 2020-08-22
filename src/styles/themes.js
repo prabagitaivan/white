@@ -18,7 +18,8 @@ export const light = createMuiTheme({
       active: '#686868'
     },
     background: {
-      default: '#ffffff'
+      default: '#ffffff',
+      paper: '#fafafa'
     },
     text: {
       primary: '#000000'
@@ -44,7 +45,8 @@ export const dark = createMuiTheme({
       active: '#fafafa'
     },
     background: {
-      default: '#3e3e3e'
+      default: '#3e3e3e',
+      paper: '#686868'
     },
     text: {
       primary: '#ffffff'

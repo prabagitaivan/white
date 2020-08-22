@@ -53,6 +53,28 @@ export const menu = makeStyles(
       '& .MuiButton-startIcon > svg': {
         fontSize: 24
       }
+    },
+    menu: {
+      position: 'fixed',
+      top: ({ desktop }) => (desktop ? 55 : 'initial'),
+      left: ({ desktop }) => (desktop ? 17 : 7),
+      bottom: ({ desktop }) => (desktop ? 'initial' : 55)
+    },
+    option: {
+      paddingLeft: 8,
+      paddingRight: 8,
+
+      '& .MuiButton-root': {
+        fontSize: ({ desktop }) => (desktop ? 12 : 10),
+        textTransform: 'initial',
+        backgroundColor: 'transparent'
+      },
+      '& .MuiButton-startIcon': {
+        marginRight: 2
+      },
+      '& .MuiButton-startIcon > svg': {
+        fontSize: 24
+      }
     }
   },
   { name: `${layout}Menu` }

@@ -14,7 +14,7 @@ async function mockGetRandomNotes (data = []) {
 }
 
 afterEach(() => {
-  database.ref.mockReset()
+  database.ref.mockRestore()
 })
 
 describe('libraries firebase', () => {

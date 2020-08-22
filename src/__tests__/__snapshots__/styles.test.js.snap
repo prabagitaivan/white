@@ -54,7 +54,7 @@ Object {
     "augmentColor": [Function],
     "background": Object {
       "default": "#3e3e3e",
-      "paper": "#fff",
+      "paper": "#686868",
     },
     "common": Object {
       "black": "#000",
@@ -362,7 +362,7 @@ Object {
     "augmentColor": [Function],
     "background": Object {
       "default": "#ffffff",
-      "paper": "#fff",
+      "paper": "#fafafa",
     },
     "common": Object {
       "black": "#000",

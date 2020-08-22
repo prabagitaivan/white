@@ -15,6 +15,11 @@ jest.mock('firebase/app', () => ({
   }))
 }))
 
+jest.mock('lodash', () => ({
+  shuffle: jest.fn(),
+  random: jest.fn()
+}))
+
 Object.defineProperty(window.navigator, 'onLine', {
   value: true,
   writable: true

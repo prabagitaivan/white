@@ -11,10 +11,14 @@ import Navigator from '../Navigator'
 let store
 
 function renderNavigator ({ desktop = true, light = true }) {
-  const preloadedState = { status: { desktop, light, page: 'Home' } }
+  const preloadedState = {
+    status: { desktop, light, page: 'Home' },
+    randomNotes: { data: [] }
+  }
   store = createStore(preloadedState)
 
   jest.spyOn(store, 'dispatch').mockReturnValue()
+  jest.spyOn(store, 'getState')
 
   return render(
     <Provider store={store}>
@@ -60,8 +64,29 @@ describe('components Navigator', () => {
       window.open.mockRestore()
       emoji.getRandomEmoji.mockRestore()
       store.dispatch.mockRestore()
+      store.getState.mockRestore()
     })
 
+    it('open menu list when click Menu', () => {
+      // use Home menu list, testing it shows
+      const { getByText, getByTitle } = renderNavigator({})
+      const menu = getByTitle('Menu')
+
+      userEvent.click(menu)
+      expect(getByText('Shuffle Notes')).toBeInTheDocument()
+    })
+    it("do action and close when click one of the Menu's option", () => {
+      // use Home menu list, testing it shows
+      const { getByText, getByTitle, queryByText } = renderNavigator({})
+      const menu = getByTitle('Menu')
+
+      userEvent.click(menu)
+      const shuffleOption = getByText('Shuffle Notes')
+
+      userEvent.click(shuffleOption)
+      expect(store.getState).toHaveBeenCalled()
+      expect(queryByText('Shuffle Notes')).not.toBeInTheDocument()
+    })
     it('open this repository when click the Repository', () => {
       const { getByTitle } = renderNavigator({})
       const repo = getByTitle('Repository')

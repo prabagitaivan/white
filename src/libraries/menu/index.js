@@ -1,6 +1,9 @@
+import randomNotes from './randomNotes'
+
 const menu = {
   Home: {
-    name: 'Random Notes'
+    name: 'Random Notes',
+    options: randomNotes
   }
 }
 

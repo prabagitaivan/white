@@ -7,10 +7,11 @@ const defaultState = {
 }
 
 export const {
-  randomNotes: { request, success, failure }
+  randomNotes: { request, edit, success, failure }
 } = createActions({
   RANDOM_NOTES: {
     REQUEST: action => action,
+    EDIT: action => action,
     SUCCESS: action => action,
     FAILURE: action => action
   }
@@ -19,6 +20,7 @@ export const {
 export default handleActions(
   {
     [request]: state => ({ ...state, requesting: true, error: null }),
+    [edit]: (state, { payload: data = [] }) => ({ ...state, data }),
     [success]: (state, { payload: data = [] }) => ({
       ...state,
       data,
