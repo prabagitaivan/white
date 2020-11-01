@@ -7,7 +7,7 @@ import store from '../stores'
 import Styles from '../styles'
 import { setConnection, setScreen } from '../reducers/status'
 import App from '../app'
-import Home from '../layouts/Home'
+import RandomNotes from '../layouts/RandomNotes'
 
 function setConnectionEvent (online) {
   window.navigator.onLine = online
@@ -27,7 +27,7 @@ afterEach(() => {
 
 describe('main App', () => {
   describe('routers', () => {
-    it('render Home for initial router', () => {
+    it('render RandomNotes for initial router', () => {
       const history = createBrowserHistory()
       const AppRender = render(
         <Provider store={store}>
@@ -38,15 +38,15 @@ describe('main App', () => {
           </Styles>
         </Provider>
       )
-      const HomeRender = render(
+      const RandomNotesRender = render(
         <Provider store={store}>
           <Styles>
-            <Home />
+            <RandomNotes />
           </Styles>
         </Provider>
       )
 
-      expect(AppRender.container).toEqual(HomeRender.container)
+      expect(AppRender.container).toEqual(RandomNotesRender.container)
     })
   })
   describe('mounting', () => {

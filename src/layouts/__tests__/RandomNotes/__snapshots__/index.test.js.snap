@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`layouts Home snapshots contain data content when requesting result is not empty in desktop 1`] = `
+exports[`layouts RandomNotes snapshots contain data content when requesting result is not empty in desktop 1`] = `
 <ul
   class="MuiGridList-root"
   style="margin: -10px;"
@@ -14,11 +14,11 @@ exports[`layouts Home snapshots contain data content when requesting result is n
     >
       <img
         alt="title"
-        class="WhiteHomeNotes-img"
+        class="WhiteRandomNotesNotes-img"
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteHomeNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiGridListTileBar-root WhiteRandomNotesNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
       >
         <div
           class="MuiGridListTileBar-titleWrap"
@@ -35,7 +35,7 @@ exports[`layouts Home snapshots contain data content when requesting result is n
 </ul>
 `;
 
-exports[`layouts Home snapshots contain data content when requesting result is not empty in mobile 1`] = `
+exports[`layouts RandomNotes snapshots contain data content when requesting result is not empty in mobile 1`] = `
 <ul
   class="MuiGridList-root"
   style="margin: -10px;"
@@ -49,11 +49,11 @@ exports[`layouts Home snapshots contain data content when requesting result is n
     >
       <img
         alt="title"
-        class="WhiteHomeNotes-img"
+        class="WhiteRandomNotesNotes-img"
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteHomeNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiGridListTileBar-root WhiteRandomNotesNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
       >
         <div
           class="MuiGridListTileBar-titleWrap"
@@ -70,9 +70,9 @@ exports[`layouts Home snapshots contain data content when requesting result is n
 </ul>
 `;
 
-exports[`layouts Home snapshots contain empty content when requesting result is empty 1`] = `
+exports[`layouts RandomNotes snapshots contain empty content when requesting result is empty 1`] = `
 <div
-  class="WhiteHomeEmpty-root"
+  class="WhiteRandomNotesEmpty-root"
 >
   <div>
     Still Empty
@@ -86,15 +86,15 @@ exports[`layouts Home snapshots contain empty content when requesting result is 
 </div>
 `;
 
-exports[`layouts Home snapshots contain loading content when requesting 1`] = `
+exports[`layouts RandomNotes snapshots contain loading content when requesting 1`] = `
 <div
-  class="WhiteHomeLoading-root"
+  class="WhiteRandomNotesLoading-root"
 >
   <div>
     Loading
   </div>
   <div
-    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary WhiteHomeLoading-linearProgress MuiLinearProgress-indeterminate"
+    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary WhiteRandomNotesLoading-linearProgress MuiLinearProgress-indeterminate"
     role="progressbar"
   >
     <div

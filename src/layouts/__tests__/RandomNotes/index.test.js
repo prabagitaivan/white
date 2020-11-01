@@ -5,12 +5,15 @@ import { Provider } from 'react-redux'
 import { createStore } from '../../../stores'
 import Styles from '../../../styles'
 import { request } from '../../../reducers/randomNotes'
-import Home from '../../Home'
+import RandomNotes from '../../RandomNotes'
 
 let store
 
-function renderHome ({ desktop = true, randomNotes }) {
-  const preloadedState = { status: { desktop, page: 'Home' }, randomNotes }
+function renderRandomNotes ({ desktop = true, randomNotes }) {
+  const preloadedState = {
+    status: { desktop, page: 'RandomNotes' },
+    randomNotes
+  }
   store = createStore(preloadedState)
 
   jest.spyOn(store, 'dispatch').mockReturnValue()
@@ -18,7 +21,7 @@ function renderHome ({ desktop = true, randomNotes }) {
   return render(
     <Provider store={store}>
       <Styles>
-        <Home />
+        <RandomNotes />
       </Styles>
     </Provider>
   )
@@ -28,21 +31,21 @@ afterEach(() => {
   store.dispatch.mockRestore()
 })
 
-describe('layouts Home', () => {
+describe('layouts RandomNotes', () => {
   describe('snapshots', () => {
     it('contain navigator', () => {
-      const { container } = renderHome({})
+      const { container } = renderRandomNotes({})
       const Navigator = container.querySelector('#navigator')
       expect(Navigator).toBeInTheDocument()
     })
     it('contain loading content when requesting', () => {
-      const { container } = renderHome({})
+      const { container } = renderRandomNotes({})
       const Content = container.querySelector('#content')
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain empty content when requesting result is empty', () => {
-      const { container } = renderHome({
+      const { container } = renderRandomNotes({
         randomNotes: { requesting: false, data: [] }
       })
       const Content = container.querySelector('#content')
@@ -50,7 +53,7 @@ describe('layouts Home', () => {
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain data content when requesting result is not empty in desktop', () => {
-      const { container } = renderHome({
+      const { container } = renderRandomNotes({
         randomNotes: {
           requesting: false,
           data: [
@@ -69,7 +72,7 @@ describe('layouts Home', () => {
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain data content when requesting result is not empty in mobile', () => {
-      const { container } = renderHome({
+      const { container } = renderRandomNotes({
         desktop: false,
         randomNotes: {
           requesting: false,
@@ -89,7 +92,7 @@ describe('layouts Home', () => {
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('show active only in data content', () => {
-      const { queryByAltText } = renderHome({
+      const { queryByAltText } = renderRandomNotes({
         randomNotes: {
           requesting: false,
           data: [
@@ -113,7 +116,7 @@ describe('layouts Home', () => {
       expect(queryByAltText('title2')).toBeInTheDocument()
     })
     it('show subtitle when author provided in data content', () => {
-      const { queryByText } = renderHome({
+      const { queryByText } = renderRandomNotes({
         randomNotes: {
           requesting: false,
           data: [
@@ -140,7 +143,7 @@ describe('layouts Home', () => {
   })
   describe('mounting', () => {
     beforeEach(() => {
-      renderHome({})
+      renderRandomNotes({})
     })
 
     it('request for random notes data after mount', () => {
@@ -156,7 +159,7 @@ describe('layouts Home', () => {
     })
 
     it("open url when click the note's images", () => {
-      const { getByAltText } = renderHome({
+      const { getByAltText } = renderRandomNotes({
         randomNotes: {
           requesting: false,
           data: [

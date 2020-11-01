@@ -20,7 +20,7 @@ describe('reducers status', () => {
       online: true,
       desktop: true,
       light: getLightStatus(),
-      page: 'Home'
+      page: 'RandomNotes'
     })
   })
   it('return correct actions', () => {

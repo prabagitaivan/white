@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setConnection, setScreen } from './reducers/status'
-import Home from './layouts/Home'
+import RandomNotes from './layouts/RandomNotes'
 
 export default () => {
   const dispatch = useDispatch()
@@ -28,7 +28,7 @@ export default () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/' component={RandomNotes} />
       </Switch>
     </BrowserRouter>
   )

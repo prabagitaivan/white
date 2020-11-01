@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/styles'
 
-const layout = 'Home'
+const layout = 'RandomNotes'
 
 export const loading = makeStyles(
   {

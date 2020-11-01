@@ -1,7 +1,7 @@
 import randomNotes from './randomNotes'
 
 const menu = {
-  Home: {
+  RandomNotes: {
     name: 'Random Notes',
     options: randomNotes
   }

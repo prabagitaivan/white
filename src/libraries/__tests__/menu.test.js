@@ -10,7 +10,10 @@ function mockRandomNotesStore ({ data = [] }) {
 describe('libraries menu', () => {
   describe('data', () => {
     it('return all correct menu', () => {
-      expect(menu.Home).toEqual({ name: 'Random Notes', options: randomNotes })
+      expect(menu.RandomNotes).toEqual({
+        name: 'Random Notes',
+        options: randomNotes
+      })
     })
   })
   describe('random notes', () => {

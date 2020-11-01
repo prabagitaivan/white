@@ -12,7 +12,7 @@ let store
 
 function renderNavigator ({ desktop = true, light = true }) {
   const preloadedState = {
-    status: { desktop, light, page: 'Home' },
+    status: { desktop, light, page: 'RandomNotes' },
     randomNotes: { data: [] }
   }
   store = createStore(preloadedState)
@@ -68,7 +68,7 @@ describe('components Navigator', () => {
     })
 
     it('open menu list when click Menu', () => {
-      // use Home menu list, testing it shows
+      // use RandomNotes menu list, testing it shows
       const { getByText, getByTitle } = renderNavigator({})
       const menu = getByTitle('Menu')
 
@@ -76,7 +76,7 @@ describe('components Navigator', () => {
       expect(getByText('Shuffle Notes')).toBeInTheDocument()
     })
     it("do action and close when click one of the Menu's option", () => {
-      // use Home menu list, testing it shows
+      // use RandomNotes menu list, testing it shows
       const { getByText, getByTitle, queryByText } = renderNavigator({})
       const menu = getByTitle('Menu')
 

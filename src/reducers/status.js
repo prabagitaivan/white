@@ -5,7 +5,7 @@ const defaultState = {
   online: true,
   desktop: true,
   light: getLightStatus(),
-  page: 'Home'
+  page: 'RandomNotes'
 }
 
 export const {
