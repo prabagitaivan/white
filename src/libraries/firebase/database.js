@@ -24,4 +24,27 @@ export async function getRandomNotes () {
   return data
 }
 
+export async function getTreeBookmarks () {
+  const snapshots = await database.ref('tree_bookmarks/').once('value')
+  const data = {}
+
+  snapshots.forEach(snapshot => {
+    const subkey = snapshot.key
+    const subdata = snapshot.val()
+    data[subkey] = []
+
+    Object.keys(subdata).forEach(datum => {
+      const value = subdata[datum]
+
+      data[subkey].push({
+        title: value.title,
+        url: value.url,
+        active: value.active
+      })
+    })
+  })
+
+  return data
+}
+
 export default database
