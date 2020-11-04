@@ -8,6 +8,7 @@ import Styles from '../styles'
 import { setConnection, setScreen } from '../reducers/status'
 import App from '../app'
 import RandomNotes from '../layouts/RandomNotes'
+import TreeBookmarks from '../layouts/TreeBookmarks'
 
 function setConnectionEvent (online) {
   window.navigator.onLine = online
@@ -27,8 +28,9 @@ afterEach(() => {
 
 describe('main App', () => {
   describe('routers', () => {
-    it('render RandomNotes for initial router', () => {
+    it('render RandomNotes for / (root) router', () => {
       const history = createBrowserHistory()
+
       const AppRender = render(
         <Provider store={store}>
           <Styles>
@@ -47,6 +49,52 @@ describe('main App', () => {
       )
 
       expect(AppRender.container).toEqual(RandomNotesRender.container)
+    })
+    it('render RandomNotes for /random-notes router', () => {
+      const history = createBrowserHistory()
+      history.push('/random-notes')
+
+      const AppRender = render(
+        <Provider store={store}>
+          <Styles>
+            <Router history={history}>
+              <App />
+            </Router>
+          </Styles>
+        </Provider>
+      )
+      const RandomNotesRender = render(
+        <Provider store={store}>
+          <Styles>
+            <RandomNotes />
+          </Styles>
+        </Provider>
+      )
+
+      expect(AppRender.container).toEqual(RandomNotesRender.container)
+    })
+    it('render TreeBookmarks for /tree-bookmarks router', () => {
+      const history = createBrowserHistory()
+      history.push('/tree-bookmarks')
+
+      const AppRender = render(
+        <Provider store={store}>
+          <Styles>
+            <Router history={history}>
+              <App />
+            </Router>
+          </Styles>
+        </Provider>
+      )
+      const TreeBookmarksRender = render(
+        <Provider store={store}>
+          <Styles>
+            <TreeBookmarks />
+          </Styles>
+        </Provider>
+      )
+
+      expect(AppRender.container).toEqual(TreeBookmarksRender.container)
     })
   })
   describe('mounting', () => {

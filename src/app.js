@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setConnection, setScreen } from './reducers/status'
 import RandomNotes from './layouts/RandomNotes'
+import TreeBookmarks from './layouts/TreeBookmarks'
 
 export default () => {
   const dispatch = useDispatch()
@@ -29,6 +30,8 @@ export default () => {
     <BrowserRouter>
       <Switch>
         <Route exact path='/' component={RandomNotes} />
+        <Route exact path='/random-notes' component={RandomNotes} />
+        <Route exact path='/tree-bookmarks' component={TreeBookmarks} />
       </Switch>
     </BrowserRouter>
   )

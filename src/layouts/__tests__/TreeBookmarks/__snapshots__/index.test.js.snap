@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty 1`] = `
+<div
+  class="MuiGrid-root"
+>
+  <ul
+    aria-multiselectable="false"
+    class="MuiTreeView-root WhiteTreeBookmarksTree-root WhiteTreeBookmarksTree-root"
+    role="tree"
+  >
+    <li
+      aria-expanded="false"
+      class="MuiTreeItem-root"
+      role="treeitem"
+      tabindex="0"
+    >
+      <div
+        class="MuiTreeItem-content"
+      >
+        <div
+          class="MuiTreeItem-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            />
+          </svg>
+        </div>
+        <div
+          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+        >
+          <p
+            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+          >
+            root
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty 2`] = `
+<div
+  class="MuiGrid-root"
+>
+  <ul
+    aria-multiselectable="false"
+    class="MuiTreeView-root WhiteTreeBookmarksTree-root WhiteTreeBookmarksTree-root"
+    role="tree"
+  >
+    <li
+      aria-expanded="true"
+      aria-selected="true"
+      class="MuiTreeItem-root MuiTreeItem-expanded MuiTreeItem-selected"
+      role="treeitem"
+      tabindex="0"
+    >
+      <div
+        class="MuiTreeItem-content"
+      >
+        <div
+          class="MuiTreeItem-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            />
+          </svg>
+        </div>
+        <div
+          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+        >
+          <p
+            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+          >
+            root
+          </p>
+        </div>
+      </div>
+      <ul
+        class="MuiCollapse-container MuiTreeItem-group"
+        role="group"
+        style="min-height: 0px; height: 0px; transition-duration: 300ms;"
+      >
+        <div
+          class="MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner"
+          >
+            <li
+              aria-expanded="false"
+              class="MuiTreeItem-root"
+              role="treeitem"
+              tabindex="-1"
+            >
+              <div
+                class="MuiTreeItem-content"
+              >
+                <div
+                  class="MuiTreeItem-iconContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                >
+                  <p
+                    class="MuiTypography-root WhiteTreeBookmarksTree-fontSubdata MuiTypography-body1"
+                  >
+                    subdata1
+                  </p>
+                </div>
+              </div>
+            </li>
+          </div>
+        </div>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty 3`] = `
+<div
+  class="MuiGrid-root"
+>
+  <ul
+    aria-multiselectable="false"
+    class="MuiTreeView-root WhiteTreeBookmarksTree-root WhiteTreeBookmarksTree-root"
+    role="tree"
+  >
+    <li
+      aria-expanded="true"
+      class="MuiTreeItem-root MuiTreeItem-expanded"
+      role="treeitem"
+      tabindex="-1"
+    >
+      <div
+        class="MuiTreeItem-content"
+      >
+        <div
+          class="MuiTreeItem-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+            />
+          </svg>
+        </div>
+        <div
+          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+        >
+          <p
+            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+          >
+            root
+          </p>
+        </div>
+      </div>
+      <ul
+        class="MuiCollapse-container MuiTreeItem-group"
+        role="group"
+        style="min-height: 0px; height: 0px; transition-duration: 300ms;"
+      >
+        <div
+          class="MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner"
+          >
+            <li
+              aria-expanded="true"
+              aria-selected="true"
+              class="MuiTreeItem-root MuiTreeItem-expanded MuiTreeItem-selected"
+              role="treeitem"
+              tabindex="0"
+            >
+              <div
+                class="MuiTreeItem-content"
+              >
+                <div
+                  class="MuiTreeItem-iconContainer"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                >
+                  <p
+                    class="MuiTypography-root WhiteTreeBookmarksTree-fontSubdata MuiTypography-body1"
+                  >
+                    subdata1
+                  </p>
+                </div>
+              </div>
+              <ul
+                class="MuiCollapse-container MuiTreeItem-group"
+                role="group"
+                style="min-height: 0px; height: 0px; transition-duration: 300ms;"
+              >
+                <div
+                  class="MuiCollapse-wrapper"
+                >
+                  <div
+                    class="MuiCollapse-wrapperInner"
+                  >
+                    <li
+                      class="MuiTreeItem-root"
+                      role="treeitem"
+                      tabindex="-1"
+                    >
+                      <div
+                        class="MuiTreeItem-content"
+                      >
+                        <div
+                          class="MuiTreeItem-iconContainer"
+                        >
+                          <svg
+                            aria-hidden="true"
+                            class="MuiSvgIcon-root"
+                            focusable="false"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              d="M10 9c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm0 4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zM7 9.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm3 7c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-3-3c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm3-6c.28 0 .5-.22.5-.5s-.22-.5-.5-.5-.5.22-.5.5.22.5.5.5zM14 9c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm0-1.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5-.5.22-.5.5.22.5.5.5zm3 6c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm0-4c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm2-3.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm0-3.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"
+                            />
+                          </svg>
+                        </div>
+                        <div
+                          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                        >
+                          <div
+                            class="MuiGrid-root"
+                          >
+                            <p
+                              class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap"
+                            >
+                              title1
+                            </p>
+                            <p
+                              class="MuiTypography-root WhiteTreeBookmarksTree-fontUrl MuiTypography-body1 MuiTypography-noWrap"
+                            >
+                              url1
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </ul>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`layouts TreeBookmarks snapshots contain empty content when requesting result is empty 1`] = `
+<div
+  class="MuiGrid-root"
+>
+  <ul
+    aria-multiselectable="false"
+    class="MuiTreeView-root WhiteTreeBookmarksTree-root WhiteTreeBookmarksTree-root"
+    role="tree"
+  >
+    <li
+      class="MuiTreeItem-root"
+      role="treeitem"
+      tabindex="0"
+    >
+      <div
+        class="MuiTreeItem-content"
+      >
+        <div
+          class="MuiTreeItem-iconContainer"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 9c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm0 4c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zM7 9.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm3 7c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm-3-3c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm3-6c.28 0 .5-.22.5-.5s-.22-.5-.5-.5-.5.22-.5.5.22.5.5.5zM14 9c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1zm0-1.5c.28 0 .5-.22.5-.5s-.22-.5-.5-.5-.5.22-.5.5.22.5.5.5zm3 6c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm0-4c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm2-3.5c-.28 0-.5.22-.5.5s.22.5.5.5.5-.22.5-.5-.22-.5-.5-.5zm0-3.5c-.55 0-1 .45-1 1s.45 1 1 1 1-.45 1-1-.45-1-1-1z"
+            />
+          </svg>
+        </div>
+        <div
+          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+        >
+          <p
+            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+          >
+            root
+          </p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`layouts TreeBookmarks snapshots contain loading content when requesting 1`] = `
+<div
+  class="WhiteTreeBookmarksLoading-root"
+>
+  <div>
+    Loading
+  </div>
+  <div
+    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary WhiteTreeBookmarksLoading-linearProgress MuiLinearProgress-indeterminate"
+    role="progressbar"
+  >
+    <div
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Indeterminate"
+    />
+    <div
+      class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorSecondary"
+    />
+  </div>
+</div>
+`;
