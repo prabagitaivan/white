@@ -1,34 +1,19 @@
 import React, { memo, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import {
-  AppBar,
-  Fab,
-  Avatar,
-  Container,
-  Toolbar,
-  Tooltip,
-  IconButton
-} from '@material-ui/core'
-import { GitHub, WbSunny, Brightness2 } from '@material-ui/icons'
+import { useSelector } from 'react-redux'
+import { AppBar, Fab, Avatar, Container, Toolbar } from '@material-ui/core'
 import useStyles from './styles'
-import Menu from './components/Menu'
-import { setTheme } from '../../reducers/status'
+import Link from './components/Link'
+import Option from './components/Option'
+import Side from './components/Side'
 import { getRandomEmoji } from '../../libraries/emoji'
 
 const initialEmoji = getRandomEmoji()
 
-const openRepository = () =>
-  window.open('https://github.com/prabagitaivan/white')
-
 export default memo(() => {
   const [emoji, setEmoji] = useState(initialEmoji)
-  const { desktop, light } = useSelector(state => state.status)
-  const dispatch = useDispatch()
+  const { desktop } = useSelector(state => state.status)
   const classes = useStyles({ desktop })
 
-  const changeTheme = () => {
-    dispatch(setTheme(!light))
-  }
   const changeEmoji = () => {
     const emoji = getRandomEmoji()
     setEmoji(emoji)
@@ -45,28 +30,12 @@ export default memo(() => {
       </Fab>
       <Container>
         <Toolbar disableGutters>
-          <Menu />
+          <Option />
           <div className={classes.grow} />
-          <Tooltip title='Repository'>
-            <IconButton size='small' onClick={openRepository}>
-              <GitHub className={classes.compressIcon} />
-            </IconButton>
-          </Tooltip>
-          <Tooltip
-            title='Light / Dark Theme'
-            edge='end'
-            className={classes.themeContainer}
-          >
-            <IconButton size='small' onClick={changeTheme}>
-              {light ? (
-                <WbSunny className={classes.compressIcon} />
-              ) : (
-                <Brightness2 className={classes.compressIcon} />
-              )}
-            </IconButton>
-          </Tooltip>
+          <Side />
         </Toolbar>
       </Container>
+      <Link />
     </AppBar>
   )
 })

@@ -9,12 +9,13 @@ const defaultState = {
 }
 
 export const {
-  status: { setConnection, setScreen, setTheme }
+  status: { setConnection, setScreen, setTheme, setPage }
 } = createActions({
   STATUS: {
     SET_CONNECTION: action => action,
     SET_SCREEN: action => action,
-    SET_THEME: action => action
+    SET_THEME: action => action,
+    SET_PAGE: action => action
   }
 })
 
@@ -25,7 +26,8 @@ export default handleActions(
       ...state,
       desktop: size > 600
     }),
-    [setTheme]: (state, { payload: light }) => ({ ...state, light })
+    [setTheme]: (state, { payload: light }) => ({ ...state, light }),
+    [setPage]: (state, { payload: page }) => ({ ...state, page })
   },
   defaultState
 )

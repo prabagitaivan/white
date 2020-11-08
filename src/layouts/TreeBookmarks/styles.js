@@ -35,6 +35,11 @@ export const empty = makeStyles(
 export const tree = makeStyles(
   {
     root: {
+      marginTop: -7.5,
+      paddingTop: -7.5,
+      paddingBottom: 10
+    },
+    tree: {
       '& .MuiTreeItem-group': {
         marginLeft: 7,
         paddingLeft: 14,

@@ -1,4 +1,9 @@
-import reducers, { setConnection, setScreen, setTheme } from '../status'
+import reducers, {
+  setConnection,
+  setScreen,
+  setTheme,
+  setPage
+} from '../status'
 import { getLightStatus } from '../../libraries/styles'
 
 function setConnectionAction (online) {
@@ -12,6 +17,10 @@ function setScreenAction (size) {
 function setThemeAction (light) {
   const state = reducers(undefined, {})
   return reducers(state, setTheme(light))
+}
+function setPageAction (page) {
+  const state = reducers(undefined, {})
+  return reducers(state, setPage(page))
 }
 
 describe('reducers status', () => {
@@ -27,6 +36,7 @@ describe('reducers status', () => {
     expect(setConnection.toString()).toEqual('STATUS/SET_CONNECTION')
     expect(setScreen.toString()).toEqual('STATUS/SET_SCREEN')
     expect(setTheme.toString()).toEqual('STATUS/SET_THEME')
+    expect(setPage.toString()).toEqual('STATUS/SET_PAGE')
   })
   it('set for online status when set connection action called', () => {
     expect(setConnectionAction(true)).toMatchObject({ online: true })
@@ -43,5 +53,11 @@ describe('reducers status', () => {
   it('set for light status when set theme action called', () => {
     expect(setThemeAction(true)).toMatchObject({ light: true })
     expect(setThemeAction(false)).toMatchObject({ light: false })
+  })
+  it('set for page status when set page action called', () => {
+    expect(setPageAction('TreeBookmarks')).toMatchObject({
+      page: 'TreeBookmarks'
+    })
+    expect(setPageAction('RandomNotes')).toMatchObject({ page: 'RandomNotes' })
   })
 })

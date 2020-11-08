@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { createStore } from '../../../stores'
 import Styles from '../../../styles'
 import { request } from '../../../reducers/randomNotes'
+import { setPage } from '../../../reducers/status'
 import RandomNotes from '../../RandomNotes'
 
 let store
@@ -146,6 +147,9 @@ describe('layouts RandomNotes', () => {
       renderRandomNotes({})
     })
 
+    it('set page to random notes after mount', () => {
+      expect(store.dispatch).toHaveBeenCalledWith(setPage('RandomNotes'))
+    })
     it('request for random notes data after mount', () => {
       expect(store.dispatch).toHaveBeenCalledWith(request())
     })

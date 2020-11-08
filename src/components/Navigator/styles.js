@@ -29,18 +29,12 @@ export default makeStyles(
       left: 0,
       right: 0,
       fontSize: 30
-    },
-    compressIcon: {
-      padding: 2
-    },
-    themeContainer: {
-      marginLeft: 10
     }
   },
   { name: layout }
 )
 
-export const menu = makeStyles(
+export const option = makeStyles(
   {
     button: {
       fontSize: ({ desktop }) => (desktop ? 12 : 10),
@@ -77,5 +71,46 @@ export const menu = makeStyles(
       }
     }
   },
-  { name: `${layout}Menu` }
+  { name: `${layout}Option` }
+)
+
+export const side = makeStyles(
+  {
+    compressIcon: {
+      padding: 2
+    },
+    themeContainer: {
+      marginLeft: 10
+    }
+  },
+  { name: `${layout}Side` }
+)
+
+export const link = makeStyles(
+  {
+    root: {
+      position: 'fixed',
+      top: ({ desktop }) => (desktop ? 'auto' : 0),
+      bottom: ({ desktop }) => (desktop ? 0 : 'auto'),
+      marginTop: ({ desktop }) => (desktop ? 'initial' : 2.5),
+      marginBottom: ({ desktop }) => (desktop ? 4 : 'initial')
+    },
+    active: {
+      cursor: 'pointer',
+      fontSize: ({ desktop }) => (desktop ? 12 : 10)
+    },
+    inactive: {
+      cursor: 'pointer',
+      fontSize: ({ desktop }) => (desktop ? 12 : 10),
+      color: '#b1b1b1'
+    },
+    line: {
+      height: 1,
+      width: ({ desktop }) => (desktop ? 15 : 10),
+      marginLeft: 5,
+      marginRight: 5,
+      backgroundColor: '#b1b1b1'
+    }
+  },
+  { name: `${layout}Link` }
 )

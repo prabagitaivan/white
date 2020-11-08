@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
 import { request } from '../../reducers/randomNotes'
+import { setPage } from '../../reducers/status'
 import Loading from './components/Loading'
 import Empty from './components/Empty'
 import Notes from './components/Notes'
@@ -12,6 +13,7 @@ export default memo(() => {
   const dispatch = useDispatch()
 
   useEffect(() => {
+    dispatch(setPage('RandomNotes'))
     dispatch(request())
   }, [dispatch])
 

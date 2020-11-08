@@ -12,7 +12,13 @@ describe('libraries menu', () => {
     it('return all correct menu', () => {
       expect(menu.RandomNotes).toEqual({
         name: 'Random Notes',
-        options: randomNotes
+        options: randomNotes,
+        route: '/random-notes'
+      })
+      expect(menu.TreeBookmarks).toEqual({
+        name: 'Tree Bookmarks',
+        options: [],
+        route: '/tree-bookmarks'
       })
     })
   })

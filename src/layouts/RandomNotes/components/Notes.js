@@ -6,7 +6,7 @@ import { notes as useStyles } from '../styles'
 export default memo(() => {
   const { desktop } = useSelector(state => state.status)
   const { data } = useSelector(state => state.randomNotes)
-  const classes = useStyles({ desktop })
+  const classes = useStyles()
 
   const openNote = url => window.open(url)
 

@@ -34,9 +34,9 @@ export default memo(() => {
   const openBookmark = url => window.open(url)
 
   return (
-    <Grid>
+    <Grid className={classes.root}>
       <TreeView
-        className={classes.root}
+        className={classes.tree}
         defaultCollapseIcon={<HighlightOff />}
         defaultExpandIcon={<AddCircleOutline />}
         defaultEndIcon={<BlurCircular />}

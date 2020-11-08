@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import { createStore } from '../../../stores'
 import Styles from '../../../styles'
 import { request } from '../../../reducers/treeBookmarks'
+import { setPage } from '../../../reducers/status'
 import TreeBookmarks from '../../TreeBookmarks'
 
 let store
@@ -31,7 +32,7 @@ afterEach(() => {
   store.dispatch.mockRestore()
 })
 
-describe('layouts TreeBookmarks', () => {
+describe.only('layouts TreeBookmarks', () => {
   describe('snapshots', () => {
     it('contain navigator', () => {
       const { container } = renderTreeBookmarks({})
@@ -52,8 +53,40 @@ describe('layouts TreeBookmarks', () => {
       expect(Content).toBeInTheDocument()
       expect(Content.firstChild).toMatchSnapshot()
     })
-    it('contain data content when requesting result is not empty', () => {
+    it('contain data content when requesting result is not empty in desktop', () => {
       const { container, queryByText } = renderTreeBookmarks({
+        treeBookmarks: {
+          requesting: false,
+          data: {
+            subdata1: [
+              {
+                title: 'title1',
+                url: 'url1',
+                active: true
+              }
+            ]
+          }
+        }
+      })
+      const Content = container.querySelector('#content')
+
+      // root version
+      expect(Content).toBeInTheDocument()
+      expect(Content.firstChild).toMatchSnapshot()
+
+      // subdata version
+      const Data = queryByText('root')
+      userEvent.click(Data)
+      expect(Content.firstChild).toMatchSnapshot()
+
+      // bookmark version
+      const Subdata1 = queryByText('subdata1')
+      userEvent.click(Subdata1)
+      expect(Content.firstChild).toMatchSnapshot()
+    })
+    it('contain data content when requesting result is not empty in mobile', () => {
+      const { container, queryByText } = renderTreeBookmarks({
+        desktop: false,
         treeBookmarks: {
           requesting: false,
           data: {
@@ -119,6 +152,9 @@ describe('layouts TreeBookmarks', () => {
       renderTreeBookmarks({})
     })
 
+    it('set page to tree bookmarks after mount', () => {
+      expect(store.dispatch).toHaveBeenCalledWith(setPage('TreeBookmarks'))
+    })
     it('request for tree bookmarks data after mount', () => {
       expect(store.dispatch).toHaveBeenCalledWith(request())
     })

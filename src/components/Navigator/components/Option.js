@@ -9,7 +9,7 @@ import {
   Tooltip
 } from '@material-ui/core'
 import { BubbleChart } from '@material-ui/icons'
-import { menu as useStyles } from '../styles'
+import { option as useStyles } from '../styles'
 import data from '../../../libraries/menu'
 
 export default memo(() => {
