@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Empty snapshots return correct snapshot 1`] = `
+<div
+  class="WhiteEmpty-root"
+>
+  <div>
+    Still Empty
+  </div>
+  <span
+    aria-label="three-wise-monkeys"
+    role="img"
+  >
+    🙈🙉🙊
+  </span>
+</div>
+`;

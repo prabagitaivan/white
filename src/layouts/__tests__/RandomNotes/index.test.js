@@ -6,6 +6,8 @@ import { createStore } from '../../../stores'
 import Styles from '../../../styles'
 import { request } from '../../../reducers/randomNotes'
 import { setPage } from '../../../reducers/status'
+import Loading from '../../../components/Loading'
+import Empty from '../../../components/Empty'
 import RandomNotes from '../../RandomNotes'
 
 let store
@@ -41,17 +43,31 @@ describe('layouts RandomNotes', () => {
     })
     it('contain loading content when requesting', () => {
       const { container } = renderRandomNotes({})
+      const LoadingRender = render(
+        <Provider store={store}>
+          <Styles>
+            <Loading />
+          </Styles>
+        </Provider>
+      )
       const Content = container.querySelector('#content')
-      expect(Content).toBeInTheDocument()
-      expect(Content.firstChild).toMatchSnapshot()
+      const LoadingContent = LoadingRender.container
+      expect(Content.firstChild).toEqual(LoadingContent.firstChild)
     })
     it('contain empty content when requesting result is empty', () => {
       const { container } = renderRandomNotes({
         randomNotes: { requesting: false, data: [] }
       })
+      const EmptyRender = render(
+        <Provider store={store}>
+          <Styles>
+            <Empty />
+          </Styles>
+        </Provider>
+      )
       const Content = container.querySelector('#content')
-      expect(Content).toBeInTheDocument()
-      expect(Content.firstChild).toMatchSnapshot()
+      const EmptyContent = EmptyRender.container
+      expect(Content.firstChild).toEqual(EmptyContent.firstChild)
     })
     it('contain data content when requesting result is not empty in desktop', () => {
       const { container } = renderRandomNotes({

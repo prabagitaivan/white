@@ -14,11 +14,11 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
     >
       <img
         alt="title"
-        class="WhiteRandomNotesNotes-img"
+        class="WhiteRandomNotes-img"
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteRandomNotesNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiGridListTileBar-root WhiteRandomNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
       >
         <div
           class="MuiGridListTileBar-titleWrap"
@@ -49,11 +49,11 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
     >
       <img
         alt="title"
-        class="WhiteRandomNotesNotes-img"
+        class="WhiteRandomNotes-img"
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteRandomNotesNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiGridListTileBar-root WhiteRandomNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
       >
         <div
           class="MuiGridListTileBar-titleWrap"
@@ -68,41 +68,4 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
     </div>
   </li>
 </ul>
-`;
-
-exports[`layouts RandomNotes snapshots contain empty content when requesting result is empty 1`] = `
-<div
-  class="WhiteRandomNotesEmpty-root"
->
-  <div>
-    Still Empty
-  </div>
-  <span
-    aria-label="three-wise-monkeys"
-    role="img"
-  >
-    🙈🙉🙊
-  </span>
-</div>
-`;
-
-exports[`layouts RandomNotes snapshots contain loading content when requesting 1`] = `
-<div
-  class="WhiteRandomNotesLoading-root"
->
-  <div>
-    Loading
-  </div>
-  <div
-    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary WhiteRandomNotesLoading-linearProgress MuiLinearProgress-indeterminate"
-    role="progressbar"
-  >
-    <div
-      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Indeterminate"
-    />
-    <div
-      class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorSecondary"
-    />
-  </div>
-</div>
 `;

@@ -1,5 +1,15 @@
 import React, { memo } from 'react'
-import { empty as useStyles } from '../styles'
+import { makeStyles } from '@material-ui/styles'
+
+const useStyles = makeStyles(
+  {
+    root: {
+      textAlign: 'center',
+      marginTop: '40vh'
+    }
+  },
+  { name: 'Empty' }
+)
 
 export default memo(() => {
   const classes = useStyles()

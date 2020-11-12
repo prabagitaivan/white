@@ -2,11 +2,23 @@ import React, { memo } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { Tooltip, IconButton } from '@material-ui/core'
 import { GitHub, WbSunny, Brightness2 } from '@material-ui/icons'
-import { side as useStyles } from '../styles'
+import { makeStyles } from '@material-ui/styles'
 import { setTheme } from '../../../reducers/status'
 
 const openRepository = () =>
   window.open('https://github.com/prabagitaivan/white')
+
+const useStyles = makeStyles(
+  {
+    compressIcon: {
+      padding: 2
+    },
+    themeContainer: {
+      marginLeft: 10
+    }
+  },
+  { name: 'NavigatorSide' }
+)
 
 export default memo(() => {
   const { desktop, light } = useSelector(state => state.status)

@@ -2,11 +2,11 @@
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 1`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarksTree-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarksTree-tree WhiteTreeBookmarksTree-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
     role="tree"
   >
     <li
@@ -36,7 +36,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
           >
             root
           </p>
@@ -49,11 +49,11 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 2`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarksTree-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarksTree-tree WhiteTreeBookmarksTree-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
     role="tree"
   >
     <li
@@ -84,7 +84,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
           >
             root
           </p>
@@ -128,7 +128,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksTree-fontSubdata MuiTypography-body1"
+                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
                     subdata1
                   </p>
@@ -145,11 +145,11 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 3`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarksTree-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarksTree-tree WhiteTreeBookmarksTree-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
     role="tree"
   >
     <li
@@ -179,7 +179,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
           >
             root
           </p>
@@ -224,7 +224,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksTree-fontSubdata MuiTypography-body1"
+                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
                     subdata1
                   </p>
@@ -266,20 +266,16 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                         <div
                           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
                         >
-                          <div
-                            class="MuiGrid-root"
+                          <p
+                            class="MuiTypography-root WhiteTreeBookmarksLabel-title MuiTypography-body1 MuiTypography-noWrap"
                           >
-                            <p
-                              class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap"
-                            >
-                              title1
-                            </p>
-                            <p
-                              class="MuiTypography-root WhiteTreeBookmarksTree-fontUrl MuiTypography-body1 MuiTypography-noWrap"
-                            >
-                              url1
-                            </p>
-                          </div>
+                            title1
+                          </p>
+                          <p
+                            class="MuiTypography-root WhiteTreeBookmarksLabel-url MuiTypography-body1 MuiTypography-noWrap"
+                          >
+                            url1
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -297,11 +293,11 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 1`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarksTree-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarksTree-tree WhiteTreeBookmarksTree-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
     role="tree"
   >
     <li
@@ -331,7 +327,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
           >
             root
           </p>
@@ -344,11 +340,11 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 2`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarksTree-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarksTree-tree WhiteTreeBookmarksTree-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
     role="tree"
   >
     <li
@@ -379,7 +375,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
           >
             root
           </p>
@@ -423,7 +419,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksTree-fontSubdata MuiTypography-body1"
+                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
                     subdata1
                   </p>
@@ -440,11 +436,11 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 3`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarksTree-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarksTree-tree WhiteTreeBookmarksTree-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
     role="tree"
   >
     <li
@@ -474,7 +470,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksTree-fontRoot MuiTypography-body1"
+            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
           >
             root
           </p>
@@ -519,7 +515,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksTree-fontSubdata MuiTypography-body1"
+                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
                     subdata1
                   </p>
@@ -561,20 +557,16 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                         <div
                           class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
                         >
-                          <div
-                            class="MuiGrid-root"
+                          <p
+                            class="MuiTypography-root WhiteTreeBookmarksLabel-title MuiTypography-body1 MuiTypography-noWrap"
                           >
-                            <p
-                              class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap"
-                            >
-                              title1
-                            </p>
-                            <p
-                              class="MuiTypography-root WhiteTreeBookmarksTree-fontUrl MuiTypography-body1 MuiTypography-noWrap"
-                            >
-                              url1
-                            </p>
-                          </div>
+                            title1
+                          </p>
+                          <p
+                            class="MuiTypography-root WhiteTreeBookmarksLabel-url MuiTypography-body1 MuiTypography-noWrap"
+                          >
+                            url1
+                          </p>
                         </div>
                       </div>
                     </li>
@@ -587,42 +579,5 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
       </ul>
     </li>
   </ul>
-</div>
-`;
-
-exports[`layouts TreeBookmarks snapshots contain empty content when requesting result is empty 1`] = `
-<div
-  class="WhiteTreeBookmarksEmpty-root"
->
-  <div>
-    Still Empty
-  </div>
-  <span
-    aria-label="three-wise-monkeys"
-    role="img"
-  >
-    ☁️🌧️⛈️
-  </span>
-</div>
-`;
-
-exports[`layouts TreeBookmarks snapshots contain loading content when requesting 1`] = `
-<div
-  class="WhiteTreeBookmarksLoading-root"
->
-  <div>
-    Loading
-  </div>
-  <div
-    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary WhiteTreeBookmarksLoading-linearProgress MuiLinearProgress-indeterminate"
-    role="progressbar"
-  >
-    <div
-      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Indeterminate"
-    />
-    <div
-      class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorSecondary"
-    />
-  </div>
 </div>
 `;

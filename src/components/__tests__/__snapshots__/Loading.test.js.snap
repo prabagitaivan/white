@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components Loading snapshots return correct snapshot 1`] = `
+<div
+  class="WhiteLoading-root"
+>
+  <div>
+    Loading
+  </div>
+  <div
+    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary WhiteLoading-linearProgress MuiLinearProgress-indeterminate"
+    role="progressbar"
+  >
+    <div
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Indeterminate"
+    />
+    <div
+      class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorSecondary"
+    />
+  </div>
+</div>
+`;
