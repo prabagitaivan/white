@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React, { memo, Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { Grid, Typography } from '@material-ui/core'
@@ -56,18 +56,15 @@ export default memo(() => {
       className={classes.root}
     >
       {links.map((link, index) => (
-        <>
+        <Fragment key={index}>
           <Typography
-            key={`link-${index}`}
             className={link.name === name ? classes.active : classes.inactive}
             onClick={() => openLink(link.route)}
           >
             {link.name}
           </Typography>
-          {index !== links.length - 1 ? (
-            <div key={`line-${index}`} className={classes.line} />
-          ) : null}
-        </>
+          {index !== links.length - 1 ? <div className={classes.line} /> : null}
+        </Fragment>
       ))}
     </Grid>
   )

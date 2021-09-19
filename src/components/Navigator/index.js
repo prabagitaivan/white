@@ -53,7 +53,7 @@ export default memo(() => {
 
   return (
     <AppBar id='navigator' position='fixed' className={classes.appBar}>
-      <Fab color='secondary' className={classes.fab} onClick={changeEmoji}>
+      <Fab className={classes.fab} onClick={changeEmoji}>
         <Avatar>
           <span role='img' aria-label={emoji.text} className={classes.emoji}>
             {emoji.image}

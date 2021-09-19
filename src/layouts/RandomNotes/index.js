@@ -1,6 +1,11 @@
 import React, { memo, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { GridList, GridListTile, GridListTileBar } from '@material-ui/core'
+import {
+  Container,
+  GridList,
+  GridListTile,
+  GridListTileBar
+} from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
@@ -54,7 +59,7 @@ export default memo(() => {
   }, [dispatch])
 
   return (
-    <div>
+    <Container disableGutters>
       <Navigator />
       <Content>
         {requesting ? (
@@ -83,6 +88,6 @@ export default memo(() => {
           </GridList>
         )}
       </Content>
-    </div>
+    </Container>
   )
 })

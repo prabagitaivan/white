@@ -5,7 +5,7 @@ import {
   BlurCircular,
   HighlightOff
 } from '@material-ui/icons'
-import { Grid } from '@material-ui/core'
+import { Container, Grid } from '@material-ui/core'
 import { TreeView, TreeItem } from '@material-ui/lab'
 import { makeStyles } from '@material-ui/styles'
 import Navigator from '../../components/Navigator'
@@ -51,7 +51,7 @@ export default memo(() => {
   }, [dispatch])
 
   return (
-    <div>
+    <Container disableGutters>
       <Navigator />
       <Content>
         {requesting ? (
@@ -92,6 +92,6 @@ export default memo(() => {
           </Grid>
         )}
       </Content>
-    </div>
+    </Container>
   )
 })
