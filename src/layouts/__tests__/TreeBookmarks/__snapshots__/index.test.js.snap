@@ -10,56 +10,8 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
     role="tree"
   >
     <li
-      aria-expanded="false"
-      class="MuiTreeItem-root"
-      role="treeitem"
-      tabindex="0"
-    >
-      <div
-        class="MuiTreeItem-content"
-      >
-        <div
-          class="MuiTreeItem-iconContainer"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-            />
-          </svg>
-        </div>
-        <div
-          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
-        >
-          <p
-            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
-          >
-            root
-          </p>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 2`] = `
-<div
-  class="MuiGrid-root WhiteTreeBookmarks-root"
->
-  <ul
-    aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
-    role="tree"
-  >
-    <li
       aria-expanded="true"
-      aria-selected="true"
-      class="MuiTreeItem-root MuiTreeItem-expanded MuiTreeItem-selected"
+      class="MuiTreeItem-root MuiTreeItem-expanded"
       role="treeitem"
       tabindex="0"
     >
@@ -91,9 +43,9 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group"
+        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
         role="group"
-        style="min-height: 0px; height: 0px; transition-duration: 300ms;"
+        style="min-height: 0px;"
       >
         <div
           class="MuiCollapse-wrapper"
@@ -143,7 +95,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 </div>
 `;
 
-exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 3`] = `
+exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 2`] = `
 <div
   class="MuiGrid-root WhiteTreeBookmarks-root"
 >
@@ -186,9 +138,9 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group"
+        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
         role="group"
-        style="min-height: 0px; height: 0px; transition-duration: 300ms;"
+        style="min-height: 0px;"
       >
         <div
           class="MuiCollapse-wrapper"
@@ -301,56 +253,8 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
     role="tree"
   >
     <li
-      aria-expanded="false"
-      class="MuiTreeItem-root"
-      role="treeitem"
-      tabindex="0"
-    >
-      <div
-        class="MuiTreeItem-content"
-      >
-        <div
-          class="MuiTreeItem-iconContainer"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M13 7h-2v4H7v2h4v4h2v-4h4v-2h-4V7zm-1-5C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
-            />
-          </svg>
-        </div>
-        <div
-          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
-        >
-          <p
-            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
-          >
-            root
-          </p>
-        </div>
-      </div>
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 2`] = `
-<div
-  class="MuiGrid-root WhiteTreeBookmarks-root"
->
-  <ul
-    aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
-    role="tree"
-  >
-    <li
       aria-expanded="true"
-      aria-selected="true"
-      class="MuiTreeItem-root MuiTreeItem-expanded MuiTreeItem-selected"
+      class="MuiTreeItem-root MuiTreeItem-expanded"
       role="treeitem"
       tabindex="0"
     >
@@ -382,9 +286,9 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group"
+        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
         role="group"
-        style="min-height: 0px; height: 0px; transition-duration: 300ms;"
+        style="min-height: 0px;"
       >
         <div
           class="MuiCollapse-wrapper"
@@ -434,7 +338,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 </div>
 `;
 
-exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 3`] = `
+exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 2`] = `
 <div
   class="MuiGrid-root WhiteTreeBookmarks-root"
 >
@@ -477,9 +381,9 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group"
+        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
         role="group"
-        style="min-height: 0px; height: 0px; transition-duration: 300ms;"
+        style="min-height: 0px;"
       >
         <div
           class="MuiCollapse-wrapper"

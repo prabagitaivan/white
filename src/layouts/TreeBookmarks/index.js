@@ -5,7 +5,7 @@ import {
   BlurCircular,
   HighlightOff
 } from '@material-ui/icons'
-import { Container, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import { TreeView, TreeItem } from '@material-ui/lab'
 import { makeStyles } from '@material-ui/styles'
 import Navigator from '../../components/Navigator'
@@ -51,7 +51,7 @@ export default memo(() => {
   }, [dispatch])
 
   return (
-    <Container disableGutters>
+    <div>
       <Navigator />
       <Content>
         {requesting ? (
@@ -62,6 +62,7 @@ export default memo(() => {
           <Grid className={classes.root}>
             <TreeView
               className={classes.tree}
+              defaultExpanded={['root']}
               defaultCollapseIcon={<HighlightOff />}
               defaultExpandIcon={<AddCircleOutline />}
               defaultEndIcon={<BlurCircular />}
@@ -92,6 +93,6 @@ export default memo(() => {
           </Grid>
         )}
       </Content>
-    </Container>
+    </div>
   )
 })

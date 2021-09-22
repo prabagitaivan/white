@@ -2,14 +2,14 @@ import randomNotes from './randomNotes'
 
 const menu = {
   RandomNotes: {
-    name: 'Random Notes',
+    name: 'random notes',
     route: '/random-notes',
     options: randomNotes
   },
   TreeBookmarks: {
-    name: 'Tree Bookmarks',
+    name: 'tree bookmarks',
     route: '/tree-bookmarks',
-    options: []
+    options: null
   }
 }
 

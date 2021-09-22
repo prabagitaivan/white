@@ -12,6 +12,11 @@ Array [
       "render": [Function],
     },
   },
+]
+`;
+
+exports[`libraries menu random notes return all correct icon and order 2`] = `
+Array [
   Object {
     "$$typeof": Symbol(react.memo),
     "compare": null,

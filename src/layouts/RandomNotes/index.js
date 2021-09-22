@@ -1,11 +1,6 @@
 import React, { memo, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import {
-  Container,
-  GridList,
-  GridListTile,
-  GridListTileBar
-} from '@material-ui/core'
+import { GridList, GridListTile, GridListTileBar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
@@ -16,6 +11,12 @@ import Empty from '../../components/Empty'
 
 const useStyles = makeStyles(
   {
+    gridListTile: {
+      '& .MuiGridListTile-tile': {
+        borderRadius: 5,
+        boxShadow: '0px 5px 5px rgb(0 0 0 / 25%)'
+      }
+    },
     img: {
       cursor: 'pointer'
     },
@@ -59,7 +60,7 @@ export default memo(() => {
   }, [dispatch])
 
   return (
-    <Container disableGutters>
+    <div>
       <Navigator />
       <Content>
         {requesting ? (
@@ -71,12 +72,13 @@ export default memo(() => {
             {data
               .filter(note => note.active)
               .map((note, index) => (
-                <GridListTile key={index}>
+                <GridListTile key={index} className={classes.gridListTile}>
                   <img
                     src={note.image}
                     alt={note.title}
                     className={classes.img}
                     onClick={() => openNote(note.url)}
+                    loading='lazy'
                   />
                   <GridListTileBar
                     title={note.title}
@@ -88,6 +90,6 @@ export default memo(() => {
           </GridList>
         )}
       </Content>
-    </Container>
+    </div>
   )
 })

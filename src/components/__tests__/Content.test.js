@@ -28,13 +28,13 @@ describe('components Content', () => {
     it('return correct style for desktop', () => {
       const { container } = renderContent({})
       expect(container.firstChild).toHaveStyle(
-        'position: fixed; top: -7.5px; bottom: -7.5px; padding-top: 80px; padding-bottom: 20px;'
+        'padding-top: 65px; padding-bottom: 80px;'
       )
     })
     it('return correct style for mobile', () => {
       const { container } = renderContent({ desktop: false })
       expect(container.firstChild).toHaveStyle(
-        'position: fixed; top: 7.5px; bottom: -30px; padding-top: 20px; padding-bottom: 80px;'
+        'padding-top: 15px; padding-bottom: 110px;'
       )
     })
   })

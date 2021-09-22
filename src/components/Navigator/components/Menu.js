@@ -1,7 +1,7 @@
 import React, { memo, Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import { useHistory } from 'react-router-dom'
-import { Grid, Typography } from '@material-ui/core'
+import { Button } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import data from '../../../libraries/menu'
 
@@ -13,20 +13,22 @@ const links = Object.keys(data).map(page => ({
 const useStyles = makeStyles(
   {
     root: {
-      position: 'fixed',
-      top: ({ desktop }) => (desktop ? 'auto' : 0),
-      bottom: ({ desktop }) => (desktop ? 0 : 'auto'),
-      marginTop: ({ desktop }) => (desktop ? 'initial' : 2.5),
-      marginBottom: ({ desktop }) => (desktop ? 4 : 'initial')
+      display: 'flex',
+      alignItems: 'center'
     },
     active: {
       cursor: 'pointer',
-      fontSize: ({ desktop }) => (desktop ? 12 : 10)
+      fontSize: ({ desktop }) => (desktop ? 12 : 10),
+      textTransform: 'initial'
     },
     inactive: {
       cursor: 'pointer',
       fontSize: ({ desktop }) => (desktop ? 12 : 10),
-      color: '#b1b1b1'
+      textTransform: 'initial',
+
+      '& .MuiButton-label': {
+        color: '#b1b1b1'
+      }
     },
     line: {
       height: 1,
@@ -36,7 +38,7 @@ const useStyles = makeStyles(
       backgroundColor: '#b1b1b1'
     }
   },
-  { name: 'NavigatorLink' }
+  { name: 'NavigatorMenu' }
 )
 
 export default memo(() => {
@@ -48,24 +50,19 @@ export default memo(() => {
   const openLink = route => history.push(route)
 
   return (
-    <Grid
-      container
-      direction='row'
-      alignItems='center'
-      justify='center'
-      className={classes.root}
-    >
+    <div className={classes.root}>
       {links.map((link, index) => (
         <Fragment key={index}>
-          <Typography
+          <Button
+            size='small'
             className={link.name === name ? classes.active : classes.inactive}
             onClick={() => openLink(link.route)}
           >
             {link.name}
-          </Typography>
+          </Button>
           {index !== links.length - 1 ? <div className={classes.line} /> : null}
         </Fragment>
       ))}
-    </Grid>
+    </div>
   )
 })

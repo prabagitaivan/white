@@ -86,13 +86,8 @@ describe.only('layouts TreeBookmarks', () => {
       })
       const Content = container.querySelector('#content')
 
-      // root version
+      // root + subdata version
       expect(Content).toBeInTheDocument()
-      expect(Content.firstChild).toMatchSnapshot()
-
-      // subdata version
-      const Data = queryByText('root')
-      userEvent.click(Data)
       expect(Content.firstChild).toMatchSnapshot()
 
       // bookmark version
@@ -118,13 +113,8 @@ describe.only('layouts TreeBookmarks', () => {
       })
       const Content = container.querySelector('#content')
 
-      // root version
+      // root + subdata version
       expect(Content).toBeInTheDocument()
-      expect(Content.firstChild).toMatchSnapshot()
-
-      // subdata version
-      const Data = queryByText('root')
-      userEvent.click(Data)
       expect(Content.firstChild).toMatchSnapshot()
 
       // bookmark version
@@ -152,9 +142,6 @@ describe.only('layouts TreeBookmarks', () => {
           }
         }
       })
-
-      const Data = queryByText('root')
-      userEvent.click(Data)
 
       const Subdata1 = queryByText('subdata1')
       userEvent.click(Subdata1)
@@ -203,9 +190,6 @@ describe.only('layouts TreeBookmarks', () => {
           }
         }
       })
-
-      const Data = queryByText('root')
-      userEvent.click(Data)
 
       const Subdata1 = queryByText('subdata1')
       userEvent.click(Subdata1)

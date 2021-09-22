@@ -6,7 +6,7 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
   style="margin: -10px;"
 >
   <li
-    class="MuiGridListTile-root"
+    class="MuiGridListTile-root WhiteRandomNotes-gridListTile"
     style="width: 25%; height: 270px; padding: 10px;"
   >
     <div
@@ -15,6 +15,7 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
       <img
         alt="title"
         class="WhiteRandomNotes-img"
+        loading="lazy"
         src="image"
       />
       <div
@@ -41,7 +42,7 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
   style="margin: -10px;"
 >
   <li
-    class="MuiGridListTile-root"
+    class="MuiGridListTile-root WhiteRandomNotes-gridListTile"
     style="width: 100%; height: 270px; padding: 10px;"
   >
     <div
@@ -50,6 +51,7 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
       <img
         alt="title"
         class="WhiteRandomNotes-img"
+        loading="lazy"
         src="image"
       />
       <div

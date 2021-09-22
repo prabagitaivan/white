@@ -1,62 +1,52 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components Navigator snapshots contain link menu 1`] = `
-<div
-  class="MuiGrid-root WhiteNavigatorLink-root WhiteNavigatorLink-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-xs-center"
->
-  <p
-    class="MuiTypography-root WhiteNavigatorLink-active WhiteNavigatorLink-active MuiTypography-body1"
-  >
-    Random Notes
-  </p>
-  <div
-    class="WhiteNavigatorLink-line WhiteNavigatorLink-line"
-  />
-  <p
-    class="MuiTypography-root WhiteNavigatorLink-inactive WhiteNavigatorLink-inactive MuiTypography-body1"
-  >
-    Tree Bookmarks
-  </p>
-</div>
-`;
-
-exports[`components Navigator snapshots contain option menu 1`] = `
+exports[`components Navigator snapshots contain fab menu 1`] = `
 <button
-  class="MuiButtonBase-root MuiButton-root MuiButton-text WhiteNavigatorOption-button WhiteNavigatorOption-button MuiButton-textSecondary MuiButton-textSizeSmall MuiButton-sizeSmall"
+  class="MuiButtonBase-root MuiFab-root WhiteNavigatorFab-left WhiteNavigatorFab-left"
+  id="navigator-fab-shuffle-notes"
   tabindex="0"
-  title="Menu"
   type="button"
 >
   <span
-    class="MuiButton-label"
+    class="MuiFab-label"
   >
-    <span
-      class="MuiButton-startIcon MuiButton-iconSizeSmall"
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root WhiteNavigatorFab-icon WhiteNavigatorFab-icon"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <circle
-          cx="7.2"
-          cy="14.4"
-          r="3.2"
-        />
-        <circle
-          cx="14.8"
-          cy="18"
-          r="2"
-        />
-        <circle
-          cx="15.2"
-          cy="8.8"
-          r="4.8"
-        />
-      </svg>
-    </span>
-    Random Notes
+      <path
+        d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"
+      />
+    </svg>
+  </span>
+  <span
+    class="MuiTouchRipple-root"
+  />
+</button>
+`;
+
+exports[`components Navigator snapshots contain fab menu 2`] = `
+<button
+  class="MuiButtonBase-root MuiFab-root WhiteNavigatorFab-right WhiteNavigatorFab-right"
+  id="navigator-fab-open-random"
+  tabindex="0"
+  type="button"
+>
+  <span
+    class="MuiFab-label"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root WhiteNavigatorFab-icon WhiteNavigatorFab-icon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M7 2v11h3v9l7-12h-4l4-8z"
+      />
+    </svg>
   </span>
   <span
     class="MuiTouchRipple-root"
@@ -67,8 +57,8 @@ exports[`components Navigator snapshots contain option menu 1`] = `
 exports[`components Navigator snapshots contain side menu on dark theme 1`] = `
 <button
   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  id="navigator-toolbar-repository"
   tabindex="0"
-  title="Repository"
   type="button"
 >
   <span
@@ -76,7 +66,7 @@ exports[`components Navigator snapshots contain side menu on dark theme 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-compressIcon"
+      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
       focusable="false"
       viewBox="0 0 24 24"
     >
@@ -93,9 +83,9 @@ exports[`components Navigator snapshots contain side menu on dark theme 1`] = `
 
 exports[`components Navigator snapshots contain side menu on dark theme 2`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root WhiteNavigatorSide-themeContainer MuiIconButton-sizeSmall MuiIconButton-edgeEnd"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  id="navigator-toolbar-theme"
   tabindex="0"
-  title="Light / Dark Theme"
   type="button"
 >
   <span
@@ -103,7 +93,7 @@ exports[`components Navigator snapshots contain side menu on dark theme 2`] = `
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-compressIcon"
+      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
       focusable="false"
       viewBox="0 0 24 24"
     >
@@ -121,8 +111,8 @@ exports[`components Navigator snapshots contain side menu on dark theme 2`] = `
 exports[`components Navigator snapshots contain side menu on light theme 1`] = `
 <button
   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  id="navigator-toolbar-repository"
   tabindex="0"
-  title="Repository"
   type="button"
 >
   <span
@@ -130,7 +120,7 @@ exports[`components Navigator snapshots contain side menu on light theme 1`] = `
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-compressIcon"
+      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
       focusable="false"
       viewBox="0 0 24 24"
     >
@@ -147,9 +137,9 @@ exports[`components Navigator snapshots contain side menu on light theme 1`] = `
 
 exports[`components Navigator snapshots contain side menu on light theme 2`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root WhiteNavigatorSide-themeContainer MuiIconButton-sizeSmall MuiIconButton-edgeEnd"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  id="navigator-toolbar-theme"
   tabindex="0"
-  title="Light / Dark Theme"
   type="button"
 >
   <span
@@ -157,7 +147,7 @@ exports[`components Navigator snapshots contain side menu on light theme 2`] = `
   >
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-compressIcon"
+      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
       focusable="false"
       viewBox="0 0 24 24"
     >

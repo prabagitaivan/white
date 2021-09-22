@@ -37,51 +37,54 @@ function renderNavigator ({ desktop = true, light = true }) {
 
 describe('components Navigator', () => {
   describe('snapshots', () => {
-    it('contain option menu', () => {
-      // use RandomNotes default page
-      const { getAllByText, getByTitle } = renderNavigator({})
-      expect(getAllByText('Random Notes')[0]).toBeInTheDocument()
-      expect(getByTitle('Menu')).toMatchSnapshot()
-    })
-    it('contain side menu on light theme', () => {
-      const { getByTitle } = renderNavigator({})
-      expect(getByTitle('Repository')).toMatchSnapshot()
-      expect(getByTitle('Light / Dark Theme')).toMatchSnapshot()
-    })
-    it('contain side menu on dark theme', () => {
-      const { getByTitle } = renderNavigator({ light: false })
-      expect(getByTitle('Repository')).toMatchSnapshot()
-      expect(getByTitle('Light / Dark Theme')).toMatchSnapshot()
-    })
-    it('contain link menu', () => {
-      const { container } = renderNavigator({ light: false })
-      expect(container.firstChild.lastChild).toMatchSnapshot()
-    })
-    it('highlight current page as active in link menu', () => {
-      // use RandomNotes default page
-      const { getAllByText } = renderNavigator({})
-      expect(getAllByText('Random Notes')[1]).not.toHaveStyle('color: #b1b1b1')
-    })
-    it('dim other pages as inactive in link menu', () => {
+    it('highlight current page as active in menu', () => {
       // use RandomNotes default page
       const { getByText } = renderNavigator({})
-      expect(getByText('Tree Bookmarks')).toHaveStyle('color: #b1b1b1')
+      expect(getByText('random notes')).not.toHaveStyle('color: #b1b1b1')
     })
-    it('show main menu in top for desktop', () => {
+    it('dim other pages as inactive in menu', () => {
+      // use RandomNotes default page
+      const { getByText } = renderNavigator({})
+      expect(getByText('tree bookmarks')).toHaveStyle('color: #b1b1b1')
+    })
+    it('contain side menu on light theme', () => {
+      const { container } = renderNavigator({})
+      const Repo = container.querySelector('#navigator-toolbar-repository')
+      const Theme = container.querySelector('#navigator-toolbar-theme')
+
+      expect(Repo).toMatchSnapshot()
+      expect(Theme).toMatchSnapshot()
+    })
+    it('contain side menu on dark theme', () => {
+      const { container } = renderNavigator({ light: false })
+      const Repo = container.querySelector('#navigator-toolbar-repository')
+      const Theme = container.querySelector('#navigator-toolbar-theme')
+
+      expect(Repo).toMatchSnapshot()
+      expect(Theme).toMatchSnapshot()
+    })
+    it('contain fab menu', () => {
+      // use RandomNotes default page
+      const { container } = renderNavigator({})
+      const Shuffle = container.querySelector('#navigator-fab-shuffle-notes')
+      const Emoji = container.querySelector('#navigator-fab-emoji')
+      const Random = container.querySelector('#navigator-fab-open-random')
+
+      expect(Shuffle).toBeInTheDocument()
+      expect(Emoji).toBeInTheDocument()
+      expect(Random).toBeInTheDocument()
+
+      // skip emoji match snapshot because random generator
+      expect(Shuffle).toMatchSnapshot()
+      expect(Random).toMatchSnapshot()
+    })
+    it('show menu in top for desktop', () => {
       const { container } = renderNavigator({})
       expect(container.firstChild).toHaveStyle('top: 0px')
     })
-    it('show main menu in bottom for mobile', () => {
+    it('show menu in bottom for mobile', () => {
       const { container } = renderNavigator({ desktop: false })
       expect(container.firstChild).toHaveStyle('bottom: 0px')
-    })
-    it('show link menu in top for mobile', () => {
-      const { container } = renderNavigator({ desktop: false })
-      expect(container.firstChild.lastChild).toHaveStyle('top: 0px')
-    })
-    it('show link menu in bottom for desktop', () => {
-      const { container } = renderNavigator({})
-      expect(container.firstChild.lastChild).toHaveStyle('bottom: 0px')
     })
   })
   describe('userEvent', () => {
@@ -96,36 +99,42 @@ describe('components Navigator', () => {
       store.getState.mockRestore()
     })
 
-    it('open option menu list when click Menu', () => {
-      // use RandomNotes option menu list, testing it shows
-      const { getByText, getByTitle } = renderNavigator({})
-      const Menu = getByTitle('Menu')
+    it('open and navigate the page when click it page in menu', () => {
+      const { getByText } = renderNavigator({})
+      const RandomNotes = getByText('random notes')
+      const TreeBookmarks = getByText('tree bookmarks')
 
-      userEvent.click(Menu)
-      expect(getByText('Shuffle Notes')).toBeInTheDocument()
+      userEvent.click(RandomNotes)
+      expect(history.location.pathname).toEqual('/random-notes')
+      userEvent.click(TreeBookmarks)
+      expect(history.location.pathname).toEqual('/tree-bookmarks')
     })
-    it("do action and close when click one of the Menu's option", () => {
-      // use RandomNotes option menu list, testing it shows
-      const { getByText, getByTitle, queryByText } = renderNavigator({})
-      const Menu = getByTitle('Menu')
-
-      userEvent.click(Menu)
-      const ShuffleOption = getByText('Shuffle Notes')
-
-      userEvent.click(ShuffleOption)
-      expect(store.getState).toHaveBeenCalled()
-      expect(queryByText('Shuffle Notes')).not.toBeInTheDocument()
-    })
-    it('open this repository when click the Repository', () => {
-      const { getByTitle } = renderNavigator({})
-      const Repo = getByTitle('Repository')
+    it('open this repository when click the Repository from side menu', () => {
+      const { container } = renderNavigator({})
+      const Repo = container.querySelector('#navigator-toolbar-repository')
 
       userEvent.click(Repo)
       expect(window.open).toHaveBeenCalledWith(
         'https://github.com/prabagitaivan/white'
       )
     })
-    it('random emoji when click the Emoji avatar', () => {
+    it('switch to dark theme when click the Theme from side menu', () => {
+      const { container } = renderNavigator({})
+      const Theme = container.querySelector('#navigator-toolbar-theme')
+
+      userEvent.click(Theme)
+      expect(store.dispatch).toHaveBeenCalledTimes(1)
+      expect(store.dispatch).toHaveBeenCalledWith(setTheme(false))
+    })
+    it('switch to light theme when click the Theme from side menu', () => {
+      const { container } = renderNavigator({ light: false })
+      const Theme = container.querySelector('#navigator-toolbar-theme')
+
+      userEvent.click(Theme)
+      expect(store.dispatch).toHaveBeenCalledTimes(1)
+      expect(store.dispatch).toHaveBeenCalledWith(setTheme(true))
+    })
+    it('random emoji when click the main fab menu', () => {
       const { getByRole } = renderNavigator({})
       const Avatar = getByRole('img')
 
@@ -135,28 +144,21 @@ describe('components Navigator', () => {
       userEvent.click(Avatar)
       expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(2)
     })
-    it('switch to dark theme when click the Light / Dark Theme in light theme', () => {
-      const { getByTitle } = renderNavigator({})
-      const Theme = getByTitle('Light / Dark Theme')
+    it('do option when click left fab menu', () => {
+      // use RandomNotes option menu list
+      const { container } = renderNavigator({})
+      const Shuffle = container.querySelector('#navigator-fab-shuffle-notes')
 
-      userEvent.click(Theme)
-      expect(store.dispatch).toHaveBeenCalledTimes(1)
-      expect(store.dispatch).toHaveBeenCalledWith(setTheme(false))
+      userEvent.click(Shuffle)
+      expect(store.getState).toHaveBeenCalled()
     })
-    it('switch to light theme when click the Light / Dark Theme in dark theme', () => {
-      const { getByTitle } = renderNavigator({ light: false })
-      const Theme = getByTitle('Light / Dark Theme')
+    it('do option when click right fab menu', () => {
+      // use RandomNotes option menu list
+      const { container } = renderNavigator({})
+      const Random = container.querySelector('#navigator-fab-open-random')
 
-      userEvent.click(Theme)
-      expect(store.dispatch).toHaveBeenCalledTimes(1)
-      expect(store.dispatch).toHaveBeenCalledWith(setTheme(true))
-    })
-    it('open and navigate the page when click it page in link menu', () => {
-      const { getByText } = renderNavigator({})
-      const Link = getByText('Tree Bookmarks')
-
-      userEvent.click(Link)
-      expect(history.location.pathname).toEqual('/tree-bookmarks')
+      userEvent.click(Random)
+      expect(store.getState).toHaveBeenCalled()
     })
   })
 })
