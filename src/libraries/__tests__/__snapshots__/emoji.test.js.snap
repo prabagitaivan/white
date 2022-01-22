@@ -35,6 +35,14 @@ Array [
     "text": "face with open mouth",
   },
   Object {
+    "image": "😎",
+    "text": "smiling face with with sunglasses",
+  },
+  Object {
+    "image": "🤫",
+    "text": "shushing face",
+  },
+  Object {
     "image": "👻",
     "text": "ghost",
   },
@@ -91,12 +99,120 @@ Array [
     "text": "oncoming fist",
   },
   Object {
+    "image": "🙌",
+    "text": "raising hands",
+  },
+  Object {
+    "image": "🤝",
+    "text": "handshake",
+  },
+  Object {
+    "image": "⛺",
+    "text": "tent",
+  },
+  Object {
+    "image": "🚧",
+    "text": "construction",
+  },
+  Object {
+    "image": "⛓️",
+    "text": "chains",
+  },
+  Object {
+    "image": "💡",
+    "text": "light bulb",
+  },
+  Object {
+    "image": "💭",
+    "text": "thought ballon",
+  },
+  Object {
     "image": "🚀",
     "text": "rocket",
   },
   Object {
+    "image": "🛸",
+    "text": "flying saucer",
+  },
+  Object {
+    "image": "🗺️",
+    "text": "world map",
+  },
+  Object {
+    "image": "☁️",
+    "text": "cloud",
+  },
+  Object {
+    "image": "☃️",
+    "text": "snowman",
+  },
+  Object {
+    "image": "🧊",
+    "text": "ice",
+  },
+  Object {
     "image": "🔥",
     "text": "fire",
+  },
+  Object {
+    "image": "💥",
+    "text": "collision",
+  },
+  Object {
+    "image": "✨",
+    "text": "sparkles",
+  },
+  Object {
+    "image": "🕸️",
+    "text": "spider web",
+  },
+  Object {
+    "image": "🐛",
+    "text": "bug",
+  },
+  Object {
+    "image": "🦋",
+    "text": "butterfly",
+  },
+  Object {
+    "image": "🐣",
+    "text": "hatching chick",
+  },
+  Object {
+    "image": "🔬",
+    "text": "microscope",
+  },
+  Object {
+    "image": "🔭",
+    "text": "telescope",
+  },
+  Object {
+    "image": "💻",
+    "text": "laptop",
+  },
+  Object {
+    "image": "🖥️",
+    "text": "desktop computer",
+  },
+  Object {
+    "image": "📱",
+    "text": "mobile phone",
+  },
+  Object {
+    "image": "🎨",
+    "text": "artist paletter",
+  },
+  Object {
+    "image": "🎁",
+    "text": "wrapped gift",
+  },
+  Object {
+    "image": "🍦",
+    "text": "soft ice cream",
+  },
+  Object {
+    "image": "🍉",
+    "text": "watermelon",
   },
 ]
 `;
