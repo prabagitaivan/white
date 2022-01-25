@@ -27,7 +27,7 @@ const useStyles = makeStyles(
       '& .MuiTreeItem-group': {
         marginLeft: 7,
         paddingLeft: 14,
-        borderLeft: `1px dashed gray`
+        borderLeft: '1px dashed gray'
       },
       '& .MuiTreeItem-label': {
         width: ({ desktop }) => (desktop ? '98%' : '91%')

@@ -3,7 +3,7 @@ import { shuffle, random } from 'lodash'
 import store from '../../stores'
 import { edit } from '../../reducers/randomNotes'
 
-export default {
+const options = {
   left: [
     {
       Icon: Loop,
@@ -29,3 +29,5 @@ export default {
     }
   ]
 }
+
+export default options
