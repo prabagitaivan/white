@@ -20,9 +20,16 @@ jest.mock('lodash', () => ({
   random: jest.fn()
 }))
 
-Object.defineProperty(window.navigator, 'onLine', {
-  value: true,
-  writable: true
+Object.defineProperties(window.navigator, {
+  onLine: {
+    value: true,
+    writable: true
+  },
+  clipboard: {
+    value: {
+      writeText: () => {}
+    }
+  }
 })
 
 // fix tooltip issues using jest
@@ -30,6 +37,7 @@ Object.defineProperty(window.navigator, 'onLine', {
 global.document.createRange = () => ({
   setStart: () => {},
   setEnd: () => {},
+  getClientRects: () => [],
   commonAncestorContainer: {
     nodeName: 'BODY',
     ownerDocument: document

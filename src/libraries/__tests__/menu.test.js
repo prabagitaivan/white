@@ -20,6 +20,11 @@ describe('libraries menu', () => {
         options: null,
         route: '/tree-bookmarks'
       })
+      expect(menu.Playground).toEqual({
+        name: 'playground',
+        options: null,
+        route: '/playground'
+      })
     })
   })
   describe('random notes', () => {

@@ -9,6 +9,7 @@ import { setConnection, setScreen } from '../reducers/status'
 import App from '../app'
 import RandomNotes from '../layouts/RandomNotes'
 import TreeBookmarks from '../layouts/TreeBookmarks'
+import Playground from '../layouts/Playground'
 
 function setConnectionEvent (online) {
   window.navigator.onLine = online
@@ -26,7 +27,7 @@ afterEach(() => {
   store.dispatch.mockRestore()
 })
 
-describe('main App', () => {
+describe.only('main App', () => {
   describe('routers', () => {
     it('render RandomNotes for / (root) router', () => {
       const history = createBrowserHistory()
@@ -95,6 +96,35 @@ describe('main App', () => {
       )
 
       expect(AppRender.container).toEqual(TreeBookmarksRender.container)
+    })
+    it('render Playground for /playground router', () => {
+      const history = createBrowserHistory()
+      history.push('/playground')
+
+      const AppRender = render(
+        <Provider store={store}>
+          <Styles>
+            <Router history={history}>
+              <App />
+            </Router>
+          </Styles>
+        </Provider>
+      )
+      const PlaygroundRender = render(
+        <Provider store={store}>
+          <Styles>
+            <Playground />
+          </Styles>
+        </Provider>
+      )
+
+      const AppEditors = AppRender.container.getElementsByClassName(
+        'cm-activeLine cm-line'
+      )
+      const PlaygroundEditors = PlaygroundRender.container.getElementsByClassName(
+        'cm-activeLine cm-line'
+      )
+      expect(AppEditors).toEqual(PlaygroundEditors)
     })
   })
   describe('mounting', () => {
