@@ -2,15 +2,15 @@
 
 exports[`layouts RandomNotes snapshots contain data content when requesting result is not empty in desktop 1`] = `
 <ul
-  class="MuiGridList-root"
+  class="MuiImageList-root"
   style="margin: -10px;"
 >
   <li
-    class="MuiGridListTile-root WhiteRandomNotes-gridListTile"
+    class="MuiImageListItem-root WhiteRandomNotes-imageListItem"
     style="width: 25%; height: 270px; padding: 10px;"
   >
     <div
-      class="MuiGridListTile-tile"
+      class="MuiImageListItem-item"
     >
       <img
         alt="title"
@@ -19,13 +19,13 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteRandomNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiImageListItemBar-root WhiteRandomNotes-imageListItemBar MuiImageListItemBar-positionBottom"
       >
         <div
-          class="MuiGridListTileBar-titleWrap"
+          class="MuiImageListItemBar-titleWrap"
         >
           <div
-            class="MuiGridListTileBar-title"
+            class="MuiImageListItemBar-title"
           >
             title
           </div>
@@ -38,15 +38,15 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
 
 exports[`layouts RandomNotes snapshots contain data content when requesting result is not empty in mobile 1`] = `
 <ul
-  class="MuiGridList-root"
+  class="MuiImageList-root"
   style="margin: -10px;"
 >
   <li
-    class="MuiGridListTile-root WhiteRandomNotes-gridListTile"
+    class="MuiImageListItem-root WhiteRandomNotes-imageListItem"
     style="width: 100%; height: 270px; padding: 10px;"
   >
     <div
-      class="MuiGridListTile-tile"
+      class="MuiImageListItem-item"
     >
       <img
         alt="title"
@@ -55,13 +55,13 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
         src="image"
       />
       <div
-        class="MuiGridListTileBar-root WhiteRandomNotes-gridListTileBar MuiGridListTileBar-titlePositionBottom"
+        class="MuiImageListItemBar-root WhiteRandomNotes-imageListItemBar MuiImageListItemBar-positionBottom"
       >
         <div
-          class="MuiGridListTileBar-titleWrap"
+          class="MuiImageListItemBar-titleWrap"
         >
           <div
-            class="MuiGridListTileBar-title"
+            class="MuiImageListItemBar-title"
           >
             title
           </div>

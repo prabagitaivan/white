@@ -1,6 +1,6 @@
 import React, { memo, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { GridList, GridListTile, GridListTileBar } from '@material-ui/core'
+import { ImageList, ImageListItem, ImageListItemBar } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
@@ -11,8 +11,8 @@ import Empty from '../../components/Empty'
 
 const useStyles = makeStyles(
   {
-    gridListTile: {
-      '& .MuiGridListTile-tile': {
+    imageListItem: {
+      '& .MuiImageListItem-item': {
         borderRadius: 5,
         boxShadow: '0px 5px 5px rgb(0 0 0 / 25%)'
       }
@@ -20,23 +20,23 @@ const useStyles = makeStyles(
     img: {
       cursor: 'pointer'
     },
-    gridListTileBar: {
+    imageListItemBar: {
       height: 50,
 
-      '& .MuiGridListTileBar-titleWrap': {
+      '& .MuiImageListItemBar-titleWrap': {
         marginLeft: 10,
         marginRight: 10
       },
-      '& .MuiGridListTileBar-rootSubtitle': {
+      '& .MuiImageListItemBar-rootSubtitle': {
         marginLeft: 10,
         marginRight: 10
       },
-      '& .MuiGridListTileBar-title': {
+      '& .MuiImageListItemBar-title': {
         fontSize: 15,
         lineHeight: 'normal',
         color: 'rgba(255, 255, 255, 0.85)'
       },
-      '& .MuiGridListTileBar-subtitle': {
+      '& .MuiImageListItemBar-subtitle': {
         fontSize: 12,
         lineHeight: 'normal',
         color: 'rgba(255, 255, 255, 0.75)'
@@ -68,11 +68,11 @@ export default memo(() => {
         ) : data.length === 0 ? (
           <Empty />
         ) : (
-          <GridList cols={desktop ? 4 : 1} cellHeight={250} spacing={20}>
+          <ImageList cols={desktop ? 4 : 1} rowHeight={250} gap={20}>
             {data
               .filter(note => note.active)
               .map((note, index) => (
-                <GridListTile key={index} className={classes.gridListTile}>
+                <ImageListItem key={index} className={classes.imageListItem}>
                   <img
                     src={note.image}
                     alt={note.title}
@@ -80,14 +80,14 @@ export default memo(() => {
                     onClick={() => openNote(note.url)}
                     loading='lazy'
                   />
-                  <GridListTileBar
+                  <ImageListItemBar
                     title={note.title}
                     subtitle={note.author}
-                    className={classes.gridListTileBar}
+                    className={classes.imageListItemBar}
                   />
-                </GridListTile>
+                </ImageListItem>
               ))}
-          </GridList>
+          </ImageList>
         )}
       </Content>
     </div>

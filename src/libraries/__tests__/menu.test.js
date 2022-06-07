@@ -1,3 +1,4 @@
+import { FlashOn, Loop } from '@material-ui/icons'
 import _ from 'lodash'
 import store from '../../stores'
 import menu from '../menu'
@@ -46,8 +47,8 @@ describe('libraries menu', () => {
       mockRandomNotesStore({})
       const left = randomNotes.left.map(note => note.Icon)
       const right = randomNotes.right.map(note => note.Icon)
-      expect(left).toMatchSnapshot()
-      expect(right).toMatchSnapshot()
+      expect(left).toEqual([Loop])
+      expect(right).toEqual([FlashOn])
     })
     it('return all correct text and order', () => {
       mockRandomNotesStore({})

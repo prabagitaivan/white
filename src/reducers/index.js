@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from '@reduxjs/toolkit'
 import status from './status'
 import randomNotes from './randomNotes'
 import treeBookmarks from './treeBookmarks'

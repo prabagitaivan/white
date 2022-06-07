@@ -1,37 +1,31 @@
-import { createActions, handleActions } from 'redux-actions'
+import { createSlice } from '@reduxjs/toolkit'
 
-const defaultState = {
+const initialState = {
   data: [],
   requesting: true,
   error: null
 }
 
-export const {
-  randomNotes: { request, edit, success, failure }
-} = createActions({
-  RANDOM_NOTES: {
-    REQUEST: action => action,
-    EDIT: action => action,
-    SUCCESS: action => action,
-    FAILURE: action => action
-  }
-})
-
-export default handleActions(
-  {
-    [request]: state => ({ ...state, requesting: true, error: null }),
-    [edit]: (state, { payload: data = [] }) => ({ ...state, data }),
-    [success]: (state, { payload: data = [] }) => ({
+const slice = createSlice({
+  name: 'randomNotes',
+  initialState,
+  reducers: {
+    request: state => ({ ...state, requesting: true, error: null }),
+    edit: (state, { payload: data = [] }) => ({ ...state, data }),
+    success: (state, { payload: data = [] }) => ({
       ...state,
       data,
       requesting: false,
       error: null
     }),
-    [failure]: (state, { payload: error = 'error' }) => ({
+    failure: (state, { payload: error = 'error' }) => ({
       ...state,
       requesting: false,
       error
     })
-  },
-  defaultState
-)
+  }
+})
+
+export const { request, edit, success, failure } = slice.actions
+
+export default slice.reducer

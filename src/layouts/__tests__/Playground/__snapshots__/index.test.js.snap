@@ -217,7 +217,7 @@ HTMLCollection [
   >
     console.log(
     <span
-      class="ͼd"
+      class="ͼe"
     >
       'hello world'
     </span>
@@ -238,7 +238,7 @@ HTMLCollection [
   >
     console.log(
     <span
-      class="ͼd"
+      class="ͼe"
     >
       'hello world'
     </span>
@@ -259,7 +259,7 @@ HTMLCollection [
   >
     console.log(
     <span
-      class="ͼd"
+      class="ͼe"
     >
       'hello world'
     </span>
@@ -295,7 +295,7 @@ HTMLCollection [
   >
     console.log(
     <span
-      class="ͼd"
+      class="ͼe"
     >
       'hello world'
     </span>

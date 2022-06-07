@@ -1,5 +1,4 @@
 import { takeLatest, call, put, race, delay } from 'redux-saga/effects'
-
 import { request, success, failure } from '../reducers/treeBookmarks'
 import { getTreeBookmarks } from '../libraries/firebase/database'
 

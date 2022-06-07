@@ -1,5 +1,4 @@
 import { takeLatest, call, put, race, delay } from 'redux-saga/effects'
-
 import { request, success, failure } from '../reducers/randomNotes'
 import { getRandomNotes } from '../libraries/firebase/database'
 

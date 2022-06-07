@@ -2,7 +2,7 @@ import firebase from 'firebase/app'
 
 const apiKey = process.env.REACT_APP_FIREBASE_API_KEY
 const projectId = process.env.REACT_APP_FIREBASE_PROJECT_ID
-const senderId = process.env.REACT_APP_FIREBASE_SENDER_ID
+const messagingSenderId = process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID
 const appId = process.env.REACT_APP_FIREBASE_APP_ID
 
 const options = {
@@ -11,7 +11,7 @@ const options = {
   databaseURL: `https://${projectId}.firebaseio.com`,
   projectId,
   storageBucket: `${projectId}.appspot.com`,
-  messagingSenderId: senderId,
+  messagingSenderId,
   appId
 }
 

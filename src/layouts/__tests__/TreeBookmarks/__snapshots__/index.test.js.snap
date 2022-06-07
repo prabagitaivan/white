@@ -43,7 +43,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
         role="group"
         style="min-height: 0px;"
       >
@@ -138,7 +138,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
         role="group"
         style="min-height: 0px;"
       >
@@ -183,7 +183,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                 </div>
               </div>
               <ul
-                class="MuiCollapse-container MuiTreeItem-group"
+                class="MuiCollapse-root MuiTreeItem-group"
                 role="group"
                 style="min-height: 0px; height: 0px; transition-duration: 300ms;"
               >
@@ -286,7 +286,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
         role="group"
         style="min-height: 0px;"
       >
@@ -381,7 +381,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
         </div>
       </div>
       <ul
-        class="MuiCollapse-container MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
         role="group"
         style="min-height: 0px;"
       >
@@ -426,7 +426,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                 </div>
               </div>
               <ul
-                class="MuiCollapse-container MuiTreeItem-group"
+                class="MuiCollapse-root MuiTreeItem-group"
                 role="group"
                 style="min-height: 0px; height: 0px; transition-duration: 300ms;"
               >

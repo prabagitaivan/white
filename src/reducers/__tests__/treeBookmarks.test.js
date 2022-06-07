@@ -22,9 +22,9 @@ describe('reducers treeBookmarks', () => {
     })
   })
   it('return correct actions', () => {
-    expect(request.toString()).toEqual('TREE_BOOKMARKS/REQUEST')
-    expect(success.toString()).toEqual('TREE_BOOKMARKS/SUCCESS')
-    expect(failure.toString()).toEqual('TREE_BOOKMARKS/FAILURE')
+    expect(request.toString()).toEqual('treeBookmarks/request')
+    expect(success.toString()).toEqual('treeBookmarks/success')
+    expect(failure.toString()).toEqual('treeBookmarks/failure')
   })
   it('set for requesting status and clear error when request action called', () => {
     expect(requestAction()).toMatchObject({

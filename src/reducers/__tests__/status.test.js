@@ -33,10 +33,10 @@ describe('reducers status', () => {
     })
   })
   it('return correct actions', () => {
-    expect(setConnection.toString()).toEqual('STATUS/SET_CONNECTION')
-    expect(setScreen.toString()).toEqual('STATUS/SET_SCREEN')
-    expect(setTheme.toString()).toEqual('STATUS/SET_THEME')
-    expect(setPage.toString()).toEqual('STATUS/SET_PAGE')
+    expect(setConnection.toString()).toEqual('status/setConnection')
+    expect(setScreen.toString()).toEqual('status/setScreen')
+    expect(setTheme.toString()).toEqual('status/setTheme')
+    expect(setPage.toString()).toEqual('status/setPage')
   })
   it('set for online status when set connection action called', () => {
     expect(setConnectionAction(true)).toMatchObject({ online: true })

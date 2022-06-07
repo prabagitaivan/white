@@ -26,10 +26,10 @@ describe('reducers randomNotes', () => {
     })
   })
   it('return correct actions', () => {
-    expect(request.toString()).toEqual('RANDOM_NOTES/REQUEST')
-    expect(edit.toString()).toEqual('RANDOM_NOTES/EDIT')
-    expect(success.toString()).toEqual('RANDOM_NOTES/SUCCESS')
-    expect(failure.toString()).toEqual('RANDOM_NOTES/FAILURE')
+    expect(request.toString()).toEqual('randomNotes/request')
+    expect(edit.toString()).toEqual('randomNotes/edit')
+    expect(success.toString()).toEqual('randomNotes/success')
+    expect(failure.toString()).toEqual('randomNotes/failure')
   })
   it('set for requesting status and clear error when request action called', () => {
     expect(requestAction()).toMatchObject({
