@@ -4,7 +4,7 @@ import reducers, {
   setTheme,
   setPage
 } from '../status'
-import { getLightStatus } from '../../libraries/styles'
+import { isLightMode, isMacPlatform } from '../../libraries/status'
 
 function setConnectionAction (online) {
   const state = reducers(undefined, {})
@@ -28,7 +28,8 @@ describe('reducers status', () => {
     expect(reducers(undefined, {})).toEqual({
       online: true,
       desktop: true,
-      light: getLightStatus(),
+      mac: isMacPlatform(),
+      light: isLightMode(),
       page: 'RandomNotes'
     })
   })

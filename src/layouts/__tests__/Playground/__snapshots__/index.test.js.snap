@@ -84,6 +84,13 @@ exports[`layouts Playground snapshots contain buttons with text in desktop 1`] =
       >
         execute
       </p>
+      <p
+        class="MuiTypography-root WhitePlayground-keyText WhitePlayground-keyText MuiTypography-body1"
+      >
+        [
+        Cmd
+         + Enter]
+      </p>
     </span>
     <span
       class="MuiTouchRipple-root"
@@ -289,6 +296,27 @@ HTMLCollection [
 `;
 
 exports[`layouts Playground userEvent execute the code content when click execute button 1`] = `
+HTMLCollection [
+  <div
+    class="cm-activeLine cm-line"
+  >
+    console.log(
+    <span
+      class="ͼe"
+    >
+      'hello world'
+    </span>
+    )
+  </div>,
+  <div
+    class="cm-activeLine cm-line"
+  >
+    01:01:01.001Z ✨ "hello world"
+  </div>,
+]
+`;
+
+exports[`layouts Playground userEvent execute the code content when key shortcuts pressed 1`] = `
 HTMLCollection [
   <div
     class="cm-activeLine cm-line"

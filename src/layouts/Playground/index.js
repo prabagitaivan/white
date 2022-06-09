@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Button, ButtonGroup, Typography, SvgIcon } from '@material-ui/core'
 import { Clear, PlayArrow } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
-import CodeMirror from '@uiw/react-codemirror'
+import CodeMirror, { Prec, keymap } from '@uiw/react-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
@@ -46,13 +46,20 @@ const useStyles = makeStyles(
       marginLeft: 2,
       marginTop: ({ desktop }) => (desktop ? -1.5 : 0),
       textTransform: 'none'
+    },
+    keyText: {
+      fontSize: 12,
+      fontFamily: 'monospace',
+      marginLeft: 10,
+      marginTop: ({ desktop }) => (desktop ? -2 : 0),
+      textTransform: 'none'
     }
   },
   { name: 'Playground' }
 )
 
 export default memo(() => {
-  const { desktop, light } = useSelector(state => state.status)
+  const { desktop, mac, light } = useSelector(state => state.status)
   const dispatch = useDispatch()
   const classes = useStyles({ desktop })
   const [code, setCode] = useState("console.log('hello world')")
@@ -105,7 +112,14 @@ export default memo(() => {
         <CodeMirror
           autoFocus
           value={code}
-          extensions={[javascript()]}
+          extensions={[
+            javascript(),
+            Prec.highest(
+              keymap.of([
+                { key: 'Mod-Enter', preventDefault: true, run: execute }
+              ])
+            )
+          ]}
           onChange={coding}
           theme={light ? 'light' : 'dark'}
           height='45vh'
@@ -129,6 +143,11 @@ export default memo(() => {
           <Button onClick={execute} className={classes.mainButton}>
             <PlayArrow />
             <Typography className={classes.mainText}>execute</Typography>
+            {desktop && (
+              <Typography className={classes.keyText}>
+                [{mac ? 'Cmd' : 'Ctrl'} + Enter]
+              </Typography>
+            )}
           </Button>
         </ButtonGroup>
         <CodeMirror

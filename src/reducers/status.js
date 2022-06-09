@@ -1,10 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { getLightStatus } from '../libraries/styles'
+import { isLightMode, isMacPlatform } from '../libraries/status'
 
 const initialState = {
   online: true,
   desktop: true,
-  light: getLightStatus(),
+  mac: isMacPlatform(),
+  light: isLightMode(),
   page: 'RandomNotes'
 }
 

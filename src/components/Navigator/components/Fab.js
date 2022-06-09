@@ -40,6 +40,9 @@ const useStyles = makeStyles(
       opacity: 0.9
     },
     emoji: {
+      display: 'flex',
+      justifyContent: ({ desktop }) => (desktop ? 'initial' : 'center'),
+      alignItems: ({ desktop }) => (desktop ? 'initial' : 'center'),
       width: ({ desktop }) => (desktop ? 25 : 20),
       height: ({ desktop }) => (desktop ? 25 : 20),
       fontSize: ({ desktop }) => (desktop ? 25 : 20),

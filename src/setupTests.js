@@ -29,6 +29,10 @@ Object.defineProperties(window.navigator, {
     value: {
       writeText: () => {}
     }
+  },
+  platform: {
+    value: 'MacIntel',
+    writable: true
   }
 })
 

@@ -9,9 +9,9 @@ import Playground from '../../Playground'
 
 let store
 
-function renderPlayground ({ desktop = true, light = true }) {
+function renderPlayground ({ desktop = true, mac = true, light = true }) {
   const preloadedState = {
-    status: { desktop, light, page: 'Playground' }
+    status: { desktop, mac, light, page: 'Playground' }
   }
   store = createStore(preloadedState)
 
@@ -79,6 +79,14 @@ describe('layouts Playground', () => {
       expect(Content).toBeInTheDocument()
       expect(Content.childNodes[1]).toMatchSnapshot()
     })
+    it('contain key shortcuts in the desktop buttons in mac platform', () => {
+      const { getByText } = renderPlayground({})
+      expect(getByText('[Cmd + Enter]')).toBeInTheDocument()
+    })
+    it('contain key shortcuts in the desktop buttons in common platform', () => {
+      const { getByText } = renderPlayground({ mac: false })
+      expect(getByText('[Ctrl + Enter]')).toBeInTheDocument()
+    })
   })
   describe('mounting', () => {
     beforeEach(() => {
@@ -122,6 +130,16 @@ describe('layouts Playground', () => {
 
       const Execute = getByText('execute')
       userEvent.click(Execute)
+
+      const Editors = container.getElementsByClassName('cm-activeLine cm-line')
+      await waitForDomChange(Editors)
+      expect(Editors).toMatchSnapshot()
+    })
+    it('execute the code content when key shortcuts pressed', async () => {
+      const { container, findAllByRole } = renderPlayground({})
+
+      const EditorTextBoxes = await findAllByRole('textbox')
+      fireEvent.keyDown(EditorTextBoxes[0], { metaKey: true, key: 'Enter' })
 
       const Editors = container.getElementsByClassName('cm-activeLine cm-line')
       await waitForDomChange(Editors)

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import { createStore as ReduxCreateStore } from 'redux'
+import { configureStore } from '@reduxjs/toolkit'
 import { Provider, useStore } from 'react-redux'
 import { createStore } from '../stores'
 import reducers from '../reducers'
@@ -24,14 +24,14 @@ function renderApp (preloadedState = undefined) {
 describe('main Stores', () => {
   it('return default state', () => {
     const AppStore = renderApp()
-    const defaultStore = ReduxCreateStore(reducers).getState()
+    const defaultStore = configureStore({ reducer: reducers }).getState()
 
     expect(AppStore).toEqual(defaultStore)
   })
   it('return with overwrite preloaded state', () => {
     const preloadedState = { status: { online: false } }
     const AppStore = renderApp(preloadedState)
-    const defaultStore = ReduxCreateStore(reducers).getState()
+    const defaultStore = configureStore({ reducer: reducers }).getState()
     const withPreloadedStore = { ...defaultStore, ...preloadedState }
 
     expect(AppStore).not.toEqual(defaultStore)

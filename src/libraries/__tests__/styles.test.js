@@ -5,21 +5,6 @@ import { Container as MuiContainer } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
 import store from '../../stores'
 import Styles from '../../styles'
-import { getLightStatus } from '../../libraries/styles'
-
-const resetDate = Date
-
-function mockGetLightStatus (hour) {
-  global.Date = jest.fn(() => ({
-    getHours: jest.fn().mockReturnValue(hour)
-  }))
-
-  return getLightStatus()
-}
-
-afterEach(() => {
-  global.Date = resetDate
-})
 
 describe('libraries styles', () => {
   describe('main', () => {
@@ -63,16 +48,6 @@ describe('libraries styles', () => {
       expect(container.firstChild).toHaveClass(
         'WhiteContainer-root WhiteContainer-maxWidthLg'
       )
-    })
-    it('return light status based on hour time', () => {
-      expect(mockGetLightStatus(0)).toEqual(false)
-      expect(mockGetLightStatus(3)).toEqual(false)
-      expect(mockGetLightStatus(6)).toEqual(true)
-      expect(mockGetLightStatus(9)).toEqual(true)
-      expect(mockGetLightStatus(12)).toEqual(true)
-      expect(mockGetLightStatus(15)).toEqual(true)
-      expect(mockGetLightStatus(18)).toEqual(false)
-      expect(mockGetLightStatus(21)).toEqual(false)
     })
   })
 })
