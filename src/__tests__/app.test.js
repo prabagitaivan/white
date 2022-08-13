@@ -10,6 +10,7 @@ import App from '../app'
 import RandomNotes from '../layouts/RandomNotes'
 import TreeBookmarks from '../layouts/TreeBookmarks'
 import Playground from '../layouts/Playground'
+import * as emoji from '../libraries/emoji'
 
 function setConnectionEvent (online) {
   window.navigator.onLine = online
@@ -21,9 +22,13 @@ function setScreenEvent (size) {
 }
 
 beforeEach(() => {
+  jest
+    .spyOn(emoji, 'getRandomEmoji')
+    .mockReturnValue({ image: '😁', text: 'emoji-1' })
   jest.spyOn(store, 'dispatch').mockReturnValue()
 })
 afterEach(() => {
+  emoji.getRandomEmoji.mockRestore()
   store.dispatch.mockRestore()
 })
 

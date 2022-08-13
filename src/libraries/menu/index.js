@@ -9,12 +9,12 @@ const menu = {
   TreeBookmarks: {
     name: 'tree bookmarks',
     route: '/tree-bookmarks',
-    options: null
+    options: []
   },
   Playground: {
     name: 'playground',
     route: '/playground',
-    options: null
+    options: []
   }
 }
 

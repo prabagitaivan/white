@@ -37,15 +37,28 @@ function renderNavigator ({ desktop = true, light = true }) {
 
 describe('components Navigator', () => {
   describe('snapshots', () => {
-    it('highlight current page as active in menu', () => {
+    it('highlight current page in menu for desktop', () => {
       // use RandomNotes default page
       const { getByText } = renderNavigator({})
       expect(getByText('random notes')).not.toHaveStyle('color: #b1b1b1')
-    })
-    it('dim other pages as inactive in menu', () => {
-      // use RandomNotes default page
-      const { getByText } = renderNavigator({})
       expect(getByText('tree bookmarks')).toHaveStyle('color: #b1b1b1')
+      expect(getByText('playground')).toHaveStyle('color: #b1b1b1')
+    })
+    it('highlight current page in menu for mobile', () => {
+      // use RandomNotes default page
+      const { container, getByText } = renderNavigator({ desktop: false })
+      const Menu = container.querySelector('#navigator-toolbar-menu')
+
+      userEvent.click(Menu)
+      expect(getByText('random notes')).toHaveStyle(
+        'background-color: rgba(0, 0, 0, 0.08)'
+      )
+      expect(getByText('tree bookmarks')).not.toHaveStyle(
+        'color: rgba(0, 0, 0, 0.08)'
+      )
+      expect(getByText('playground')).not.toHaveStyle(
+        'color: rgba(0, 0, 0, 0.08)'
+      )
     })
     it('contain side menu on light theme', () => {
       const { container } = renderNavigator({})
@@ -135,29 +148,23 @@ describe('components Navigator', () => {
       expect(store.dispatch).toHaveBeenCalledWith(setTheme(true))
     })
     it('random emoji when click the main fab menu', () => {
-      const { getByRole } = renderNavigator({})
-      const Avatar = getByRole('img')
+      const { container } = renderNavigator({})
+      const Emoji = container.querySelector('#navigator-fab-emoji')
 
-      userEvent.click(Avatar)
-      expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(1)
+      // 1 called when first pathname change
 
-      userEvent.click(Avatar)
+      userEvent.click(Emoji)
       expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(2)
+
+      userEvent.click(Emoji)
+      expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(3)
     })
-    it('do option when click left fab menu', () => {
+    it('do option when click one of options fab menu', () => {
       // use RandomNotes option menu list
       const { container } = renderNavigator({})
       const Shuffle = container.querySelector('#navigator-fab-shuffle-notes')
 
       userEvent.click(Shuffle)
-      expect(store.getState).toHaveBeenCalled()
-    })
-    it('do option when click right fab menu', () => {
-      // use RandomNotes option menu list
-      const { container } = renderNavigator({})
-      const Random = container.querySelector('#navigator-fab-open-random')
-
-      userEvent.click(Random)
       expect(store.getState).toHaveBeenCalled()
     })
   })

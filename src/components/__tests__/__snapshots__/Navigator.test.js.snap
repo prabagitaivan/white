@@ -2,13 +2,13 @@
 
 exports[`components Navigator snapshots contain fab menu 1`] = `
 <button
-  class="MuiButtonBase-root MuiFab-root WhiteNavigatorFab-left WhiteNavigatorFab-left"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
   id="navigator-fab-shuffle-notes"
   tabindex="0"
   type="button"
 >
   <span
-    class="MuiFab-label"
+    class="MuiIconButton-label"
   >
     <svg
       aria-hidden="true"
@@ -29,13 +29,13 @@ exports[`components Navigator snapshots contain fab menu 1`] = `
 
 exports[`components Navigator snapshots contain fab menu 2`] = `
 <button
-  class="MuiButtonBase-root MuiFab-root WhiteNavigatorFab-right WhiteNavigatorFab-right"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
   id="navigator-fab-open-random"
   tabindex="0"
   type="button"
 >
   <span
-    class="MuiFab-label"
+    class="MuiIconButton-label"
   >
     <svg
       aria-hidden="true"

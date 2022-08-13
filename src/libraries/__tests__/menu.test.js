@@ -18,12 +18,12 @@ describe('libraries menu', () => {
       })
       expect(menu.TreeBookmarks).toEqual({
         name: 'tree bookmarks',
-        options: null,
+        options: [],
         route: '/tree-bookmarks'
       })
       expect(menu.Playground).toEqual({
         name: 'playground',
-        options: null,
+        options: [],
         route: '/playground'
       })
     })
@@ -43,44 +43,37 @@ describe('libraries menu', () => {
       window.open.mockRestore()
     })
 
-    it('return all correct icon and order', () => {
+    it('return all correct text, icon and order', () => {
       mockRandomNotesStore({})
-      const left = randomNotes.left.map(note => note.Icon)
-      const right = randomNotes.right.map(note => note.Icon)
-      expect(left).toEqual([Loop])
-      expect(right).toEqual([FlashOn])
-    })
-    it('return all correct text and order', () => {
-      mockRandomNotesStore({})
-      const left = randomNotes.left.map(note => note.text)
-      const right = randomNotes.right.map(note => note.text)
-      expect(left).toEqual(['shuffle-notes'])
-      expect(right).toEqual(['open-random'])
+      const icons = randomNotes.map(note => note.Icon)
+      const texts = randomNotes.map(note => note.text)
+      expect(icons).toEqual([Loop, FlashOn])
+      expect(texts).toEqual(['shuffle-notes', 'open-random'])
     })
     it('shuffle notes if data exists', () => {
       mockRandomNotesStore({ data: [1, 2] })
-      const shuffleOption = randomNotes.left[0]
+      const shuffleOption = randomNotes[0]
       shuffleOption.action()
       expect(_.shuffle).toHaveBeenCalledTimes(1)
       expect(store.dispatch).toHaveBeenCalledTimes(1)
     })
     it('not shuffle notes if data empty', () => {
       mockRandomNotesStore({})
-      const shuffleOption = randomNotes.left[0]
+      const shuffleOption = randomNotes[0]
       shuffleOption.action()
       expect(_.shuffle).not.toHaveBeenCalled()
       expect(store.dispatch).not.toHaveBeenCalled()
     })
     it('open 1 random note if data exists', () => {
       mockRandomNotesStore({ data: [{ url: 1 }, { url: 2 }] })
-      const randomOption = randomNotes.right[0]
+      const randomOption = randomNotes[1]
       randomOption.action()
       expect(_.random).toHaveBeenCalledTimes(1)
       expect(window.open).toHaveBeenCalledTimes(1)
     })
     it('not open 1 random note if data empty', () => {
       mockRandomNotesStore({})
-      const randomOption = randomNotes.right[0]
+      const randomOption = randomNotes[1]
       randomOption.action()
       expect(_.random).not.toHaveBeenCalled()
       expect(window.open).not.toHaveBeenCalled()

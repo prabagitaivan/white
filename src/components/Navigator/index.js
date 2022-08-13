@@ -12,7 +12,8 @@ const useStyles = makeStyles(
       height: 50,
       justifyContent: 'center',
       top: ({ desktop }) => (desktop ? 0 : 'auto'),
-      bottom: ({ desktop }) => (desktop ? 'auto' : 0)
+      bottom: ({ desktop }) => (desktop ? 'auto' : 0),
+      backgroundColor: ({ light }) => (light ? '#ffffff' : '#424242')
     },
     grow: {
       flexGrow: 1
@@ -22,19 +23,19 @@ const useStyles = makeStyles(
 )
 
 export default memo(() => {
-  const { desktop } = useSelector(state => state.status)
-  const classes = useStyles({ desktop })
+  const { desktop, light } = useSelector(state => state.status)
+  const classes = useStyles({ desktop, light })
 
   return (
     <AppBar id='navigator' position='fixed' className={classes.appBar}>
       <Container>
         <Toolbar disableGutters>
           <Menu />
+          <Fab />
           <div className={classes.grow} />
           <Side />
         </Toolbar>
       </Container>
-      <Fab />
     </AppBar>
   )
 })
