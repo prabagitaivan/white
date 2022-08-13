@@ -32,7 +32,7 @@ afterEach(() => {
   store.dispatch.mockRestore()
 })
 
-describe.only('main App', () => {
+describe('main App', () => {
   describe('routers', () => {
     it('render RandomNotes for / (root) router', () => {
       const history = createBrowserHistory()

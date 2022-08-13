@@ -159,15 +159,21 @@ describe('layouts RandomNotes', () => {
     })
   })
   describe('mounting', () => {
-    beforeEach(() => {
-      renderRandomNotes({})
-    })
-
     it('set page to random notes after mount', () => {
+      renderRandomNotes({})
       expect(store.dispatch).toHaveBeenCalledWith(setPage('RandomNotes'))
     })
     it('request for random notes data after mount', () => {
+      renderRandomNotes({})
       expect(store.dispatch).toHaveBeenCalledWith(request())
+    })
+    it('not request for random notes if data exists', () => {
+      renderRandomNotes({
+        randomNotes: {
+          data: [{ image: 'image', title: 'title', url: 'url', active: true }]
+        }
+      })
+      expect(store.dispatch).not.toHaveBeenCalledWith(request())
     })
   })
   describe('userEvent', () => {

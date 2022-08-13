@@ -34,7 +34,7 @@ afterEach(() => {
   store.dispatch.mockRestore()
 })
 
-describe.only('layouts TreeBookmarks', () => {
+describe('layouts TreeBookmarks', () => {
   describe('snapshots', () => {
     it('contain navigator', () => {
       const { container } = renderTreeBookmarks({})
@@ -151,15 +151,21 @@ describe.only('layouts TreeBookmarks', () => {
     })
   })
   describe('mounting', () => {
-    beforeEach(() => {
-      renderTreeBookmarks({})
-    })
-
     it('set page to tree bookmarks after mount', () => {
+      renderTreeBookmarks({})
       expect(store.dispatch).toHaveBeenCalledWith(setPage('TreeBookmarks'))
     })
     it('request for tree bookmarks data after mount', () => {
+      renderTreeBookmarks({})
       expect(store.dispatch).toHaveBeenCalledWith(request())
+    })
+    it('not request for tree bookmarks if data exists', () => {
+      renderTreeBookmarks({
+        treeBookmarks: {
+          data: { subdata1: [{ title: 'title1', url: 'url1', active: true }] }
+        }
+      })
+      expect(store.dispatch).not.toHaveBeenCalledWith(request())
     })
   })
   describe('userEvent', () => {

@@ -56,7 +56,7 @@ export default memo(() => {
 
   useEffect(() => {
     dispatch(setPage('RandomNotes'))
-    dispatch(request())
+    if (data.length === 0) dispatch(request())
   }, [dispatch])
 
   return (
@@ -71,6 +71,7 @@ export default memo(() => {
           <ImageList cols={desktop ? 4 : 1} rowHeight={250} gap={20}>
             {data
               .filter(note => note.active)
+              .reverse()
               .map((note, index) => (
                 <ImageListItem key={index} className={classes.imageListItem}>
                   <img

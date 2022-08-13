@@ -47,7 +47,7 @@ export default memo(() => {
 
   useEffect(() => {
     dispatch(setPage('TreeBookmarks'))
-    dispatch(request())
+    if (Object.keys(data).length === 0) dispatch(request())
   }, [dispatch])
 
   return (
