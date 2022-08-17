@@ -82,7 +82,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   <p
                     class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
-                    subdata1
+                    subdata
                   </p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   <p
                     class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
-                    subdata1
+                    subdata
                   </p>
                 </div>
               </div>
@@ -221,12 +221,12 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                           <p
                             class="MuiTypography-root WhiteTreeBookmarksLabel-title MuiTypography-body1 MuiTypography-noWrap"
                           >
-                            title1
+                            title
                           </p>
                           <p
                             class="MuiTypography-root WhiteTreeBookmarksLabel-url MuiTypography-body1 MuiTypography-noWrap"
                           >
-                            url1
+                            url
                           </p>
                         </div>
                       </div>
@@ -325,7 +325,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   <p
                     class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
-                    subdata1
+                    subdata
                   </p>
                 </div>
               </div>
@@ -421,7 +421,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   <p
                     class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
                   >
-                    subdata1
+                    subdata
                   </p>
                 </div>
               </div>
@@ -464,12 +464,12 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                           <p
                             class="MuiTypography-root WhiteTreeBookmarksLabel-title MuiTypography-body1 MuiTypography-noWrap"
                           >
-                            title1
+                            title
                           </p>
                           <p
                             class="MuiTypography-root WhiteTreeBookmarksLabel-url MuiTypography-body1 MuiTypography-noWrap"
                           >
-                            url1
+                            url
                           </p>
                         </div>
                       </div>

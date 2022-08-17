@@ -73,15 +73,7 @@ describe('layouts TreeBookmarks', () => {
       const { container, queryByText } = renderTreeBookmarks({
         treeBookmarks: {
           requesting: false,
-          data: {
-            subdata1: [
-              {
-                title: 'title1',
-                url: 'url1',
-                active: true
-              }
-            ]
-          }
+          data: { subdata: [{ title: 'title', url: 'url', active: true }] }
         }
       })
       const Content = container.querySelector('#content')
@@ -91,8 +83,8 @@ describe('layouts TreeBookmarks', () => {
       expect(Content.firstChild).toMatchSnapshot()
 
       // bookmark version
-      const Subdata1 = queryByText('subdata1')
-      userEvent.click(Subdata1)
+      const Subdata = queryByText('subdata')
+      userEvent.click(Subdata)
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain data content when requesting result is not empty in mobile', () => {
@@ -100,15 +92,7 @@ describe('layouts TreeBookmarks', () => {
         desktop: false,
         treeBookmarks: {
           requesting: false,
-          data: {
-            subdata1: [
-              {
-                title: 'title1',
-                url: 'url1',
-                active: true
-              }
-            ]
-          }
+          data: { subdata: [{ title: 'title', url: 'url', active: true }] }
         }
       })
       const Content = container.querySelector('#content')
@@ -118,8 +102,8 @@ describe('layouts TreeBookmarks', () => {
       expect(Content.firstChild).toMatchSnapshot()
 
       // bookmark version
-      const Subdata1 = queryByText('subdata1')
-      userEvent.click(Subdata1)
+      const Subdata = queryByText('subdata')
+      userEvent.click(Subdata)
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('show active only in data content', () => {
@@ -127,24 +111,16 @@ describe('layouts TreeBookmarks', () => {
         treeBookmarks: {
           requesting: false,
           data: {
-            subdata1: [
-              {
-                title: 'title1',
-                url: 'url1',
-                active: false
-              },
-              {
-                title: 'title2',
-                url: 'url2',
-                active: true
-              }
+            subdata: [
+              { title: 'title1', url: 'url1', active: false },
+              { title: 'title2', url: 'url2', active: true }
             ]
           }
         }
       })
 
-      const Subdata1 = queryByText('subdata1')
-      userEvent.click(Subdata1)
+      const Subdata = queryByText('subdata')
+      userEvent.click(Subdata)
 
       expect(queryByText('title1')).not.toBeInTheDocument()
       expect(queryByText('title2')).toBeInTheDocument()
@@ -162,7 +138,8 @@ describe('layouts TreeBookmarks', () => {
     it('not request for tree bookmarks if data exists', () => {
       renderTreeBookmarks({
         treeBookmarks: {
-          data: { subdata1: [{ title: 'title1', url: 'url1', active: true }] }
+          requesting: false,
+          data: { subdata: [{ title: 'title', url: 'url', active: true }] }
         }
       })
       expect(store.dispatch).not.toHaveBeenCalledWith(request())
@@ -181,24 +158,16 @@ describe('layouts TreeBookmarks', () => {
         treeBookmarks: {
           requesting: false,
           data: {
-            subdata1: [
-              {
-                title: 'title1',
-                url: 'url1',
-                active: true
-              },
-              {
-                title: 'title2',
-                url: 'url2',
-                active: true
-              }
+            subdata: [
+              { title: 'title1', url: 'url1', active: true },
+              { title: 'title2', url: 'url2', active: true }
             ]
           }
         }
       })
 
-      const Subdata1 = queryByText('subdata1')
-      userEvent.click(Subdata1)
+      const Subdata = queryByText('subdata')
+      userEvent.click(Subdata)
 
       const Bookmark1 = queryByText('title1')
       userEvent.click(Bookmark1)

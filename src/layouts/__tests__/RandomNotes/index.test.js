@@ -73,14 +73,7 @@ describe('layouts RandomNotes', () => {
       const { container } = renderRandomNotes({
         randomNotes: {
           requesting: false,
-          data: [
-            {
-              image: 'image',
-              title: 'title',
-              url: 'url',
-              active: true
-            }
-          ]
+          data: [{ image: 'image', title: 'title', url: 'url', active: true }]
         }
       })
       const Content = container.querySelector('#content')
@@ -93,14 +86,7 @@ describe('layouts RandomNotes', () => {
         desktop: false,
         randomNotes: {
           requesting: false,
-          data: [
-            {
-              image: 'image',
-              title: 'title',
-              url: 'url',
-              active: true
-            }
-          ]
+          data: [{ image: 'image', title: 'title', url: 'url', active: true }]
         }
       })
       const Content = container.querySelector('#content')
@@ -113,18 +99,8 @@ describe('layouts RandomNotes', () => {
         randomNotes: {
           requesting: false,
           data: [
-            {
-              image: 'image1',
-              title: 'title1',
-              url: 'url1',
-              active: false
-            },
-            {
-              image: 'image2',
-              title: 'title2',
-              url: 'url2',
-              active: true
-            }
+            { image: 'image1', title: 'title1', url: 'url1', active: false },
+            { image: 'image2', title: 'title2', url: 'url2', active: true }
           ]
         }
       })
@@ -137,17 +113,12 @@ describe('layouts RandomNotes', () => {
         randomNotes: {
           requesting: false,
           data: [
-            {
-              image: 'image1',
-              title: 'title1',
-              url: 'url1',
-              active: true
-            },
+            { image: 'image1', title: 'title1', url: 'url1', active: true },
             {
               image: 'image2',
               title: 'title2',
-              url: 'url2',
               author: 'author2',
+              url: 'url2',
               active: true
             }
           ]
@@ -170,6 +141,7 @@ describe('layouts RandomNotes', () => {
     it('not request for random notes if data exists', () => {
       renderRandomNotes({
         randomNotes: {
+          requesting: false,
           data: [{ image: 'image', title: 'title', url: 'url', active: true }]
         }
       })
@@ -189,18 +161,8 @@ describe('layouts RandomNotes', () => {
         randomNotes: {
           requesting: false,
           data: [
-            {
-              image: 'image1',
-              title: 'title1',
-              url: 'url1',
-              active: true
-            },
-            {
-              image: 'image2',
-              title: 'title2',
-              url: 'url2',
-              active: true
-            }
+            { image: 'image1', title: 'title1', url: 'url1', active: true },
+            { image: 'image2', title: 'title2', url: 'url2', active: true }
           ]
         }
       })

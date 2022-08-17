@@ -5,8 +5,9 @@ import { GitHub, WbSunny, Brightness2 } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
 import { setTheme } from '../../../reducers/status'
 
-const openRepository = () =>
+const openRepository = () => {
   window.open('https://github.com/prabagitaivan/white')
+}
 
 const useStyles = makeStyles(
   {

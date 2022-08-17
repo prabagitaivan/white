@@ -13,15 +13,11 @@ import logger from '../../libraries/logger'
 const useStyles = makeStyles(
   {
     editor: {
-      marginLeft: 5,
-      marginRight: 5,
       border: '1px solid gray'
     },
     buttons: {
       marginTop: 10,
       marginBottom: 10,
-      marginLeft: 5,
-      marginRight: 5,
 
       '& .MuiButton-root': {
         borderRadius: 0
@@ -38,7 +34,6 @@ const useStyles = makeStyles(
       textTransform: 'none'
     },
     mainButton: {
-      marginRight: 10,
       width: '80vw'
     },
     mainText: {
@@ -122,7 +117,7 @@ export default memo(() => {
           ]}
           onChange={coding}
           theme={light ? 'light' : 'dark'}
-          height='45vh'
+          height={desktop ? '60vh' : '53vh'}
           className={classes.editor}
         />
         <ButtonGroup fullWidth className={classes.buttons}>

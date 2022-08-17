@@ -7,7 +7,7 @@ const useStyles = makeStyles(
   {
     root: ({ desktop }) => ({
       paddingTop: desktop ? 65 : 15,
-      paddingBottom: desktop ? 80 : 110
+      paddingBottom: desktop ? 15 : 70
     })
   },
   { name: 'Content' }

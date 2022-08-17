@@ -121,6 +121,25 @@ describe('components Navigator', () => {
       expect(history.location.pathname).toEqual('/random-notes')
       userEvent.click(TreeBookmarks)
       expect(history.location.pathname).toEqual('/tree-bookmarks')
+      userEvent.click(Playground)
+      expect(history.location.pathname).toEqual('/playground')
+    })
+    it('open and navigate the page when click it page in menu for mobile', () => {
+      const { container, getByText } = renderNavigator({ desktop: false })
+
+      const Menu = container.querySelector('#navigator-toolbar-menu')
+      userEvent.click(Menu)
+
+      const RandomNotes = getByText('random notes')
+      const TreeBookmarks = getByText('tree bookmarks')
+      const Playground = getByText('playground')
+
+      userEvent.click(RandomNotes)
+      expect(history.location.pathname).toEqual('/random-notes')
+      userEvent.click(TreeBookmarks)
+      expect(history.location.pathname).toEqual('/tree-bookmarks')
+      userEvent.click(Playground)
+      expect(history.location.pathname).toEqual('/playground')
     })
     it('open this repository when click the Repository from side menu', () => {
       const { container } = renderNavigator({})
