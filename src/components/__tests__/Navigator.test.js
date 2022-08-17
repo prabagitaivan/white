@@ -62,17 +62,21 @@ describe('components Navigator', () => {
     })
     it('contain side menu on light theme', () => {
       const { container } = renderNavigator({})
+      const JustMatch = container.querySelector('#navigator-toolbar-just-match')
       const Repo = container.querySelector('#navigator-toolbar-repository')
       const Theme = container.querySelector('#navigator-toolbar-theme')
 
+      expect(JustMatch).toMatchSnapshot()
       expect(Repo).toMatchSnapshot()
       expect(Theme).toMatchSnapshot()
     })
     it('contain side menu on dark theme', () => {
       const { container } = renderNavigator({ light: false })
+      const JustMatch = container.querySelector('#navigator-toolbar-just-match')
       const Repo = container.querySelector('#navigator-toolbar-repository')
       const Theme = container.querySelector('#navigator-toolbar-theme')
 
+      expect(JustMatch).toMatchSnapshot()
       expect(Repo).toMatchSnapshot()
       expect(Theme).toMatchSnapshot()
     })
@@ -116,6 +120,7 @@ describe('components Navigator', () => {
       const { getByText } = renderNavigator({})
       const RandomNotes = getByText('random notes')
       const TreeBookmarks = getByText('tree bookmarks')
+      const Playground = getByText('playground')
 
       userEvent.click(RandomNotes)
       expect(history.location.pathname).toEqual('/random-notes')
@@ -140,6 +145,13 @@ describe('components Navigator', () => {
       expect(history.location.pathname).toEqual('/tree-bookmarks')
       userEvent.click(Playground)
       expect(history.location.pathname).toEqual('/playground')
+    })
+    it('open and navigate /just-match when click the JustMatch from side menu', () => {
+      const { container } = renderNavigator({})
+      const JustMatch = container.querySelector('#navigator-toolbar-just-match')
+
+      userEvent.click(JustMatch)
+      expect(history.location.pathname).toEqual('/just-match')
     })
     it('open this repository when click the Repository from side menu', () => {
       const { container } = renderNavigator({})

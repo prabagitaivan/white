@@ -1,7 +1,8 @@
 import React, { memo } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
 import { IconButton } from '@material-ui/core'
-import { GitHub, WbSunny, Brightness2 } from '@material-ui/icons'
+import { GitHub, WbSunny, Brightness2, FindInPage } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
 import { setTheme } from '../../../reducers/status'
 
@@ -26,13 +27,20 @@ export default memo(() => {
   const { desktop, light } = useSelector(state => state.status)
   const dispatch = useDispatch()
   const classes = useStyles({ desktop })
+  const history = useHistory()
 
-  const changeTheme = () => {
-    dispatch(setTheme(!light))
-  }
+  const openJustMatch = () => history.push('/just-match')
+  const changeTheme = () => dispatch(setTheme(!light))
 
   return (
     <div className={classes.root}>
+      <IconButton
+        id='navigator-toolbar-just-match'
+        size='small'
+        onClick={openJustMatch}
+      >
+        <FindInPage className={classes.icon} />
+      </IconButton>
       <IconButton
         id='navigator-toolbar-repository'
         size='small'

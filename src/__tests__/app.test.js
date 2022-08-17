@@ -10,6 +10,7 @@ import App from '../app'
 import RandomNotes from '../layouts/RandomNotes'
 import TreeBookmarks from '../layouts/TreeBookmarks'
 import Playground from '../layouts/Playground'
+import JustMatch from '../layouts/JustMatch'
 import * as emoji from '../libraries/emoji'
 
 function setConnectionEvent (online) {
@@ -130,6 +131,29 @@ describe('main App', () => {
         'cm-activeLine cm-line'
       )
       expect(AppEditors).toEqual(PlaygroundEditors)
+    })
+    it('render JustMatch for /just-match router', () => {
+      const history = createBrowserHistory()
+      history.push('/just-match')
+
+      const AppRender = render(
+        <Provider store={store}>
+          <Styles>
+            <Router history={history}>
+              <App />
+            </Router>
+          </Styles>
+        </Provider>
+      )
+      const JustMatchRender = render(
+        <Provider store={store}>
+          <Styles>
+            <JustMatch />
+          </Styles>
+        </Provider>
+      )
+
+      expect(AppRender.container).toEqual(JustMatchRender.container)
     })
   })
   describe('mounting', () => {

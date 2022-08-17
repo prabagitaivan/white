@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { Button, Drawer, IconButton, List, ListItem } from '@material-ui/core'
 import { Menu } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
+import { get } from 'lodash'
 import data from '../../../libraries/menu'
 
 const links = Object.keys(data).map(page => ({
@@ -54,7 +55,7 @@ const useStyles = makeStyles(
 export default memo(() => {
   const [drawer, setDrawer] = useState(false)
   const { desktop, page } = useSelector(state => state.status)
-  const { name } = data[page]
+  const name = get(data, `${page}.name`, '')
   const classes = useStyles({ desktop })
   const history = useHistory()
 

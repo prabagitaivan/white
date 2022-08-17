@@ -16,7 +16,8 @@ jest.mock('firebase/app', () => ({
 }))
 
 jest.mock('lodash', () => ({
-  shuffle: jest.fn(),
+  ...jest.requireActual('lodash'),
+  shuffle: data => data,
   random: jest.fn()
 }))
 

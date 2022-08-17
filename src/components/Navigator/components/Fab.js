@@ -2,6 +2,7 @@ import React, { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { IconButton } from '@material-ui/core'
 import { makeStyles } from '@material-ui/styles'
+import { get } from 'lodash'
 import data from '../../../libraries/menu'
 import { getRandomEmoji } from '../../../libraries/emoji'
 
@@ -35,7 +36,7 @@ const useStyles = makeStyles(
 export default memo(() => {
   const [emoji, setEmoji] = useState(initialEmoji)
   const { desktop, page } = useSelector(state => state.status)
-  const { options } = data[page]
+  const options = get(data, `${page}.options`, [])
   const classes = useStyles({ desktop })
   const pathname = window.location.pathname
 
