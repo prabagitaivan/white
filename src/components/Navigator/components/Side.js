@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { useHistory } from 'react-router-dom'
-import { IconButton } from '@material-ui/core'
-import { GitHub, WbSunny, Brightness2, FindInPage } from '@material-ui/icons'
-import { makeStyles } from '@material-ui/styles'
+import { useNavigate } from 'react-router-dom'
+import { IconButton } from '@mui/material'
+import { GitHub, WbSunny, Brightness2, FindInPage } from '@mui/icons-material'
+import { makeStyles } from '@mui/styles'
 import { setTheme } from '../../../reducers/status'
 
 const openRepository = () => {
@@ -27,9 +27,9 @@ export default memo(() => {
   const { desktop, light } = useSelector(state => state.status)
   const dispatch = useDispatch()
   const classes = useStyles({ desktop })
-  const history = useHistory()
+  const navigate = useNavigate()
 
-  const openJustMatch = () => history.push('/just-match')
+  const openJustMatch = () => navigate('/just-match')
   const changeTheme = () => dispatch(setTheme(!light))
 
   return (
@@ -37,6 +37,7 @@ export default memo(() => {
       <IconButton
         id='navigator-toolbar-just-match'
         size='small'
+        color='secondary'
         onClick={openJustMatch}
       >
         <FindInPage className={classes.icon} />
@@ -44,6 +45,7 @@ export default memo(() => {
       <IconButton
         id='navigator-toolbar-repository'
         size='small'
+        color='secondary'
         onClick={openRepository}
       >
         <GitHub className={classes.icon} />
@@ -51,6 +53,7 @@ export default memo(() => {
       <IconButton
         id='navigator-toolbar-theme'
         size='small'
+        color='secondary'
         onClick={changeTheme}
       >
         {light ? (

@@ -1,8 +1,8 @@
 import React, { memo, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Button, ButtonGroup, Typography, SvgIcon } from '@material-ui/core'
-import { Clear, PlayArrow } from '@material-ui/icons'
-import { makeStyles } from '@material-ui/styles'
+import { Button, ButtonGroup, Typography, SvgIcon } from '@mui/material'
+import { Clear, PlayArrow } from '@mui/icons-material'
+import { makeStyles } from '@mui/styles'
 import CodeMirror, { Prec, keymap } from '@uiw/react-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import Navigator from '../../components/Navigator'
@@ -12,12 +12,18 @@ import logger from '../../libraries/logger'
 
 const useStyles = makeStyles(
   {
-    editor: {
+    mainEditor: {
+      marginTop: 20,
+      fontSize: 14,
+      border: '1px solid gray'
+    },
+    resultEditor: {
+      fontSize: 14,
       border: '1px solid gray'
     },
     buttons: {
-      marginTop: 10,
-      marginBottom: 10,
+      marginTop: 15,
+      marginBottom: 15,
 
       '& .MuiButton-root': {
         borderRadius: 0
@@ -117,10 +123,10 @@ export default memo(() => {
           ]}
           onChange={coding}
           theme={light ? 'light' : 'dark'}
-          height={desktop ? '60vh' : '53vh'}
-          className={classes.editor}
+          height='52vh'
+          className={classes.mainEditor}
         />
-        <ButtonGroup fullWidth className={classes.buttons}>
+        <ButtonGroup color='secondary' fullWidth className={classes.buttons}>
           <Button onClick={clear} className={classes.subButton}>
             <Clear />
             {desktop ? (
@@ -150,7 +156,7 @@ export default memo(() => {
           value={results.join('\n')}
           theme={light ? 'light' : 'dark'}
           height='25vh'
-          className={classes.editor}
+          className={classes.resultEditor}
         />
       </Content>
     </div>

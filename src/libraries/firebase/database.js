@@ -1,5 +1,5 @@
 import firebase from './client'
-import 'firebase/database'
+import 'firebase/compat/database'
 
 const database = firebase.database()
 

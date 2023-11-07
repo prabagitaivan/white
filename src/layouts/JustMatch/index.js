@@ -1,8 +1,8 @@
 import React, { memo, useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Grid, IconButton, InputBase } from '@material-ui/core'
-import { Search } from '@material-ui/icons'
-import { makeStyles } from '@material-ui/styles'
+import { Grid, IconButton, InputBase } from '@mui/material'
+import { Search } from '@mui/icons-material'
+import { makeStyles } from '@mui/styles'
 import { shuffle } from 'lodash'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
@@ -18,7 +18,8 @@ const useStyles = makeStyles(
       alignItems: 'center',
       width: '100%',
       padding: '2px 4px 2px 18px',
-      marginBottom: 30,
+      marginTop: 20,
+      marginBottom: 25,
       borderRadius: 100,
       backgroundColor: 'transparent',
       border: '1px solid #b1b1b1'

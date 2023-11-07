@@ -1,9 +1,9 @@
 import React, { memo, useState, Fragment } from 'react'
 import { useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
-import { Button, Drawer, IconButton, List, ListItem } from '@material-ui/core'
-import { Menu } from '@material-ui/icons'
-import { makeStyles } from '@material-ui/styles'
+import { useNavigate } from 'react-router-dom'
+import { Button, Drawer, IconButton, List, ListItem } from '@mui/material'
+import { Menu } from '@mui/icons-material'
+import { makeStyles } from '@mui/styles'
 import { get } from 'lodash'
 import data from '../../../libraries/menu'
 
@@ -21,19 +21,16 @@ const useStyles = makeStyles(
       left: '50%',
       transform: 'translateX(-50%)'
     },
-    active: {
+    textActive: {
       cursor: 'pointer',
       fontSize: 12,
       textTransform: 'initial'
     },
-    inactive: {
+    textInactive: {
       cursor: 'pointer',
       fontSize: 12,
       textTransform: 'initial',
-
-      '& .MuiButton-label': {
-        color: '#b1b1b1'
-      }
+      opacity: '0.4'
     },
     line: {
       height: 1,
@@ -42,7 +39,11 @@ const useStyles = makeStyles(
       marginRight: 5,
       backgroundColor: '#b1b1b1'
     },
-    item: {
+    itemActive: {
+      fontSize: 12,
+      backgroundColor: '#b1b1b1'
+    },
+    itemInactive: {
       fontSize: 12
     },
     icon: {
@@ -57,9 +58,9 @@ export default memo(() => {
   const { desktop, page } = useSelector(state => state.status)
   const name = get(data, `${page}.name`, '')
   const classes = useStyles({ desktop })
-  const history = useHistory()
+  const navigate = useNavigate()
 
-  const openLink = route => history.push(route)
+  const openLink = route => navigate(route)
   const toggleDrawer = () => setDrawer(!drawer)
 
   return desktop ? (
@@ -68,7 +69,10 @@ export default memo(() => {
         <Fragment key={index}>
           <Button
             size='small'
-            className={link.name === name ? classes.active : classes.inactive}
+            variant='contained'
+            className={
+              link.name === name ? classes.textActive : classes.textInactive
+            }
             onClick={() => openLink(link.route)}
           >
             {link.name}
@@ -82,6 +86,7 @@ export default memo(() => {
       <IconButton
         id='navigator-toolbar-menu'
         size='small'
+        color='secondary'
         onClick={toggleDrawer}
       >
         <Menu className={classes.icon} />
@@ -91,9 +96,9 @@ export default memo(() => {
           {links.map((link, index) => (
             <ListItem
               key={index}
-              button
-              selected={link.name === name}
-              className={classes.item}
+              className={
+                link.name === name ? classes.itemActive : classes.itemInactive
+              }
               onClick={() => openLink(link.route)}
             >
               {link.name}

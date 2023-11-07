@@ -1,18 +1,23 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 import store from './stores'
 import Styles from './styles'
 import App from './app'
 import * as serviceWorker from './serviceWorker'
 
-ReactDOM.render(
+const element = document.getElementById('root')
+const root = createRoot(element)
+
+root.render(
   <Provider store={store}>
     <Styles>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Styles>
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 )
 
 serviceWorker.unregister()

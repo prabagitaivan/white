@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from 'firebase/compat/app'
 
 const apiKey = process.env.REACT_APP_FIREBASE_API_KEY
 const projectId = process.env.REACT_APP_FIREBASE_PROJECT_ID

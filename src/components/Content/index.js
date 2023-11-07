@@ -1,12 +1,12 @@
 import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
-import { Container } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { Container } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles(
   {
     root: ({ desktop }) => ({
-      paddingTop: desktop ? 65 : 15,
+      paddingTop: desktop ? 50 : 0,
       paddingBottom: desktop ? 15 : 70
     })
   },

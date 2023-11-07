@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import { IconButton } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { IconButton } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 import { get } from 'lodash'
 import data from '../../../libraries/menu'
 import { getRandomEmoji } from '../../../libraries/emoji'
@@ -16,14 +16,13 @@ const useStyles = makeStyles(
     },
     main: {
       width: ({ desktop }) => (desktop ? 35 : 20),
-      height: ({ desktop }) => (desktop ? 35 : 20),
+      height: ({ desktop }) => (desktop ? 35 : 30),
       marginLeft: ({ desktop }) => (desktop ? 0 : 2.5),
-      marginRight: ({ desktop }) => (desktop ? 0 : 5),
       cursor: 'default',
       userSelect: 'none'
     },
     emoji: {
-      fontSize: ({ desktop }) => (desktop ? 25 : 15)
+      fontSize: ({ desktop }) => (desktop ? 25 : 20)
     },
     icon: {
       padding: ({ desktop }) => (desktop ? 2 : 4),

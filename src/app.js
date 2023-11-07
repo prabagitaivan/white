@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setConnection, setScreen } from './reducers/status'
 import RandomNotes from './layouts/RandomNotes'
@@ -29,14 +29,12 @@ export default () => {
   }, [dispatch])
 
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path='/' component={RandomNotes} />
-        <Route exact path='/random-notes' component={RandomNotes} />
-        <Route exact path='/tree-bookmarks' component={TreeBookmarks} />
-        <Route exact path='/playground' component={Playground} />
-        <Route exact path='/just-match' component={JustMatch} />
-      </Switch>
-    </BrowserRouter>
+    <Routes>
+      <Route path='/' element={<RandomNotes />} />
+      <Route path='/random-notes' element={<RandomNotes />} />
+      <Route path='/tree-bookmarks' element={<TreeBookmarks />} />
+      <Route path='/playground' element={<Playground />} />
+      <Route path='/just-match' element={<JustMatch />} />
+    </Routes>
   )
 }

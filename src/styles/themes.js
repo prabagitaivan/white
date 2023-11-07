@@ -1,6 +1,15 @@
-import { createTheme } from '@material-ui/core/styles'
+import { createTheme } from '@mui/material/styles'
 
 export const light = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920
+    }
+  },
   palette: {
     type: 'light',
     primary: {
@@ -13,12 +22,22 @@ export const light = createTheme({
       primary: '#181818'
     },
     background: {
-      default: '#fafafa'
+      default: '#fafafa',
+      paper: '#ffffff'
     }
   }
 })
 
 export const dark = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1920
+    }
+  },
   palette: {
     type: 'dark',
     primary: {
@@ -31,7 +50,8 @@ export const dark = createTheme({
       primary: '#ffffff'
     },
     background: {
-      default: '#1c1c1c'
+      default: '#1c1c1c',
+      paper: '#424242'
     }
   }
 })

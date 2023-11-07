@@ -1,7 +1,7 @@
 import React, { memo, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { ImageList, ImageListItem, ImageListItemBar } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { ImageList, ImageListItem, ImageListItemBar } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
 import { request } from '../../reducers/randomNotes'
@@ -11,25 +11,26 @@ import Empty from '../../components/Empty'
 
 const useStyles = makeStyles(
   {
+    imageList: {
+      overflow: 'hidden'
+    },
     imageListItem: {
-      '& .MuiImageListItem-item': {
-        borderRadius: 5,
-        boxShadow: '0px 5px 5px rgb(0 0 0 / 25%)'
-      }
+      borderRadius: 5,
+      boxShadow: '0px 5px 5px rgb(0 0 0 / 25%)'
     },
     img: {
+      overflow: 'hidden',
+      borderRadius: 5,
       cursor: 'pointer'
     },
     imageListItemBar: {
       height: 50,
+      borderBottomLeftRadius: 5,
+      borderBottomRightRadius: 5,
 
       '& .MuiImageListItemBar-titleWrap': {
-        marginLeft: 10,
-        marginRight: 10
-      },
-      '& .MuiImageListItemBar-rootSubtitle': {
-        marginLeft: 10,
-        marginRight: 10
+        paddingLeft: 10,
+        paddingRight: 10
       },
       '& .MuiImageListItemBar-title': {
         fontSize: 15,
@@ -68,7 +69,12 @@ export default memo(() => {
         ) : data.length === 0 ? (
           <Empty />
         ) : (
-          <ImageList cols={desktop ? 4 : 1} rowHeight={250} gap={20}>
+          <ImageList
+            cols={desktop ? 4 : 1}
+            rowHeight={250}
+            gap={20}
+            className={classes.imageList}
+          >
             {data
               .filter(note => note.active)
               .reverse()

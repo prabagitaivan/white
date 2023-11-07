@@ -4,10 +4,10 @@ import {
   AddCircleOutline,
   BlurCircular,
   HighlightOff
-} from '@material-ui/icons'
-import { Grid } from '@material-ui/core'
-import { TreeView, TreeItem } from '@material-ui/lab'
-import { makeStyles } from '@material-ui/styles'
+} from '@mui/icons-material'
+import { Grid } from '@mui/material'
+import { TreeView, TreeItem } from '@mui/x-tree-view'
+import { makeStyles } from '@mui/styles'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
 import { request } from '../../reducers/treeBookmarks'
@@ -19,14 +19,14 @@ import Label from './components/Label'
 const useStyles = makeStyles(
   {
     root: {
-      marginTop: -7.5,
-      paddingTop: -7.5,
+      marginTop: 10,
+      marginLeft: -8,
       paddingBottom: 10
     },
     tree: {
       '& .MuiTreeItem-group': {
-        marginLeft: 7,
-        paddingLeft: 14,
+        marginLeft: 15,
+        paddingLeft: 7.5,
         borderLeft: '1px dashed gray'
       },
       '& .MuiTreeItem-label': {
