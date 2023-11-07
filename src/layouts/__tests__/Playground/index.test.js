@@ -1,6 +1,6 @@
-import { render, fireEvent, waitForDomChange } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { render, fireEvent, waitFor } from '@testing-library/react'
 import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore } from '../../../stores'
 import Styles from '../../../styles'
@@ -23,7 +23,9 @@ function renderPlayground ({ desktop = true, mac = true, light = true }) {
   return render(
     <Provider store={store}>
       <Styles>
-        <Playground />
+        <MemoryRouter>
+          <Playground />
+        </MemoryRouter>
       </Styles>
     </Provider>
   )
@@ -105,34 +107,32 @@ describe('layouts Playground', () => {
       window.navigator.clipboard.writeText.mockRestore()
     })
 
-    it('clear content when click clear button', async () => {
+    it('clear content when click clear button', () => {
       const { container, getByText } = renderPlayground({})
 
       const Clear = getByText('clear')
-      userEvent.click(Clear)
+      fireEvent.click(Clear)
 
       const Editors = container.getElementsByClassName('cm-activeLine cm-line')
-      await waitForDomChange(Editors)
       expect(Editors).toMatchSnapshot()
     })
     it('copy content when click copy button', () => {
       const { getByText } = renderPlayground({})
 
       const Copy = getByText('copy')
-      userEvent.click(Copy)
+      fireEvent.click(Copy)
 
       expect(window.navigator.clipboard.writeText).toHaveBeenCalledWith(
         "console.log('hello world')"
       )
     })
-    it('execute the code content when click execute button', async () => {
+    it('execute the code content when click execute button', () => {
       const { container, getByText } = renderPlayground({})
 
       const Execute = getByText('execute')
-      userEvent.click(Execute)
+      fireEvent.click(Execute)
 
       const Editors = container.getElementsByClassName('cm-activeLine cm-line')
-      await waitForDomChange(Editors)
       expect(Editors).toMatchSnapshot()
     })
     it('execute the code content when key shortcuts pressed', async () => {
@@ -142,7 +142,6 @@ describe('layouts Playground', () => {
       fireEvent.keyDown(EditorTextBoxes[0], { metaKey: true, key: 'Enter' })
 
       const Editors = container.getElementsByClassName('cm-activeLine cm-line')
-      await waitForDomChange(Editors)
       expect(Editors).toMatchSnapshot()
     })
     it('execute the code with error content', async () => {
@@ -152,12 +151,11 @@ describe('layouts Playground', () => {
       fireEvent.change(EditorTextBoxes[0], { target: { textContent: 'asdf' } })
 
       const Editors = container.getElementsByClassName('cm-activeLine cm-line')
-      await waitForDomChange(Editors)
+      await waitFor(() => Editors)
 
       const Execute = getByText('execute')
-      userEvent.click(Execute)
+      fireEvent.click(Execute)
 
-      await waitForDomChange(Editors)
       expect(Editors).toMatchSnapshot()
     })
   })

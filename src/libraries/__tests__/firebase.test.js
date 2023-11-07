@@ -28,10 +28,6 @@ async function mockGetTreeBookmarks (data = {}) {
   return getTreeBookmarks()
 }
 
-afterEach(() => {
-  database.ref.mockRestore()
-})
-
 describe('libraries firebase', () => {
   describe('client', () => {
     it('use env when initialize firebase', () => {

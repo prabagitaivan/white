@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore } from '../../../stores'
 import Styles from '../../../styles'
@@ -24,7 +24,9 @@ function renderRandomNotes ({ desktop = true, randomNotes }) {
   return render(
     <Provider store={store}>
       <Styles>
-        <RandomNotes />
+        <MemoryRouter>
+          <RandomNotes />
+        </MemoryRouter>
       </Styles>
     </Provider>
   )
@@ -168,11 +170,11 @@ describe('layouts RandomNotes', () => {
       })
 
       const Image1 = getByAltText('title1')
-      userEvent.click(Image1)
+      fireEvent.click(Image1)
       expect(window.open).toHaveBeenCalledWith('url1')
 
       const Image2 = getByAltText('title2')
-      userEvent.click(Image2)
+      fireEvent.click(Image2)
       expect(window.open).toHaveBeenCalledWith('url2')
     })
   })

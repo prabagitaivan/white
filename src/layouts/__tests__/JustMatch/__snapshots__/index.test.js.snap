@@ -6,42 +6,39 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
     class="WhiteJustMatch-search"
   >
     <div
-      class="MuiInputBase-root WhiteJustMatch-input MuiInputBase-focused"
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-focused WhiteJustMatch-input css-utwxka-MuiInputBase-root"
     >
       <input
-        class="MuiInputBase-input"
+        class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
         placeholder="match"
         type="text"
         value=""
       />
     </div>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall MuiButtonBase-disabled"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
       disabled=""
       tabindex="-1"
       type="button"
     >
-      <span
-        class="MuiIconButton-label"
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteJustMatch-icon WhiteJustMatch-icon css-i4bv87-MuiSvgIcon-root"
+        data-testid="SearchIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root WhiteJustMatch-icon WhiteJustMatch-icon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-          />
-        </svg>
-      </span>
+        <path
+          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+        />
+      </svg>
     </button>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
     >
       <div
         class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -60,7 +57,7 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
     >
       <div
         class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -88,42 +85,39 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
     class="WhiteJustMatch-search"
   >
     <div
-      class="MuiInputBase-root WhiteJustMatch-input MuiInputBase-focused"
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-focused WhiteJustMatch-input css-i2fblb-MuiInputBase-root"
     >
       <input
-        class="MuiInputBase-input"
+        class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
         placeholder="match"
         type="text"
         value=""
       />
     </div>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall MuiButtonBase-disabled"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
       disabled=""
       tabindex="-1"
       type="button"
     >
-      <span
-        class="MuiIconButton-label"
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteJustMatch-icon WhiteJustMatch-icon css-i4bv87-MuiSvgIcon-root"
+        data-testid="SearchIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root WhiteJustMatch-icon WhiteJustMatch-icon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-          />
-        </svg>
-      </span>
+        <path
+          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+        />
+      </svg>
     </button>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
     >
       <div
         class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -142,7 +136,7 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
     >
       <div
         class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -170,42 +164,39 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
     class="WhiteJustMatch-search"
   >
     <div
-      class="MuiInputBase-root WhiteJustMatch-input MuiInputBase-focused"
+      class="MuiInputBase-root MuiInputBase-colorPrimary Mui-focused WhiteJustMatch-input css-i2fblb-MuiInputBase-root"
     >
       <input
-        class="MuiInputBase-input"
+        class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
         placeholder="match"
         type="text"
         value=""
       />
     </div>
     <button
-      class="MuiButtonBase-root MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall MuiButtonBase-disabled"
+      class="MuiButtonBase-root Mui-disabled MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
       disabled=""
       tabindex="-1"
       type="button"
     >
-      <span
-        class="MuiIconButton-label"
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteJustMatch-icon WhiteJustMatch-icon css-i4bv87-MuiSvgIcon-root"
+        data-testid="SearchIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
       >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root WhiteJustMatch-icon WhiteJustMatch-icon"
-          focusable="false"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-          />
-        </svg>
-      </span>
+        <path
+          d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+        />
+      </svg>
     </button>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
   >
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
     >
       <div
         class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -224,7 +215,7 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
       </div>
     </div>
     <div
-      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
     >
       <div
         class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -248,10 +239,10 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
 
 exports[`layouts RandomNotes userEvent match input with the items 1`] = `
 <div
-  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
 >
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
   >
     <div
       class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -270,7 +261,7 @@ exports[`layouts RandomNotes userEvent match input with the items 1`] = `
     </div>
   </div>
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
   >
     <div
       class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -293,10 +284,10 @@ exports[`layouts RandomNotes userEvent match input with the items 1`] = `
 
 exports[`layouts RandomNotes userEvent match input with the items 2`] = `
 <div
-  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
 >
   <div
-    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-49904w-MuiGrid-root"
   >
     <div
       class="WhiteJustMatch-link WhiteJustMatch-link"
@@ -319,6 +310,6 @@ exports[`layouts RandomNotes userEvent match input with the items 2`] = `
 
 exports[`layouts RandomNotes userEvent match input with the items 3`] = `
 <div
-  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3"
+  class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-3 css-zow5z4-MuiGrid-root"
 />
 `;

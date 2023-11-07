@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore } from '../../../stores'
 import Styles from '../../../styles'
@@ -24,7 +24,9 @@ function renderTreeBookmarks ({ desktop = true, treeBookmarks }) {
   return render(
     <Provider store={store}>
       <Styles>
-        <TreeBookmarks />
+        <MemoryRouter>
+          <TreeBookmarks />
+        </MemoryRouter>
       </Styles>
     </Provider>
   )
@@ -84,7 +86,7 @@ describe('layouts TreeBookmarks', () => {
 
       // bookmark version
       const Subdata = queryByText('subdata')
-      userEvent.click(Subdata)
+      fireEvent.click(Subdata)
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('contain data content when requesting result is not empty in mobile', () => {
@@ -103,7 +105,7 @@ describe('layouts TreeBookmarks', () => {
 
       // bookmark version
       const Subdata = queryByText('subdata')
-      userEvent.click(Subdata)
+      fireEvent.click(Subdata)
       expect(Content.firstChild).toMatchSnapshot()
     })
     it('show active only in data content', () => {
@@ -120,7 +122,7 @@ describe('layouts TreeBookmarks', () => {
       })
 
       const Subdata = queryByText('subdata')
-      userEvent.click(Subdata)
+      fireEvent.click(Subdata)
 
       expect(queryByText('title1')).not.toBeInTheDocument()
       expect(queryByText('title2')).toBeInTheDocument()
@@ -167,14 +169,14 @@ describe('layouts TreeBookmarks', () => {
       })
 
       const Subdata = queryByText('subdata')
-      userEvent.click(Subdata)
+      fireEvent.click(Subdata)
 
       const Bookmark1 = queryByText('title1')
-      userEvent.click(Bookmark1)
+      fireEvent.click(Bookmark1)
       expect(window.open).toHaveBeenCalledWith('url1')
 
       const Bookmark2 = queryByText('title2')
-      userEvent.click(Bookmark2)
+      fireEvent.click(Bookmark2)
       expect(window.open).toHaveBeenCalledWith('url2')
     })
   })

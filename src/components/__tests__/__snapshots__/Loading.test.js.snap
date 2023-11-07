@@ -7,16 +7,16 @@ exports[`components Loading snapshots return correct snapshot 1`] = `
   <div>
     Loading
   </div>
-  <div
-    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary WhiteLoading-linearProgress MuiLinearProgress-indeterminate"
+  <span
+    class="MuiLinearProgress-root MuiLinearProgress-colorSecondary MuiLinearProgress-indeterminate WhiteLoading-linearProgress css-m48q12-MuiLinearProgress-root"
     role="progressbar"
   >
-    <div
-      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Indeterminate"
+    <span
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar1Indeterminate css-3v28zu-MuiLinearProgress-bar1"
     />
-    <div
-      class="MuiLinearProgress-bar MuiLinearProgress-bar2Indeterminate MuiLinearProgress-barColorSecondary"
+    <span
+      class="MuiLinearProgress-bar MuiLinearProgress-barColorSecondary MuiLinearProgress-bar2Indeterminate css-vnqxk6-MuiLinearProgress-bar2"
     />
-  </div>
+  </span>
 </div>
 `;

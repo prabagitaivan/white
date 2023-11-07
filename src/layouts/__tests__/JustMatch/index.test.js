@@ -1,6 +1,6 @@
 import { render, fireEvent } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
 import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore } from '../../../stores'
 import Styles from '../../../styles'
@@ -31,7 +31,9 @@ function renderJustMatch ({
   return render(
     <Provider store={store}>
       <Styles>
-        <JustMatch />
+        <MemoryRouter>
+          <JustMatch />
+        </MemoryRouter>
       </Styles>
     </Provider>
   )
@@ -228,11 +230,11 @@ describe('layouts RandomNotes', () => {
       })
 
       const Item1 = getByText('title1')
-      userEvent.click(Item1)
+      fireEvent.click(Item1)
       expect(window.open).toHaveBeenCalledWith('url1')
 
       const Item2 = getByText('url2')
-      userEvent.click(Item2)
+      fireEvent.click(Item2)
       expect(window.open).toHaveBeenCalledWith('url2')
     })
 

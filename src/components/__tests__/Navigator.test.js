@@ -1,9 +1,7 @@
-import { render } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import { render, fireEvent } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
-import { Router } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { BrowserRouter } from 'react-router-dom'
 import { createStore } from '../../stores'
 import Styles from '../../styles'
 import { setTheme } from '../../reducers/status'
@@ -11,7 +9,6 @@ import * as emoji from '../../libraries/emoji'
 import Navigator from '../Navigator'
 
 let store
-let history
 
 function renderNavigator ({ desktop = true, light = true }) {
   const preloadedState = {
@@ -19,7 +16,6 @@ function renderNavigator ({ desktop = true, light = true }) {
     randomNotes: { data: [] }
   }
   store = createStore(preloadedState)
-  history = createBrowserHistory()
 
   jest.spyOn(store, 'dispatch').mockReturnValue()
   jest.spyOn(store, 'getState')
@@ -27,9 +23,9 @@ function renderNavigator ({ desktop = true, light = true }) {
   return render(
     <Provider store={store}>
       <Styles>
-        <Router history={history}>
+        <BrowserRouter>
           <Navigator />
-        </Router>
+        </BrowserRouter>
       </Styles>
     </Provider>
   )
@@ -40,24 +36,22 @@ describe('components Navigator', () => {
     it('highlight current page in menu for desktop', () => {
       // use RandomNotes default page
       const { getByText } = renderNavigator({})
-      expect(getByText('random notes')).not.toHaveStyle('color: #b1b1b1')
-      expect(getByText('tree bookmarks')).toHaveStyle('color: #b1b1b1')
-      expect(getByText('playground')).toHaveStyle('color: #b1b1b1')
+      expect(getByText('random notes')).not.toHaveStyle('opacity: 0.4')
+      expect(getByText('tree bookmarks')).toHaveStyle('opacity: 0.4')
+      expect(getByText('playground')).toHaveStyle('opacity: 0.4')
     })
     it('highlight current page in menu for mobile', () => {
       // use RandomNotes default page
       const { container, getByText } = renderNavigator({ desktop: false })
       const Menu = container.querySelector('#navigator-toolbar-menu')
 
-      userEvent.click(Menu)
-      expect(getByText('random notes')).toHaveStyle(
-        'background-color: rgba(0, 0, 0, 0.08)'
-      )
+      fireEvent.click(Menu)
+      expect(getByText('random notes')).toHaveStyle('background-color: #b1b1b1')
       expect(getByText('tree bookmarks')).not.toHaveStyle(
-        'color: rgba(0, 0, 0, 0.08)'
+        'background-color: #b1b1b1'
       )
       expect(getByText('playground')).not.toHaveStyle(
-        'color: rgba(0, 0, 0, 0.08)'
+        'background-color: #b1b1b1'
       )
     })
     it('contain side menu on light theme', () => {
@@ -122,42 +116,42 @@ describe('components Navigator', () => {
       const TreeBookmarks = getByText('tree bookmarks')
       const Playground = getByText('playground')
 
-      userEvent.click(RandomNotes)
-      expect(history.location.pathname).toEqual('/random-notes')
-      userEvent.click(TreeBookmarks)
-      expect(history.location.pathname).toEqual('/tree-bookmarks')
-      userEvent.click(Playground)
-      expect(history.location.pathname).toEqual('/playground')
+      fireEvent.click(RandomNotes)
+      expect(window.location.pathname).toEqual('/random-notes')
+      fireEvent.click(TreeBookmarks)
+      expect(window.location.pathname).toEqual('/tree-bookmarks')
+      fireEvent.click(Playground)
+      expect(window.location.pathname).toEqual('/playground')
     })
     it('open and navigate the page when click it page in menu for mobile', () => {
       const { container, getByText } = renderNavigator({ desktop: false })
 
       const Menu = container.querySelector('#navigator-toolbar-menu')
-      userEvent.click(Menu)
+      fireEvent.click(Menu)
 
       const RandomNotes = getByText('random notes')
       const TreeBookmarks = getByText('tree bookmarks')
       const Playground = getByText('playground')
 
-      userEvent.click(RandomNotes)
-      expect(history.location.pathname).toEqual('/random-notes')
-      userEvent.click(TreeBookmarks)
-      expect(history.location.pathname).toEqual('/tree-bookmarks')
-      userEvent.click(Playground)
-      expect(history.location.pathname).toEqual('/playground')
+      fireEvent.click(RandomNotes)
+      expect(window.location.pathname).toEqual('/random-notes')
+      fireEvent.click(TreeBookmarks)
+      expect(window.location.pathname).toEqual('/tree-bookmarks')
+      fireEvent.click(Playground)
+      expect(window.location.pathname).toEqual('/playground')
     })
     it('open and navigate /just-match when click the JustMatch from side menu', () => {
       const { container } = renderNavigator({})
       const JustMatch = container.querySelector('#navigator-toolbar-just-match')
 
-      userEvent.click(JustMatch)
-      expect(history.location.pathname).toEqual('/just-match')
+      fireEvent.click(JustMatch)
+      expect(window.location.pathname).toEqual('/just-match')
     })
     it('open this repository when click the Repository from side menu', () => {
       const { container } = renderNavigator({})
       const Repo = container.querySelector('#navigator-toolbar-repository')
 
-      userEvent.click(Repo)
+      fireEvent.click(Repo)
       expect(window.open).toHaveBeenCalledWith(
         'https://github.com/prabagitaivan/white'
       )
@@ -166,7 +160,7 @@ describe('components Navigator', () => {
       const { container } = renderNavigator({})
       const Theme = container.querySelector('#navigator-toolbar-theme')
 
-      userEvent.click(Theme)
+      fireEvent.click(Theme)
       expect(store.dispatch).toHaveBeenCalledTimes(1)
       expect(store.dispatch).toHaveBeenCalledWith(setTheme(false))
     })
@@ -174,7 +168,7 @@ describe('components Navigator', () => {
       const { container } = renderNavigator({ light: false })
       const Theme = container.querySelector('#navigator-toolbar-theme')
 
-      userEvent.click(Theme)
+      fireEvent.click(Theme)
       expect(store.dispatch).toHaveBeenCalledTimes(1)
       expect(store.dispatch).toHaveBeenCalledWith(setTheme(true))
     })
@@ -184,10 +178,10 @@ describe('components Navigator', () => {
 
       // 1 called when first pathname change
 
-      userEvent.click(Emoji)
+      fireEvent.click(Emoji)
       expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(2)
 
-      userEvent.click(Emoji)
+      fireEvent.click(Emoji)
       expect(emoji.getRandomEmoji).toHaveBeenCalledTimes(3)
     })
     it('do option when click one of options fab menu', () => {
@@ -195,7 +189,7 @@ describe('components Navigator', () => {
       const { container } = renderNavigator({})
       const Shuffle = container.querySelector('#navigator-fab-shuffle-notes')
 
-      userEvent.click(Shuffle)
+      fireEvent.click(Shuffle)
       expect(store.getState).toHaveBeenCalled()
     })
   })

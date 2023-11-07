@@ -2,216 +2,192 @@
 
 exports[`components Navigator snapshots contain fab menu 1`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-fab-shuffle-notes"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorFab-icon WhiteNavigatorFab-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="LoopIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorFab-icon WhiteNavigatorFab-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"
-      />
-    </svg>
-  </span>
+    <path
+      d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;
 
 exports[`components Navigator snapshots contain fab menu 2`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall css-1pe4mpk-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-fab-open-random"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorFab-icon WhiteNavigatorFab-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="FlashOnIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorFab-icon WhiteNavigatorFab-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M7 2v11h3v9l7-12h-4l4-8z"
-      />
-    </svg>
-  </span>
+    <path
+      d="M7 2v11h3v9l7-12h-4l4-8z"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;
 
 exports[`components Navigator snapshots contain side menu on dark theme 1`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary MuiIconButton-sizeSmall css-l0ukwx-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-toolbar-just-match"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorSide-icon WhiteNavigatorSide-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="FindInPageIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3z"
-      />
-    </svg>
-  </span>
+    <path
+      d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3z"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;
 
 exports[`components Navigator snapshots contain side menu on dark theme 2`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary MuiIconButton-sizeSmall css-l0ukwx-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-toolbar-repository"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorSide-icon WhiteNavigatorSide-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="GitHubIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
-      />
-    </svg>
-  </span>
+    <path
+      d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;
 
 exports[`components Navigator snapshots contain side menu on dark theme 3`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary MuiIconButton-sizeSmall css-l0ukwx-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-toolbar-theme"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorSide-icon WhiteNavigatorSide-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="Brightness2Icon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"
-      />
-    </svg>
-  </span>
+    <path
+      d="M10 2c-1.82 0-3.53.5-5 1.35C7.99 5.08 10 8.3 10 12s-2.01 6.92-5 8.65C6.47 21.5 8.18 22 10 22c5.52 0 10-4.48 10-10S15.52 2 10 2z"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;
 
 exports[`components Navigator snapshots contain side menu on light theme 1`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary MuiIconButton-sizeSmall css-2jx93l-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-toolbar-just-match"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorSide-icon WhiteNavigatorSide-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="FindInPageIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3z"
-      />
-    </svg>
-  </span>
+    <path
+      d="M20 19.59V8l-6-6H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c.45 0 .85-.15 1.19-.4l-4.43-4.43c-.8.52-1.74.83-2.76.83-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5c0 1.02-.31 1.96-.83 2.75L20 19.59zM9 13c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3z"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;
 
 exports[`components Navigator snapshots contain side menu on light theme 2`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary MuiIconButton-sizeSmall css-2jx93l-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-toolbar-repository"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorSide-icon WhiteNavigatorSide-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="GitHubIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
-      />
-    </svg>
-  </span>
+    <path
+      d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;
 
 exports[`components Navigator snapshots contain side menu on light theme 3`] = `
 <button
-  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
+  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorSecondary MuiIconButton-sizeSmall css-2jx93l-MuiButtonBase-root-MuiIconButton-root"
   id="navigator-toolbar-theme"
   tabindex="0"
   type="button"
 >
-  <span
-    class="MuiIconButton-label"
+  <svg
+    aria-hidden="true"
+    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium WhiteNavigatorSide-icon WhiteNavigatorSide-icon css-i4bv87-MuiSvgIcon-root"
+    data-testid="WbSunnyIcon"
+    focusable="false"
+    viewBox="0 0 24 24"
   >
-    <svg
-      aria-hidden="true"
-      class="MuiSvgIcon-root WhiteNavigatorSide-icon WhiteNavigatorSide-icon"
-      focusable="false"
-      viewBox="0 0 24 24"
-    >
-      <path
-        d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"
-      />
-    </svg>
-  </span>
+    <path
+      d="m6.76 4.84-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7 1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91 1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"
+    />
+  </svg>
   <span
-    class="MuiTouchRipple-root"
+    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
   />
 </button>
 `;

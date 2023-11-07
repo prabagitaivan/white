@@ -2,33 +2,29 @@
 
 exports[`layouts RandomNotes snapshots contain data content when requesting result is not empty in desktop 1`] = `
 <ul
-  class="MuiImageList-root"
-  style="margin: -10px;"
+  class="MuiImageList-root MuiImageList-standard WhiteRandomNotes-imageList css-rvv586-MuiImageList-root"
+  style="grid-template-columns: repeat(4, 1fr); gap: 20px;"
 >
   <li
-    class="MuiImageListItem-root WhiteRandomNotes-imageListItem"
-    style="width: 25%; height: 270px; padding: 10px;"
+    class="MuiImageListItem-root MuiImageListItem-standard WhiteRandomNotes-imageListItem css-ta95xa-MuiImageListItem-root"
+    style="height: 250px; grid-column-end: span 1; grid-row-end: span 1;"
   >
+    <img
+      alt="title"
+      class="MuiImageListItem-img WhiteRandomNotes-img"
+      loading="lazy"
+      src="image"
+    />
     <div
-      class="MuiImageListItem-item"
+      class="MuiImageListItemBar-root MuiImageListItemBar-positionBottom WhiteRandomNotes-imageListItemBar css-ztrqiq-MuiImageListItemBar-root"
     >
-      <img
-        alt="title"
-        class="WhiteRandomNotes-img"
-        loading="lazy"
-        src="image"
-      />
       <div
-        class="MuiImageListItemBar-root WhiteRandomNotes-imageListItemBar MuiImageListItemBar-positionBottom"
+        class="MuiImageListItemBar-titleWrap MuiImageListItemBar-titleWrapBottom css-1lizpae-MuiImageListItemBar-titleWrap"
       >
         <div
-          class="MuiImageListItemBar-titleWrap"
+          class="MuiImageListItemBar-title css-dasnyc-MuiImageListItemBar-title"
         >
-          <div
-            class="MuiImageListItemBar-title"
-          >
-            title
-          </div>
+          title
         </div>
       </div>
     </div>
@@ -38,33 +34,29 @@ exports[`layouts RandomNotes snapshots contain data content when requesting resu
 
 exports[`layouts RandomNotes snapshots contain data content when requesting result is not empty in mobile 1`] = `
 <ul
-  class="MuiImageList-root"
-  style="margin: -10px;"
+  class="MuiImageList-root MuiImageList-standard WhiteRandomNotes-imageList css-rvv586-MuiImageList-root"
+  style="grid-template-columns: repeat(1, 1fr); gap: 20px;"
 >
   <li
-    class="MuiImageListItem-root WhiteRandomNotes-imageListItem"
-    style="width: 100%; height: 270px; padding: 10px;"
+    class="MuiImageListItem-root MuiImageListItem-standard WhiteRandomNotes-imageListItem css-ta95xa-MuiImageListItem-root"
+    style="height: 250px; grid-column-end: span 1; grid-row-end: span 1;"
   >
+    <img
+      alt="title"
+      class="MuiImageListItem-img WhiteRandomNotes-img"
+      loading="lazy"
+      src="image"
+    />
     <div
-      class="MuiImageListItem-item"
+      class="MuiImageListItemBar-root MuiImageListItemBar-positionBottom WhiteRandomNotes-imageListItemBar css-ztrqiq-MuiImageListItemBar-root"
     >
-      <img
-        alt="title"
-        class="WhiteRandomNotes-img"
-        loading="lazy"
-        src="image"
-      />
       <div
-        class="MuiImageListItemBar-root WhiteRandomNotes-imageListItemBar MuiImageListItemBar-positionBottom"
+        class="MuiImageListItemBar-titleWrap MuiImageListItemBar-titleWrapBottom css-1lizpae-MuiImageListItemBar-titleWrap"
       >
         <div
-          class="MuiImageListItemBar-titleWrap"
+          class="MuiImageListItemBar-title css-dasnyc-MuiImageListItemBar-title"
         >
-          <div
-            class="MuiImageListItemBar-title"
-          >
-            title
-          </div>
+          title
         </div>
       </div>
     </div>

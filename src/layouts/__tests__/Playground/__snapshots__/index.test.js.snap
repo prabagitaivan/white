@@ -2,98 +2,88 @@
 
 exports[`layouts Playground snapshots contain buttons with text in desktop 1`] = `
 <div
-  class="MuiButtonGroup-root WhitePlayground-buttons MuiButtonGroup-fullWidth"
+  class="MuiButtonGroup-root MuiButtonGroup-outlined MuiButtonGroup-fullWidth WhitePlayground-buttons css-hipbpa-MuiButtonGroup-root"
   role="group"
 >
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlined WhitePlayground-subButton MuiButton-fullWidth"
+    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlinedSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth WhitePlayground-subButton MuiButtonGroup-firstButton css-vmkl52-MuiButtonBase-root-MuiButton-root"
     tabindex="0"
     type="button"
   >
-    <span
-      class="MuiButton-label"
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="ClearIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-        />
-      </svg>
-      <p
-        class="MuiTypography-root WhitePlayground-subText WhitePlayground-subText MuiTypography-body1"
-      >
-        clear
-      </p>
-    </span>
+      <path
+        d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+    <p
+      class="MuiTypography-root MuiTypography-body1 WhitePlayground-subText WhitePlayground-subText css-ahj2mt-MuiTypography-root"
+    >
+      clear
+    </p>
     <span
-      class="MuiTouchRipple-root"
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
     />
   </button>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlined WhitePlayground-subButton MuiButton-fullWidth"
+    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlinedSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth WhitePlayground-subButton MuiButtonGroup-middleButton css-vmkl52-MuiButtonBase-root-MuiButton-root"
     tabindex="0"
     type="button"
   >
-    <span
-      class="MuiButton-label"
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M 15 3.75 H 6 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 h 1.5 V 5.25 h 9 V 3.75 z m 2.25 3 H 9 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 c 0 0.825 0.675 1.5 1.5 1.5 h 8.25 c 0.825 0 1.5 -0.675 1.5 -1.5 V 8.25 c 0 -0.825 -0.675 -1.5 -1.5 -1.5 z m 0 12 H 9 V 8.25 h 8.25 v 10.5 z"
-        />
-      </svg>
-      <p
-        class="MuiTypography-root WhitePlayground-subText WhitePlayground-subText MuiTypography-body1"
-      >
-        copy
-      </p>
-    </span>
+      <path
+        d="M 15 3.75 H 6 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 h 1.5 V 5.25 h 9 V 3.75 z m 2.25 3 H 9 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 c 0 0.825 0.675 1.5 1.5 1.5 h 8.25 c 0.825 0 1.5 -0.675 1.5 -1.5 V 8.25 c 0 -0.825 -0.675 -1.5 -1.5 -1.5 z m 0 12 H 9 V 8.25 h 8.25 v 10.5 z"
+      />
+    </svg>
+    <p
+      class="MuiTypography-root MuiTypography-body1 WhitePlayground-subText WhitePlayground-subText css-ahj2mt-MuiTypography-root"
+    >
+      copy
+    </p>
     <span
-      class="MuiTouchRipple-root"
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
     />
   </button>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlined WhitePlayground-mainButton MuiButton-fullWidth"
+    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlinedSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth WhitePlayground-mainButton MuiButtonGroup-lastButton css-vmkl52-MuiButtonBase-root-MuiButton-root"
     tabindex="0"
     type="button"
   >
-    <span
-      class="MuiButton-label"
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="PlayArrowIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M8 5v14l11-7z"
-        />
-      </svg>
-      <p
-        class="MuiTypography-root WhitePlayground-mainText WhitePlayground-mainText MuiTypography-body1"
-      >
-        execute
-      </p>
-      <p
-        class="MuiTypography-root WhitePlayground-keyText WhitePlayground-keyText MuiTypography-body1"
-      >
-        [
-        Cmd
-         + Enter]
-      </p>
-    </span>
+      <path
+        d="M8 5v14l11-7z"
+      />
+    </svg>
+    <p
+      class="MuiTypography-root MuiTypography-body1 WhitePlayground-mainText WhitePlayground-mainText css-ahj2mt-MuiTypography-root"
+    >
+      execute
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 WhitePlayground-keyText WhitePlayground-keyText css-ahj2mt-MuiTypography-root"
+    >
+      [
+      Cmd
+       + Enter]
+    </p>
     <span
-      class="MuiTouchRipple-root"
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
     />
   </button>
 </div>
@@ -101,81 +91,71 @@ exports[`layouts Playground snapshots contain buttons with text in desktop 1`] =
 
 exports[`layouts Playground snapshots contain buttons without text in mobile 1`] = `
 <div
-  class="MuiButtonGroup-root WhitePlayground-buttons MuiButtonGroup-fullWidth"
+  class="MuiButtonGroup-root MuiButtonGroup-outlined MuiButtonGroup-fullWidth WhitePlayground-buttons css-hipbpa-MuiButtonGroup-root"
   role="group"
 >
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlined WhitePlayground-subButton MuiButton-fullWidth"
+    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlinedSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth WhitePlayground-subButton MuiButtonGroup-firstButton css-vmkl52-MuiButtonBase-root-MuiButton-root"
     tabindex="0"
     type="button"
   >
-    <span
-      class="MuiButton-label"
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="ClearIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-        />
-      </svg>
-    </span>
+      <path
+        d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
     <span
-      class="MuiTouchRipple-root"
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
     />
   </button>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlined WhitePlayground-subButton MuiButton-fullWidth"
+    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlinedSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth WhitePlayground-subButton MuiButtonGroup-middleButton css-vmkl52-MuiButtonBase-root-MuiButton-root"
     tabindex="0"
     type="button"
   >
-    <span
-      class="MuiButton-label"
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M 15 3.75 H 6 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 h 1.5 V 5.25 h 9 V 3.75 z m 2.25 3 H 9 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 c 0 0.825 0.675 1.5 1.5 1.5 h 8.25 c 0.825 0 1.5 -0.675 1.5 -1.5 V 8.25 c 0 -0.825 -0.675 -1.5 -1.5 -1.5 z m 0 12 H 9 V 8.25 h 8.25 v 10.5 z"
-        />
-      </svg>
-    </span>
+      <path
+        d="M 15 3.75 H 6 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 h 1.5 V 5.25 h 9 V 3.75 z m 2.25 3 H 9 c -0.825 0 -1.5 0.675 -1.5 1.5 v 10.5 c 0 0.825 0.675 1.5 1.5 1.5 h 8.25 c 0.825 0 1.5 -0.675 1.5 -1.5 V 8.25 c 0 -0.825 -0.675 -1.5 -1.5 -1.5 z m 0 12 H 9 V 8.25 h 8.25 v 10.5 z"
+      />
+    </svg>
     <span
-      class="MuiTouchRipple-root"
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
     />
   </button>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlined WhitePlayground-mainButton MuiButton-fullWidth"
+    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedOutlined MuiButtonGroup-groupedOutlinedHorizontal MuiButtonGroup-groupedOutlinedSecondary MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-fullWidth WhitePlayground-mainButton MuiButtonGroup-lastButton css-vmkl52-MuiButtonBase-root-MuiButton-root"
     tabindex="0"
     type="button"
   >
-    <span
-      class="MuiButton-label"
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="PlayArrowIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root"
-        focusable="false"
-        viewBox="0 0 24 24"
-      >
-        <path
-          d="M8 5v14l11-7z"
-        />
-      </svg>
-      <p
-        class="MuiTypography-root WhitePlayground-mainText WhitePlayground-mainText MuiTypography-body1"
-      >
-        execute
-      </p>
-    </span>
+      <path
+        d="M8 5v14l11-7z"
+      />
+    </svg>
+    <p
+      class="MuiTypography-root MuiTypography-body1 WhitePlayground-mainText WhitePlayground-mainText css-ahj2mt-MuiTypography-root"
+    >
+      execute
+    </p>
     <span
-      class="MuiTouchRipple-root"
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
     />
   </button>
 </div>

@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react'
 import React from 'react'
 import { Provider } from 'react-redux'
-import { Container as MuiContainer } from '@material-ui/core'
-import { makeStyles } from '@material-ui/styles'
+import { Container as MuiContainer } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 import store from '../../stores'
 import Styles from '../../styles'
 

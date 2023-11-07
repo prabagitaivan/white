@@ -2,72 +2,78 @@
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 1`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarks-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root css-vj1n65-MuiGrid-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree css-161j9ok-MuiTreeView-root"
+    id=":r0:"
     role="tree"
+    tabindex="0"
   >
     <li
       aria-expanded="true"
-      class="MuiTreeItem-root MuiTreeItem-expanded"
+      class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+      id=":r0:-root"
       role="treeitem"
-      tabindex="0"
+      tabindex="-1"
     >
       <div
-        class="MuiTreeItem-content"
+        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="HighlightOffIcon"
             focusable="false"
             viewBox="0 0 24 24"
           >
             <path
-              d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
             />
           </svg>
         </div>
         <div
-          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+          class="MuiTreeItem-label"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
+            class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-root css-ahj2mt-MuiTypography-root"
           >
             root
           </p>
         </div>
       </div>
       <ul
-        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiCollapse-vertical MuiTreeItem-group MuiCollapse-entered css-g0jugy-MuiCollapse-root-MuiTreeItem-group"
         role="group"
         style="min-height: 0px;"
       >
         <div
-          class="MuiCollapse-wrapper"
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
         >
           <div
-            class="MuiCollapse-wrapperInner"
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
           >
             <li
               aria-expanded="false"
-              class="MuiTreeItem-root"
+              class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+              id=":r0:-subdata"
               role="treeitem"
               tabindex="-1"
             >
               <div
-                class="MuiTreeItem-content"
+                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AddCircleOutlineIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -77,10 +83,10 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   </svg>
                 </div>
                 <div
-                  class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                  class="MuiTreeItem-label"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
+                    class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-subdata css-ahj2mt-MuiTypography-root"
                   >
                     subdata
                   </p>
@@ -97,116 +103,125 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in desktop 2`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarks-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root css-vj1n65-MuiGrid-root"
 >
   <ul
+    aria-activedescendant=":r0:-subdata"
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree css-161j9ok-MuiTreeView-root"
+    id=":r0:"
     role="tree"
+    tabindex="0"
   >
     <li
       aria-expanded="true"
-      class="MuiTreeItem-root MuiTreeItem-expanded"
+      class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+      id=":r0:-root"
       role="treeitem"
       tabindex="-1"
     >
       <div
-        class="MuiTreeItem-content"
+        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="HighlightOffIcon"
             focusable="false"
             viewBox="0 0 24 24"
           >
             <path
-              d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
             />
           </svg>
         </div>
         <div
-          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+          class="MuiTreeItem-label"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
+            class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-root css-ahj2mt-MuiTypography-root"
           >
             root
           </p>
         </div>
       </div>
       <ul
-        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiCollapse-vertical MuiTreeItem-group MuiCollapse-entered css-g0jugy-MuiCollapse-root-MuiTreeItem-group"
         role="group"
         style="min-height: 0px;"
       >
         <div
-          class="MuiCollapse-wrapper"
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
         >
           <div
-            class="MuiCollapse-wrapperInner"
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
           >
             <li
               aria-expanded="true"
               aria-selected="true"
-              class="MuiTreeItem-root MuiTreeItem-expanded MuiTreeItem-selected"
+              class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+              id=":r0:-subdata"
               role="treeitem"
-              tabindex="0"
+              tabindex="-1"
             >
               <div
-                class="MuiTreeItem-content"
+                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded Mui-selected Mui-focused"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="HighlightOffIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                      d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
                     />
                   </svg>
                 </div>
                 <div
-                  class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                  class="MuiTreeItem-label"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
+                    class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-subdata css-ahj2mt-MuiTypography-root"
                   >
                     subdata
                   </p>
                 </div>
               </div>
               <ul
-                class="MuiCollapse-root MuiTreeItem-group"
+                class="MuiCollapse-root MuiCollapse-vertical MuiTreeItem-group css-riv8k6-MuiCollapse-root-MuiTreeItem-group"
                 role="group"
                 style="min-height: 0px; height: 0px; transition-duration: 300ms;"
               >
                 <div
-                  class="MuiCollapse-wrapper"
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
                 >
                   <div
-                    class="MuiCollapse-wrapperInner"
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
                   >
                     <li
-                      class="MuiTreeItem-root"
+                      class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+                      id=":r0:-subdata-0"
                       role="treeitem"
                       tabindex="-1"
                     >
                       <div
-                        class="MuiTreeItem-content"
+                        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
                       >
                         <div
                           class="MuiTreeItem-iconContainer"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                            data-testid="BlurCircularIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -216,15 +231,15 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                           </svg>
                         </div>
                         <div
-                          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                          class="MuiTreeItem-label"
                         >
                           <p
-                            class="MuiTypography-root WhiteTreeBookmarksLabel-title MuiTypography-body1 MuiTypography-noWrap"
+                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap WhiteTreeBookmarksLabel-title css-fvtpii-MuiTypography-root"
                           >
                             title
                           </p>
                           <p
-                            class="MuiTypography-root WhiteTreeBookmarksLabel-url MuiTypography-body1 MuiTypography-noWrap"
+                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap WhiteTreeBookmarksLabel-url css-fvtpii-MuiTypography-root"
                           >
                             url
                           </p>
@@ -245,72 +260,78 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 1`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarks-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root css-vj1n65-MuiGrid-root"
 >
   <ul
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree css-161j9ok-MuiTreeView-root"
+    id=":r1:"
     role="tree"
+    tabindex="0"
   >
     <li
       aria-expanded="true"
-      class="MuiTreeItem-root MuiTreeItem-expanded"
+      class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+      id=":r1:-root"
       role="treeitem"
-      tabindex="0"
+      tabindex="-1"
     >
       <div
-        class="MuiTreeItem-content"
+        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="HighlightOffIcon"
             focusable="false"
             viewBox="0 0 24 24"
           >
             <path
-              d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
             />
           </svg>
         </div>
         <div
-          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+          class="MuiTreeItem-label"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
+            class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-root css-ahj2mt-MuiTypography-root"
           >
             root
           </p>
         </div>
       </div>
       <ul
-        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiCollapse-vertical MuiTreeItem-group MuiCollapse-entered css-g0jugy-MuiCollapse-root-MuiTreeItem-group"
         role="group"
         style="min-height: 0px;"
       >
         <div
-          class="MuiCollapse-wrapper"
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
         >
           <div
-            class="MuiCollapse-wrapperInner"
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
           >
             <li
               aria-expanded="false"
-              class="MuiTreeItem-root"
+              class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+              id=":r1:-subdata"
               role="treeitem"
               tabindex="-1"
             >
               <div
-                class="MuiTreeItem-content"
+                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="AddCircleOutlineIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
@@ -320,10 +341,10 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                   </svg>
                 </div>
                 <div
-                  class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                  class="MuiTreeItem-label"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
+                    class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-subdata css-ahj2mt-MuiTypography-root"
                   >
                     subdata
                   </p>
@@ -340,116 +361,125 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
 
 exports[`layouts TreeBookmarks snapshots contain data content when requesting result is not empty in mobile 2`] = `
 <div
-  class="MuiGrid-root WhiteTreeBookmarks-root"
+  class="MuiGrid-root WhiteTreeBookmarks-root css-vj1n65-MuiGrid-root"
 >
   <ul
+    aria-activedescendant=":r1:-subdata"
     aria-multiselectable="false"
-    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree"
+    class="MuiTreeView-root WhiteTreeBookmarks-tree WhiteTreeBookmarks-tree css-161j9ok-MuiTreeView-root"
+    id=":r1:"
     role="tree"
+    tabindex="0"
   >
     <li
       aria-expanded="true"
-      class="MuiTreeItem-root MuiTreeItem-expanded"
+      class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+      id=":r1:-root"
       role="treeitem"
       tabindex="-1"
     >
       <div
-        class="MuiTreeItem-content"
+        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="HighlightOffIcon"
             focusable="false"
             viewBox="0 0 24 24"
           >
             <path
-              d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+              d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
             />
           </svg>
         </div>
         <div
-          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+          class="MuiTreeItem-label"
         >
           <p
-            class="MuiTypography-root WhiteTreeBookmarksLabel-root MuiTypography-body1"
+            class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-root css-ahj2mt-MuiTypography-root"
           >
             root
           </p>
         </div>
       </div>
       <ul
-        class="MuiCollapse-root MuiTreeItem-group MuiCollapse-entered"
+        class="MuiCollapse-root MuiCollapse-vertical MuiTreeItem-group MuiCollapse-entered css-g0jugy-MuiCollapse-root-MuiTreeItem-group"
         role="group"
         style="min-height: 0px;"
       >
         <div
-          class="MuiCollapse-wrapper"
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
         >
           <div
-            class="MuiCollapse-wrapperInner"
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
           >
             <li
               aria-expanded="true"
               aria-selected="true"
-              class="MuiTreeItem-root MuiTreeItem-expanded MuiTreeItem-selected"
+              class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+              id=":r1:-subdata"
               role="treeitem"
-              tabindex="0"
+              tabindex="-1"
             >
               <div
-                class="MuiTreeItem-content"
+                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded Mui-selected Mui-focused"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="HighlightOffIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
                   >
                     <path
-                      d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                      d="M14.59 8 12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
                     />
                   </svg>
                 </div>
                 <div
-                  class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                  class="MuiTreeItem-label"
                 >
                   <p
-                    class="MuiTypography-root WhiteTreeBookmarksLabel-subdata MuiTypography-body1"
+                    class="MuiTypography-root MuiTypography-body1 WhiteTreeBookmarksLabel-subdata css-ahj2mt-MuiTypography-root"
                   >
                     subdata
                   </p>
                 </div>
               </div>
               <ul
-                class="MuiCollapse-root MuiTreeItem-group"
+                class="MuiCollapse-root MuiCollapse-vertical MuiTreeItem-group css-riv8k6-MuiCollapse-root-MuiTreeItem-group"
                 role="group"
                 style="min-height: 0px; height: 0px; transition-duration: 300ms;"
               >
                 <div
-                  class="MuiCollapse-wrapper"
+                  class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
                 >
                   <div
-                    class="MuiCollapse-wrapperInner"
+                    class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
                   >
                     <li
-                      class="MuiTreeItem-root"
+                      class="MuiTreeItem-root css-16alkdk-MuiTreeItem-root"
+                      id=":r1:-subdata-0"
                       role="treeitem"
                       tabindex="-1"
                     >
                       <div
-                        class="MuiTreeItem-content"
+                        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
                       >
                         <div
                           class="MuiTreeItem-iconContainer"
                         >
                           <svg
                             aria-hidden="true"
-                            class="MuiSvgIcon-root"
+                            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                            data-testid="BlurCircularIcon"
                             focusable="false"
                             viewBox="0 0 24 24"
                           >
@@ -459,15 +489,15 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                           </svg>
                         </div>
                         <div
-                          class="MuiTypography-root MuiTreeItem-label MuiTypography-body1"
+                          class="MuiTreeItem-label"
                         >
                           <p
-                            class="MuiTypography-root WhiteTreeBookmarksLabel-title MuiTypography-body1 MuiTypography-noWrap"
+                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap WhiteTreeBookmarksLabel-title css-fvtpii-MuiTypography-root"
                           >
                             title
                           </p>
                           <p
-                            class="MuiTypography-root WhiteTreeBookmarksLabel-url MuiTypography-body1 MuiTypography-noWrap"
+                            class="MuiTypography-root MuiTypography-body1 MuiTypography-noWrap WhiteTreeBookmarksLabel-url css-fvtpii-MuiTypography-root"
                           >
                             url
                           </p>

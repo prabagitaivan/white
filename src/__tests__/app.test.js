@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react'
 import React from 'react'
-import { Router } from 'react-router-dom'
-import { createBrowserHistory } from 'history'
+import { MemoryRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from '../stores'
 import Styles from '../styles'
@@ -36,21 +35,21 @@ afterEach(() => {
 describe('main App', () => {
   describe('routers', () => {
     it('render RandomNotes for / (root) router', () => {
-      const history = createBrowserHistory()
-
       const AppRender = render(
         <Provider store={store}>
           <Styles>
-            <Router history={history}>
+            <MemoryRouter>
               <App />
-            </Router>
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
       const RandomNotesRender = render(
         <Provider store={store}>
           <Styles>
-            <RandomNotes />
+            <MemoryRouter>
+              <RandomNotes />
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
@@ -58,22 +57,21 @@ describe('main App', () => {
       expect(AppRender.container).toEqual(RandomNotesRender.container)
     })
     it('render RandomNotes for /random-notes router', () => {
-      const history = createBrowserHistory()
-      history.push('/random-notes')
-
       const AppRender = render(
         <Provider store={store}>
           <Styles>
-            <Router history={history}>
+            <MemoryRouter initialEntries={['/random-notes']}>
               <App />
-            </Router>
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
       const RandomNotesRender = render(
         <Provider store={store}>
           <Styles>
-            <RandomNotes />
+            <MemoryRouter>
+              <RandomNotes />
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
@@ -81,22 +79,21 @@ describe('main App', () => {
       expect(AppRender.container).toEqual(RandomNotesRender.container)
     })
     it('render TreeBookmarks for /tree-bookmarks router', () => {
-      const history = createBrowserHistory()
-      history.push('/tree-bookmarks')
-
       const AppRender = render(
         <Provider store={store}>
           <Styles>
-            <Router history={history}>
+            <MemoryRouter initialEntries={['/tree-bookmarks']}>
               <App />
-            </Router>
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
       const TreeBookmarksRender = render(
         <Provider store={store}>
           <Styles>
-            <TreeBookmarks />
+            <MemoryRouter>
+              <TreeBookmarks />
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
@@ -104,22 +101,21 @@ describe('main App', () => {
       expect(AppRender.container).toEqual(TreeBookmarksRender.container)
     })
     it('render Playground for /playground router', () => {
-      const history = createBrowserHistory()
-      history.push('/playground')
-
       const AppRender = render(
         <Provider store={store}>
           <Styles>
-            <Router history={history}>
+            <MemoryRouter initialEntries={['/playground']}>
               <App />
-            </Router>
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
       const PlaygroundRender = render(
         <Provider store={store}>
           <Styles>
-            <Playground />
+            <MemoryRouter>
+              <Playground />
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
@@ -133,22 +129,21 @@ describe('main App', () => {
       expect(AppEditors).toEqual(PlaygroundEditors)
     })
     it('render JustMatch for /just-match router', () => {
-      const history = createBrowserHistory()
-      history.push('/just-match')
-
       const AppRender = render(
         <Provider store={store}>
           <Styles>
-            <Router history={history}>
+            <MemoryRouter initialEntries={['/just-match']}>
               <App />
-            </Router>
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
       const JustMatchRender = render(
         <Provider store={store}>
           <Styles>
-            <JustMatch />
+            <MemoryRouter>
+              <JustMatch />
+            </MemoryRouter>
           </Styles>
         </Provider>
       )
@@ -167,7 +162,9 @@ describe('main App', () => {
       AppRender = render(
         <Provider store={store}>
           <Styles>
-            <App />
+            <MemoryRouter>
+              <App />
+            </MemoryRouter>
           </Styles>
         </Provider>
       )

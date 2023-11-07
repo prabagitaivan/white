@@ -1,4 +1,4 @@
-import { FlashOn, Loop } from '@material-ui/icons'
+import { FlashOn, Loop } from '@mui/icons-material'
 import _ from 'lodash'
 import store from '../../stores'
 import menu from '../menu'
