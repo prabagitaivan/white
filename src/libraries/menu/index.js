@@ -15,6 +15,11 @@ const menu = {
     name: 'playground',
     route: '/playground',
     options: []
+  },
+  TapePlayers: {
+    name: 'tape players',
+    route: '/tape-players',
+    options: []
   }
 }
 

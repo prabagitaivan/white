@@ -45,4 +45,21 @@ export async function getTreeBookmarks () {
   return data
 }
 
+export async function getTapePlayers () {
+  const snapshots = await database.ref('tape_players/').once('value')
+  const data = []
+
+  snapshots.forEach(snapshot => {
+    const value = snapshot.val()
+
+    data.push({
+      title: value.title,
+      url: value.url,
+      active: value.active
+    })
+  })
+
+  return data
+}
+
 export default database

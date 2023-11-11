@@ -10,6 +10,7 @@ import RandomNotes from '../layouts/RandomNotes'
 import TreeBookmarks from '../layouts/TreeBookmarks'
 import Playground from '../layouts/Playground'
 import JustMatch from '../layouts/JustMatch'
+import TapePlayers from '../layouts/TapePlayers'
 import * as emoji from '../libraries/emoji'
 
 function setConnectionEvent (online) {
@@ -149,6 +150,28 @@ describe('main App', () => {
       )
 
       expect(AppRender.container).toEqual(JustMatchRender.container)
+    })
+    it('render TapePlayers for /tape-players router', () => {
+      const AppRender = render(
+        <Provider store={store}>
+          <Styles>
+            <MemoryRouter initialEntries={['/tape-players']}>
+              <App />
+            </MemoryRouter>
+          </Styles>
+        </Provider>
+      )
+      const TapePlayersRender = render(
+        <Provider store={store}>
+          <Styles>
+            <MemoryRouter>
+              <TapePlayers />
+            </MemoryRouter>
+          </Styles>
+        </Provider>
+      )
+
+      expect(AppRender.container).toEqual(TapePlayersRender.container)
     })
   })
   describe('mounting', () => {

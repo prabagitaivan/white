@@ -26,6 +26,11 @@ describe('libraries menu', () => {
         options: [],
         route: '/playground'
       })
+      expect(menu.TapePlayers).toEqual({
+        name: 'tape players',
+        options: [],
+        route: '/tape-players'
+      })
     })
   })
   describe('random notes', () => {

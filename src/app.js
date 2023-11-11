@@ -6,6 +6,7 @@ import RandomNotes from './layouts/RandomNotes'
 import TreeBookmarks from './layouts/TreeBookmarks'
 import Playground from './layouts/Playground'
 import JustMatch from './layouts/JustMatch'
+import TapePlayers from './layouts/TapePlayers'
 
 export default () => {
   const dispatch = useDispatch()
@@ -35,6 +36,7 @@ export default () => {
       <Route path='/tree-bookmarks' element={<TreeBookmarks />} />
       <Route path='/playground' element={<Playground />} />
       <Route path='/just-match' element={<JustMatch />} />
+      <Route path='/tape-players' element={<TapePlayers />} />
     </Routes>
   )
 }

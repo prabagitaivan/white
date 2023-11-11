@@ -1,6 +1,7 @@
 import database, {
   getRandomNotes,
-  getTreeBookmarks
+  getTreeBookmarks,
+  getTapePlayers
 } from '../firebase/database'
 
 async function mockGetRandomNotes (data = []) {
@@ -26,6 +27,19 @@ async function mockGetTreeBookmarks (data = {}) {
   }))
 
   return getTreeBookmarks()
+}
+
+async function mockGetTapePlayers (data = {}) {
+  const snapshots = Object.keys(data).map(datum => ({
+    key: datum,
+    val: () => data[datum]
+  }))
+
+  database.ref = jest.fn(() => ({
+    once: jest.fn().mockReturnValue(snapshots)
+  }))
+
+  return getTapePlayers()
 }
 
 describe('libraries firebase', () => {
@@ -154,6 +168,55 @@ describe('libraries firebase', () => {
           ],
           subdata3: []
         })
+      })
+    })
+    describe('tape players', () => {
+      it('send request data to firebase with correct references', async () => {
+        await mockGetTapePlayers()
+        expect(database.ref).toHaveBeenCalledTimes(1)
+        expect(database.ref).toHaveBeenCalledWith('tape_players/')
+      })
+      it('return with empty data', async () => {
+        const result = await mockGetTapePlayers()
+        expect(result).toEqual([])
+      })
+      it('return with correct data', async () => {
+        const data = [
+          {
+            title: 'title1',
+            url: 'url1',
+            active: true
+          },
+          {
+            title: 'title2',
+            url: 'url2',
+            active: false
+          },
+          {
+            title: 'title3',
+            url: 'url3',
+            active: true
+          }
+        ]
+        const result = await mockGetTapePlayers(data)
+
+        expect(result).toEqual([
+          {
+            title: 'title1',
+            url: 'url1',
+            active: true
+          },
+          {
+            title: 'title2',
+            url: 'url2',
+            active: false
+          },
+          {
+            title: 'title3',
+            url: 'url3',
+            active: true
+          }
+        ])
       })
     })
   })
