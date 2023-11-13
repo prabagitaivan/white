@@ -3,9 +3,13 @@ import _ from 'lodash'
 import store from '../../stores'
 import menu from '../menu'
 import randomNotes from '../menu/randomNotes'
+import tapePlayers from '../menu/tapePlayers'
 
 function mockRandomNotesStore ({ data = [] }) {
   jest.spyOn(store, 'getState').mockReturnValue({ randomNotes: { data } })
+}
+function mockTapePlayersStore ({ data = [] }) {
+  jest.spyOn(store, 'getState').mockReturnValue({ tapePlayers: { data } })
 }
 
 describe('libraries menu', () => {
@@ -28,7 +32,7 @@ describe('libraries menu', () => {
       })
       expect(menu.TapePlayers).toEqual({
         name: 'tape players',
-        options: [],
+        options: tapePlayers,
         route: '/tape-players'
       })
     })
@@ -82,6 +86,39 @@ describe('libraries menu', () => {
       randomOption.action()
       expect(_.random).not.toHaveBeenCalled()
       expect(window.open).not.toHaveBeenCalled()
+    })
+  })
+  describe('tape players', () => {
+    beforeEach(() => {
+      jest.spyOn(_, 'shuffle').mockReturnValue([])
+      jest.spyOn(store, 'dispatch').mockReturnValue()
+    })
+    afterEach(() => {
+      _.shuffle.mockRestore()
+      store.dispatch.mockRestore()
+      store.getState.mockRestore()
+    })
+
+    it('return all correct text, icon and order', () => {
+      mockTapePlayersStore({})
+      const icons = tapePlayers.map(note => note.Icon)
+      const texts = tapePlayers.map(note => note.text)
+      expect(icons).toEqual([Loop])
+      expect(texts).toEqual(['shuffle-players'])
+    })
+    it('shuffle players if data exists', () => {
+      mockTapePlayersStore({ data: [1, 2] })
+      const shuffleOption = tapePlayers[0]
+      shuffleOption.action()
+      expect(_.shuffle).toHaveBeenCalledTimes(1)
+      expect(store.dispatch).toHaveBeenCalledTimes(1)
+    })
+    it('not shuffle notes if data empty', () => {
+      mockTapePlayersStore({})
+      const shuffleOption = tapePlayers[0]
+      shuffleOption.action()
+      expect(_.shuffle).not.toHaveBeenCalled()
+      expect(store.dispatch).not.toHaveBeenCalled()
     })
   })
 })

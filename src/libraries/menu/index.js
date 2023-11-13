@@ -1,4 +1,5 @@
 import randomNotes from './randomNotes'
+import tapePlayers from './tapePlayers'
 
 const menu = {
   RandomNotes: {
@@ -19,7 +20,7 @@ const menu = {
   TapePlayers: {
     name: 'tape players',
     route: '/tape-players',
-    options: []
+    options: tapePlayers
   }
 }
 

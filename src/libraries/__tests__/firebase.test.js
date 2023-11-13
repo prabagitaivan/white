@@ -184,18 +184,11 @@ describe('libraries firebase', () => {
         const data = [
           {
             title: 'title1',
-            url: 'url1',
-            active: true
+            url: 'url1'
           },
           {
             title: 'title2',
-            url: 'url2',
-            active: false
-          },
-          {
-            title: 'title3',
-            url: 'url3',
-            active: true
+            url: 'url2'
           }
         ]
         const result = await mockGetTapePlayers(data)
@@ -203,18 +196,11 @@ describe('libraries firebase', () => {
         expect(result).toEqual([
           {
             title: 'title1',
-            url: 'url1',
-            active: true
+            url: 'url1'
           },
           {
             title: 'title2',
-            url: 'url2',
-            active: false
-          },
-          {
-            title: 'title3',
-            url: 'url3',
-            active: true
+            url: 'url2'
           }
         ])
       })

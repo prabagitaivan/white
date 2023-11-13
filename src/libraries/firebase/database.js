@@ -54,8 +54,7 @@ export async function getTapePlayers () {
 
     data.push({
       title: value.title,
-      url: value.url,
-      active: value.active
+      url: value.url
     })
   })
 

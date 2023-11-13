@@ -108,8 +108,8 @@ export default memo(() => {
                       onClick={() => openMatch(item.url)}
                       className={classes.link}
                     >
-                      <div className={classes.url}>{item.url}</div>
-                      <div className={classes.title}>{item.title}</div>
+                      <div>{item.url}</div>
+                      <div>{item.title}</div>
                     </div>
                     <div className={classes.description}>
                       {item.description}
