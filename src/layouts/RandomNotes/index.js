@@ -77,7 +77,6 @@ export default memo(() => {
           >
             {data
               .filter(note => note.active)
-              .reverse()
               .map((note, index) => (
                 <ImageListItem key={index} className={classes.imageListItem}>
                   <img

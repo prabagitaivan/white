@@ -19,7 +19,7 @@ export async function getRandomNotes () {
     })
   })
 
-  return data
+  return data.reverse()
 }
 
 export async function getTreeBookmarks () {
@@ -58,7 +58,7 @@ export async function getTapePlayers () {
     })
   })
 
-  return data
+  return data.reverse()
 }
 
 export default database

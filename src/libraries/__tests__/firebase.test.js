@@ -90,9 +90,10 @@ describe('libraries firebase', () => {
 
         expect(result).toEqual([
           {
-            image: 'image1',
-            title: 'title1',
-            url: 'url1',
+            image: 'image3',
+            title: 'title3',
+            url: 'url3',
+            author: 'author3',
             active: true
           },
           {
@@ -102,10 +103,9 @@ describe('libraries firebase', () => {
             active: false
           },
           {
-            image: 'image3',
-            title: 'title3',
-            url: 'url3',
-            author: 'author3',
+            image: 'image1',
+            title: 'title1',
+            url: 'url1',
             active: true
           }
         ])
@@ -195,12 +195,12 @@ describe('libraries firebase', () => {
 
         expect(result).toEqual([
           {
-            title: 'title1',
-            url: 'url1'
-          },
-          {
             title: 'title2',
             url: 'url2'
+          },
+          {
+            title: 'title1',
+            url: 'url1'
           }
         ])
       })
