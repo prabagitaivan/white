@@ -12,9 +12,9 @@ import RandomNotes from '../../RandomNotes'
 
 let store
 
-function renderRandomNotes ({ desktop = true, randomNotes }) {
+function renderRandomNotes ({ desktop = true, light = true, randomNotes }) {
   const preloadedState = {
-    status: { desktop, page: 'RandomNotes' },
+    status: { desktop, light, page: 'RandomNotes' },
     randomNotes
   }
   store = createStore(preloadedState)

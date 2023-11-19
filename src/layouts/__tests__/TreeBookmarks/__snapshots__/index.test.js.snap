@@ -19,7 +19,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
       tabindex="-1"
     >
       <div
-        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
+        class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
@@ -65,7 +65,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
               tabindex="-1"
             >
               <div
-                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
+                class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
@@ -121,7 +121,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
       tabindex="-1"
     >
       <div
-        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
+        class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
@@ -168,7 +168,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
               tabindex="-1"
             >
               <div
-                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded Mui-selected Mui-focused"
+                class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content Mui-expanded Mui-selected Mui-focused"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
@@ -213,7 +213,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                       tabindex="-1"
                     >
                       <div
-                        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
+                        class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content"
                       >
                         <div
                           class="MuiTreeItem-iconContainer"
@@ -277,7 +277,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
       tabindex="-1"
     >
       <div
-        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
+        class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
@@ -323,7 +323,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
               tabindex="-1"
             >
               <div
-                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
+                class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
@@ -379,7 +379,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
       tabindex="-1"
     >
       <div
-        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
+        class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content Mui-expanded"
       >
         <div
           class="MuiTreeItem-iconContainer"
@@ -426,7 +426,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
               tabindex="-1"
             >
               <div
-                class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content Mui-expanded Mui-selected Mui-focused"
+                class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content Mui-expanded Mui-selected Mui-focused"
               >
                 <div
                   class="MuiTreeItem-iconContainer"
@@ -471,7 +471,7 @@ exports[`layouts TreeBookmarks snapshots contain data content when requesting re
                       tabindex="-1"
                     >
                       <div
-                        class="css-ik3zhc-MuiTreeItem-content MuiTreeItem-content"
+                        class="css-2utc6o-MuiTreeItem-content MuiTreeItem-content"
                       >
                         <div
                           class="MuiTreeItem-iconContainer"

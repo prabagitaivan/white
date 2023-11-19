@@ -11,6 +11,7 @@ import {
 } from '@mui/icons-material'
 import { makeStyles } from '@mui/styles'
 import ReactPlayer from 'react-player/youtube'
+import { get } from 'lodash'
 import Navigator from '../../components/Navigator'
 import Content from '../../components/Content'
 import Loading from '../../components/Loading'
@@ -22,7 +23,7 @@ const useStyles = makeStyles(
   {
     root: {
       marginTop: 20,
-      maxHeight: ({ desktop }) => (desktop ? '88vh' : '78vh'),
+      maxHeight: ({ desktop }) => (desktop ? '88vh' : 'calc(100vh - 165px)'),
       overflowY: 'scroll',
 
       scrollbarWidth: 'none',
@@ -173,8 +174,10 @@ export default memo(() => {
   const onPause = () => setPlay(false)
   const onPlaying = state => setPlaying(state.played)
   const onSeek = (_, value) => {
-    player.current.seekTo(value)
     setPlaying(value)
+    if (get(player, 'current.seekTo')) {
+      player.current.seekTo(value)
+    }
   }
 
   const playTape = (tape = 0) => setTape(tape)
@@ -182,15 +185,19 @@ export default memo(() => {
     let value = tape + 1
     if (tape + 1 === data.length) value = 0
 
-    list.current.scrollTo({ top: value * 34 })
     setTape(value)
+    if (get(list, 'current.scrollTo')) {
+      list.current.scrollTo({ top: value * 34 })
+    }
   }
   const prevTape = () => {
     let value = tape - 1
     if (tape === 0) value = data.length - 1
 
-    list.current.scrollTo({ top: value * 34 })
     setTape(value)
+    if (get(list, 'current.scrollTo')) {
+      list.current.scrollTo({ top: value * 34 })
+    }
   }
 
   useEffect(() => {
@@ -224,7 +231,6 @@ export default memo(() => {
                 onPause={onPause}
                 onProgress={onPlaying}
                 onEnded={nextTape}
-                volume={0.25}
                 className={classes.player}
               />
               <div className={classes.info}>

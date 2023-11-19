@@ -8,8 +8,12 @@ import Empty from '../Empty'
 describe('components Empty', () => {
   describe('snapshots', () => {
     it('return correct snapshot', () => {
+      const preloadedState = {
+        status: { desktop: true, light: true }
+      }
+
       const { container } = render(
-        <Provider store={createStore()}>
+        <Provider store={createStore(preloadedState)}>
           <Styles>
             <Empty />
           </Styles>

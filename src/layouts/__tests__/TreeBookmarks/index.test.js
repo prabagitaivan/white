@@ -12,9 +12,9 @@ import TreeBookmarks from '../../TreeBookmarks'
 
 let store
 
-function renderTreeBookmarks ({ desktop = true, treeBookmarks }) {
+function renderTreeBookmarks ({ desktop = true, light = true, treeBookmarks }) {
   const preloadedState = {
-    status: { desktop, page: 'TreeBookmarks' },
+    status: { desktop, light, page: 'TreeBookmarks' },
     treeBookmarks
   }
   store = createStore(preloadedState)

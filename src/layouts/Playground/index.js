@@ -123,7 +123,7 @@ export default memo(() => {
           ]}
           onChange={coding}
           theme={light ? 'light' : 'dark'}
-          height='52vh'
+          height='calc(100vh - 25vh - 165px)'
           className={classes.mainEditor}
         />
         <ButtonGroup color='secondary' fullWidth className={classes.buttons}>

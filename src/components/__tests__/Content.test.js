@@ -5,8 +5,8 @@ import { createStore } from '../../stores'
 import Styles from '../../styles'
 import Content from '../Content'
 
-function renderContent ({ desktop = true }) {
-  const preloadedState = { status: { desktop, page: 'RandomNotes' } }
+function renderContent ({ desktop = true, light = true }) {
+  const preloadedState = { status: { desktop, light, page: 'RandomNotes' } }
   const store = createStore(preloadedState)
 
   return render(

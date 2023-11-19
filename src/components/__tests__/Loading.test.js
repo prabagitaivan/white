@@ -8,8 +8,12 @@ import Loading from '../Loading'
 describe('components Loading', () => {
   describe('snapshots', () => {
     it('return correct snapshot', () => {
+      const preloadedState = {
+        status: { desktop: true, light: true }
+      }
+
       const { container } = render(
-        <Provider store={createStore()}>
+        <Provider store={createStore(preloadedState)}>
           <Styles>
             <Loading />
           </Styles>
