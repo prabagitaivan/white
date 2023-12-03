@@ -21,6 +21,10 @@ jest.mock('lodash', () => ({
   random: jest.fn()
 }))
 
+jest.mock('react-player/youtube', () => props => (
+  <div {...props}>ReactPlayer</div>
+))
+
 Object.defineProperties(window.navigator, {
   onLine: {
     value: true,
